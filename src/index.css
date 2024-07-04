@@ -4,11 +4,20 @@
   box-sizing: border-box;
 }
 
+:root {
+  --darkest-green: #054643;
+  --darker-green: #094948;
+  --medium-green: #056865;
+  --lighter-green: #328b8a;
+  --lightest-green: #e5ede2;
+  --watermelon-pink: #ff5588;
+}
+
 body {
-  background-image: url(src/assets/TreeBackground.png);
+  background-image: url(src/assets/tree.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center 20%;
   background-attachment: fixed;
 }
 
@@ -26,40 +35,72 @@ body {
   font-variation-settings: "wdth" 100;
 }
 
-/****** NAVBAR ******/
-.navbar {
+.crimson-pro-bold {
+  font-family: "Crimson Pro", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cormorant-garamond-semibold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.crimson-pro-reg {
+  font-family: "Crimson Pro", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ***** HOME ***** */
+
+.container {
   display: flex;
-  justify-content: space-between;
+  flex: 1;
+  justify-content: right;
   align-items: center;
-  /* padding: 1rem 2rem; */
-  /* background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px); */
-  position: fixed;
   width: 100%;
-  border: 2px blue solid;
-  /* z-index: 1000; */
+  /* border: 2px solid blue; */
 }
 
-.logo {
-  width: 300px;
-}
-
-.linkContainer {
+.homeDiv {
+  /* border: 2px solid black; */
   display: flex;
-  flex: 1;
-  border: 2px yellow solid;
-}
-
-.linkContainer ul {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  list-style: none;
+  height: 80vh;
+  width: 70vw;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  border: 2px red solid;
 }
 
-.linkContainer ul li {
-  margin: 0 1rem;
+.hugeText {
+  font-size: 6rem;
+  /* font-family: "Crimson Pro", serif; */
+  /* font-weight: 700; */
+  color: var(--darkest-green);
+  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5);
+  line-height: 1.56;
+  text-align: center;
+}
+
+.smallerText {
+  font-size: 3rem;
+  /* font-family: "Cormorant Garamond", serif; */
+  /* font-weight: 600; */
+  color: black;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.ctaBtn {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: white;
+  background-color: var(--watermelon-pink);
+  padding: 1rem 1.5rem;
+  letter-spacing: 0.15rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
