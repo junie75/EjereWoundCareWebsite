@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  caret-color: rgba(0, 0, 0, 0);
 }
 
 :root {
@@ -14,12 +15,28 @@
 }
 
 body {
+  background-color: var(--lightest-green);
+}
+
+.home-background {
   background-image: url(src/assets/tree.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 20%;
   background-attachment: fixed;
 }
+
+.green-background {
+  background-color: var(--lightest-green);
+}
+
+/* body {
+  background-image: url(src/assets/tree.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 20%;
+  background-attachment: fixed;
+} */
 
 /*
 **** FONTS *****
@@ -103,4 +120,144 @@ body {
   letter-spacing: 0.15rem;
   border-radius: 10px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ****** ABOUT PAGE ******* */
+
+.aboutPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  width: 80vw;
+  margin: 0 auto;
+  row-gap: 10rem;
+  /* border: 2px solid red; */
+}
+
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  position: relative;
+  font-size: 5rem;
+  font-family: "Crimson Pro", serif;
+  font-weight: 700;
+  color: var(--darkest-green);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  /* border-bottom: 0.4rem solid var(--darkest-green); */
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 70%; /* Set the desired width of the underline */
+  border-bottom: 0.4rem solid var(--darkest-green); /* Set the style and color of the underline */
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 1px solid blue; */
+}
+
+.photos {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5rem;
+}
+
+.desc {
+  font-family: "Noto Serif", serif;
+  font-size: 1.8rem;
+  /* border: 1px solid red; */
+  height: 100%;
+  padding: 1rem 1.5rem;
+}
+
+.desc h2 {
+  color: var(--darkest-green);
+}
+
+.teamSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.teamBoxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.teamMember {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  background-color: white;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: row;
+  border-radius: 2rem;
+  box-shadow: 2px 2px 2px #02211f56;
+  width: 80rem;
+  margin-bottom: 2rem;
+  /* border: 2px solid #05464356; */
+  column-gap: 2rem;
+  font-family: "Noto Serif", serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  /* background-color: #f2f8f0; */
+  background-color: rgba(50, 139, 138, 0.2);
+  background-color: rgba(180, 209, 139, 0.2);
+}
+
+.name {
+  font-size: 1.5rem;
+}
+
+.role {
+  font-size: 1.2rem;
+  /* font-style: italic; */
+}
+
+.memberPic {
+  display: flex;
+  flex: 2;
+}
+
+.memberPic img {
+  height: 15rem;
+  width: 15rem;
+  object-fit: cover;
+  object-position: center -0.5rem;
+  border: 5px solid var(--medium-green);
+  border-radius: 50%;
+  /* box-shadow: 2px 2px 2px #05464356; */
+
+  /* width: 50px; */
+}
+
+.teamMember p {
+  margin-bottom: 0.5rem;
+}
+
+.teamMember span {
+  font-weight: bold;
 }
