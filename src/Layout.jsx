@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
     <div className={isHomePage ? "home-background" : "green-background"}>
       <Navigation isHomePage={isHomePage} />
       <main>{children}</main>
-      {/* <Footer /> */}
+      {!isHomePage && <Footer />}
     </div>
   );
 };

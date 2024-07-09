@@ -6,6 +6,7 @@ import "./layout.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./About.jsx";
+import WoundCare from "./WoundCare.jsx";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />,
+  },
+  {
+    path: "/services/woundcare",
+    element: <WoundCare />,
   },
 ]);
 

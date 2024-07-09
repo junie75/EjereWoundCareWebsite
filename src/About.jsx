@@ -1,13 +1,23 @@
 import React from "react";
 import Layout from "./Layout";
-import aboutImg1 from "./assets/aboutImg1.jpeg";
+import aboutImg1 from "./assets/happyDoctors.png";
 import aboutImg2 from "./assets/aboutImg2.jpg";
 import profileJackie from "./assets/profileJackie.JPG";
 import profileMelanie from "./assets/profileMelanie.jpg";
 import profileJuni from "./assets/profileJuni.jpg";
+import profileHenry from "./assets/henryFormalv4.jpg";
 
 export default function About() {
   const teamMembers = [
+    {
+      photo: profileHenry,
+      name: "Henry Ejere, MD, MS, FAPWCA, MACP",
+      role: "Medical Director",
+      blurb: `Melanie began her nursing career in 2004 as a registered nurse. She holds a Master of Science in nursing and is also certified in hyperbaric oxygen therapy.  She found her calling in wound care and hyperbaric oxygen therapy in 2018.  
+              “I am passionate about impacting my patient’s lives by empowering them with the knowledge and support they need to achieve optimal health and quality of life.”`,
+      email: "henry.ejere@ejerewoundcare.com",
+      phone: "682-582-2989",
+    },
     {
       photo: profileJackie,
       name: "Jacki Morgan, RN-MSN, CHRN, A-IPC",
@@ -38,43 +48,41 @@ export default function About() {
   ];
   return (
     <Layout>
-      <div className="aboutPage">
+      <div className="pageContainer">
         <div className="aboutSection">
           <div className="title">About Our Clinic</div>
-          <div className="content">
+          <div className="banner">
             <div className="photos">
               <img src={aboutImg1} alt="aboutImg1" />
-              <img src={aboutImg2} alt="aboutImg2" />
+              {/* <img src={aboutImg2} alt="aboutImg2" /> */}
             </div>
             <div className="desc">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Above all else, we are committed to the care and improvement of
+                human life.
+              </p>
+              {/* <br />
+              <h2>Our Patient Promise</h2>
+              <p>
+                We are committed to excellence always: every action, every
+                patient, every time.
               </p>
               <br />
-              <h2>Mission</h2>
+              <h2>Our Vision</h2>
+              <p>To be the destination of choice for healthcare excellence.</p>*/}
+            </div>
+          </div>
+          <div className="desc statements">
+            <div className="promise">
+              <h2>Our Patient Promise</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                We are committed to excellence always: every action, every
+                patient, every time.
               </p>
-              <br />
-              <h2>Patient Promise</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+            </div>
+            <div className="vision">
+              <h2>Our Vision</h2>
+              <p>To be the destination of choice for healthcare excellence.</p>
             </div>
           </div>
         </div>

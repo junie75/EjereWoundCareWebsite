@@ -9,19 +9,19 @@ const Footer = () => {
         <div className="info">
           <ul>
             <li>
-              <span class="material-symbols-outlined">location_on</span>
+              <span className="material-symbols-outlined">location_on</span>
               <p>730 Eureka St, Weatherford, TX 76086</p>
             </li>
             <li>
-              <span class="material-symbols-outlined">call</span>
+              <span className="material-symbols-outlined">call</span>
               <p>Phone: 281-713-6543</p>
             </li>
             <li>
-              <span class="material-symbols-outlined">fax</span>
+              <span className="material-symbols-outlined">fax</span>
               <p>Fax: 713-999-5342</p>
             </li>
             <li>
-              <span class="material-symbols-outlined">mail</span>
+              <span className="material-symbols-outlined">mail</span>
               <p>Email: info@ejerewoundcare.com</p>
             </li>
           </ul>
