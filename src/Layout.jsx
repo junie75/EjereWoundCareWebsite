@@ -8,10 +8,15 @@ const Layout = ({ children }) => {
   const isHomePage = location.pathname === "/";
 
   return (
-    <div className={isHomePage ? "home-background" : "green-background"}>
+    <div
+      className={`containers ${
+        isHomePage ? "home-background" : "green-background"
+      }`}
+    >
       <Navigation isHomePage={isHomePage} />
       <main>{children}</main>
-      {!isHomePage && <Footer />}
+      <Footer />
+      {/* {!isHomePage && <Footer />} */}
     </div>
   );
 };

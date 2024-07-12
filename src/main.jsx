@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Home from "./Home.jsx";
-import "./index.css";
-import "./layout.css";
-
+import "./index2.css";
+import "./layout2.css";
+import { GoogleReviewsProvider } from "./GoogleReviewsContext.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./About.jsx";
 import WoundCare from "./WoundCare.jsx";
+import Hyperbaric from "./Hyperbaric.jsx";
+import Contact from "./Contact.jsx";
+import Testimonials from "./Testimonials.jsx";
 
 const router = createBrowserRouter([
   {
@@ -22,10 +25,27 @@ const router = createBrowserRouter([
     path: "/services/woundcare",
     element: <WoundCare />,
   },
+  {
+    path: "/services/hbot",
+    element: <Hyperbaric />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
+  },
+  {
+    path: "/testimonials",
+    element: <Testimonials />,
+  },
 ]);
+
+const apiKey = "AIzaSyBwuvKlEH3rxAxRLVOgENDdwfHORHGhAa4"; // Replace with your actual API Key
+const placeId = "ChIJIy47zAH-UYYRh60sdRD_Blw"; // Replace with your actual Place ID
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <GoogleReviewsProvider apiKey={apiKey} placeId={placeId}>
+      <RouterProvider router={router} />
+    </GoogleReviewsProvider>
   </React.StrictMode>
 );

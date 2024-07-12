@@ -8,19 +8,31 @@ function Navigation({ isHomePage }) {
     <div className={`navbar ${isHomePage ? "" : "navSolidBackground"}`}>
       <img src={Logo2} alt="Logo" className="logo" />
       <div className="linkContainer">
-        <ul className="crimson-pro-bold">
-          <li>
+        <ul className="crimson-pro-bold navbar-menu">
+          <li className="navbar-item">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="navbar-item">
             <Link to="/about">About</Link>
           </li>
-          <li>
-            <Link to="/services/woundcare">Services</Link>
+          <li className="navbar-item services">
+            Services
+            <ul className="dropdown-menu">
+              <li className="dropdown-item">
+                <Link to="/services/woundcare">Wound Care </Link>
+              </li>
+              <li className="dropdown-item">
+                <Link to="/services/hbot">Hyperbaric</Link>{" "}
+              </li>
+            </ul>
           </li>
-          <li>Contact</li>
-          <li>Testimonials</li>
-          <li className="portal">Patient Portal</li>
+          <li className="navbar-item">
+            <Link to="/contact">Contact</Link>
+          </li>
+          <li className="navbar-item">
+            <Link to="/testimonials">Testimonials</Link>
+          </li>
+          <li className="navbar-item portal">Patient Portal</li>
         </ul>
       </div>
     </div>

@@ -5,7 +5,7 @@ import aboutImg2 from "./assets/aboutImg2.jpg";
 import profileJackie from "./assets/profileJackie.JPG";
 import profileMelanie from "./assets/profileMelanie.jpg";
 import profileJuni from "./assets/profileJuni.jpg";
-import profileHenry from "./assets/henryFormalv4.jpg";
+import profileHenry from "./assets/henryFormalv5.jpg";
 
 export default function About() {
   const teamMembers = [
@@ -38,7 +38,7 @@ export default function About() {
     },
     {
       photo: profileJuni,
-      name: "Juni Ejere",
+      name: "Juni Ejere, BA CIS",
       role: "Software Optimization Specialist",
       blurb: `Melanie began her nursing career in 2004 as a registered nurse. She holds a Master of Science in nursing and is also certified in hyperbaric oxygen therapy.  She found her calling in wound care and hyperbaric oxygen therapy in 2018.  
               “I am passionate about impacting my patient’s lives by empowering them with the knowledge and support they need to achieve optimal health and quality of life.”`,
@@ -52,37 +52,69 @@ export default function About() {
         <div className="aboutSection">
           <div className="title">About Our Clinic</div>
           <div className="banner">
+            <p className="crimson-pro-reg">
+              Above all else, we are committed to the care and improvement of
+              human life.
+            </p>
             <div className="photos">
               <img src={aboutImg1} alt="aboutImg1" />
               {/* <img src={aboutImg2} alt="aboutImg2" /> */}
             </div>
-            <div className="desc">
-              <p>
-                Above all else, we are committed to the care and improvement of
-                human life.
-              </p>
-              {/* <br />
-              <h2>Our Patient Promise</h2>
-              <p>
-                We are committed to excellence always: every action, every
-                patient, every time.
-              </p>
-              <br />
-              <h2>Our Vision</h2>
-              <p>To be the destination of choice for healthcare excellence.</p>*/}
-            </div>
           </div>
-          <div className="desc statements">
-            <div className="promise">
-              <h2>Our Patient Promise</h2>
-              <p>
-                We are committed to excellence always: every action, every
-                patient, every time.
-              </p>
+          <div className="desc mission">
+            <h2>Our Mission</h2>
+            <p>
+              Our mission is to provide specialized wound care services with the
+              highest level of professionalism, respect, compassion, sincerity
+              and transparency to our patients, while collaborating and working
+              closely with our referring providers and physician colleagues in
+              other specialties to facilitate wound healing, prevent limb loss
+              and improve quality of life.
+            </p>
+          </div>
+          <div className="desc hbot content">
+            {/* <div className="promiseBox">
+              <div className="iconBox">
+                <span class="material-symbols-outlined icon-large">
+                  stethoscope
+                </span>
+              </div>
+              <div className="motto">
+                <h2>Our Mission</h2>
+                <p>
+                  To provide wound care services with the highest level of
+                  professionalism, respect, compassion, and transparency to our
+                  patients.
+                </p>
+              </div>
+            </div> */}
+            <div className="promiseBox">
+              <div className="iconBox">
+                <span class="material-symbols-outlined icon-large">
+                  visibility
+                </span>
+              </div>
+              <div className="motto">
+                <h2>Vision</h2>
+                <p>
+                  To be the leading center of excellence and destination of
+                  choice for treating difficult to heal wounds in North Texas.
+                </p>
+              </div>
             </div>
-            <div className="vision">
-              <h2>Our Vision</h2>
-              <p>To be the destination of choice for healthcare excellence.</p>
+            <div className="promiseBox">
+              <div className="iconBox">
+                <span class="material-symbols-outlined icon-large">
+                  partner_exchange
+                </span>
+              </div>
+              <div className="motto">
+                <h2>Patient Promise</h2>
+                <p>
+                  To provide compassionate, professional, loving care for every
+                  patient, every wound, every time.
+                </p>
+              </div>
             </div>
           </div>
         </div>
