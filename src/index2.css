@@ -163,7 +163,7 @@ main {
   width: 80%;
   margin: 0 auto;
   /* row-gap: calc(2 * var(--rem)); */
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .aboutSection {
@@ -176,7 +176,7 @@ main {
   margin-top: calc(var(--rem));
   margin-bottom: calc(5 * var(--rem));
   /* border: 2px solid red; */
-  width: 80%;
+  /* width: 80%; */
 }
 
 .title {
@@ -205,16 +205,17 @@ main {
 .banner {
   display: flex;
   /* height: 50%; */
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-bottom: calc(5 * var(--rem));
   /* border: 1px solid blue; */
+  width: 100%;
 }
 
 .banner p {
   text-align: center;
-  width: 80%;
+  /* width: 80%; */
   flex: 1;
   font-size: calc(1.8 * var(--rem));
   font-family: "Noto Serif", serif;
@@ -239,9 +240,10 @@ main {
   /* height: 50%; */
   display: flex;
   /* flex-direction: column; */
-  /* flex: 4; */
-  width: 99vw;
+  flex: 1;
+  /* width: 99vw; */
   overflow: hidden;
+  box-shadow: 2px 2px 8px #02211f;
   /* border: 10px solid yellow; */
 }
 
@@ -251,8 +253,9 @@ main {
   /* max-height: calc(50 * var(--rem)); */
   object-fit: cover;
   height: calc(50 * var(--rem));
+
   /* width: 99vw; */
-  object-position: center -10rem;
+  /* object-position: center -10rem; */
   /* flex: 1; */
 }
 
@@ -270,7 +273,7 @@ main {
 }
 
 .desc.mission {
-  /* width: 80%; */
+  width: 80%;
   text-align: center;
   margin-bottom: calc(5 * var(--rem));
 }
@@ -427,6 +430,7 @@ main {
   flex: 1;
   width: 80%;
   background-color: rgba(5, 104, 101, 0.15);
+  margin-bottom: calc(5 * var(--rem));
 }
 
 .hbotAd .text {
@@ -485,6 +489,7 @@ main {
   align-items: center;
   width: 80%;
   /* border: 2px solid red; */
+  margin-bottom: calc(3 * var(--rem));
 }
 
 .rowSection {
@@ -553,7 +558,7 @@ main {
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
-  width: 90%;
+  /* width: 90%; */
   border: 2px solid red;
 }
 
@@ -571,7 +576,7 @@ main {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: left;
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
 }
 
 .iconBox {
@@ -587,6 +592,11 @@ main {
   display: flex;
   flex-direction: column;
   align-items: left;
+}
+
+.mapContainer {
+  height: calc(50 * var(--rem));
+  width: calc(50 * var(--rem));
 }
 
 /* ***** TESTIMONIALS ***** */

@@ -2,6 +2,8 @@ import React from "react";
 import Layout from "./Layout";
 import map from "./assets/map.jpg";
 
+import Map from "./Map";
+
 export default function Contact() {
   return (
     <Layout>
@@ -45,12 +47,15 @@ export default function Contact() {
               <div className="desc hbot">
                 <h2>Hours</h2>
                 <div>
-                  <p>Monday - Friday: 8:00am - 5:00pm</p>
+                  <p>Monday - Friday: 8:00am - 4:00pm</p>
                   <p>Saturday - Sunday: Closed</p>
                 </div>
               </div>
             </div>
-            <img src={map} alt="map" />
+            {/* <div className="mapContainer"> */}
+            <Map />
+            {/* </div> */}
+            {/* <img src={map} alt="map" /> */}
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import profileJackie from "./assets/profileJackie.JPG";
 import profileMelanie from "./assets/profileMelanie.jpg";
 import profileJuni from "./assets/profileJuni.jpg";
 import profileHenry from "./assets/henryFormalv5.jpg";
+import building from "./assets/buildingOutdoor.jpg";
 
 export default function About() {
   const teamMembers = [
@@ -52,14 +53,17 @@ export default function About() {
         <div className="aboutSection">
           <div className="title">About Our Clinic</div>
           <div className="banner">
-            <p className="crimson-pro-reg">
-              Above all else, we are committed to the care and improvement of
-              human life.
-            </p>
             <div className="photos">
-              <img src={aboutImg1} alt="aboutImg1" />
+              <img src={building} alt="aboutImg1" />
               {/* <img src={aboutImg2} alt="aboutImg2" /> */}
             </div>
+            <p className="crimson-pro-reg">
+              Ejere Wound Care & Hyperbaric Oxygen Therapy is an advanced wound
+              care clinic that aims to provide advanced wound care and
+              hyperbaric services to patients with chronic wounds in Parker
+              County community and environs. Our draw area includes Tarrant
+              County, Paolo Pinto County and Wise County.
+            </p>
           </div>
           <div className="desc mission">
             <h2>Our Mission</h2>

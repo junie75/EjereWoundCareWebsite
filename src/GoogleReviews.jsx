@@ -8,7 +8,7 @@ const GoogleReviews = () => {
   const [reviews, setReviews] = useState([]);
   const { apiKey, placeId } = useGoogleReviews();
   const { isLoaded, loadError } = useJsApiLoader({
-    googleMapsApiKey: apiKey, // Replace with your actual API key
+    googleMapsApiKey: apiKey,
   });
   // const { placeId } = useGoogleReviews();
 
