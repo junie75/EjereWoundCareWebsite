@@ -10,6 +10,7 @@ import WoundCare from "./WoundCare.jsx";
 import Hyperbaric from "./Hyperbaric.jsx";
 import Contact from "./Contact.jsx";
 import Testimonials from "./Testimonials.jsx";
+import { GoogleMapsProvider } from "./GoogleMapsContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -44,8 +45,10 @@ const placeId = "ChIJIy47zAH-UYYRh60sdRD_Blw"; // Replace with your actual Place
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <GoogleReviewsProvider apiKey={apiKey} placeId={placeId}>
-      <RouterProvider router={router} />
-    </GoogleReviewsProvider>
+    <GoogleMapsProvider apiKey={apiKey}>
+      <GoogleReviewsProvider placeId={placeId}>
+        <RouterProvider router={router} />
+      </GoogleReviewsProvider>
+    </GoogleMapsProvider>
   </React.StrictMode>
 );

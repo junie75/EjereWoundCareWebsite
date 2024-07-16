@@ -14,16 +14,18 @@ export default function Hyperbaric() {
               alt="Hyperbaric Oxygen Therapy"
               className="hbotImage"
             />
-            <p>
-              Hyperbaric Oxygen Therapy or “HBOT” is a prescribed treatment
-              approved by the FDA and AMA in which a patient breathes 100%
-              medical grade oxygen while under increased pressure. During
-              treatment the patient can relax by watching a movie, listening to
-              music or just rest. It is a non-invasive, safe method of
-              administering pure oxygen at greater than atmospheric pressure to
-              a patient in order to improve or correct certain conditions or to
-              increase recovery speed.
-            </p>
+            <div className="rowText">
+              <p>
+                Hyperbaric Oxygen Therapy or “HBOT” is a prescribed treatment
+                approved by the FDA and AMA in which a patient breathes 100%
+                medical grade oxygen while under increased pressure. During
+                treatment the patient can relax by watching a movie, listening
+                to music or just rest. It is a non-invasive, safe method of
+                administering pure oxygen at greater than atmospheric pressure
+                to a patient in order to improve or correct certain conditions
+                or to increase recovery speed.
+              </p>
+            </div>
           </div>
           <div className="desc hbot">
             <p>

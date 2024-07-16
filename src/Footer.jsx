@@ -18,13 +18,13 @@ const Footer = () => {
           <span className="material-symbols-outlined icon-small white">
             call
           </span>
-          <p>Phone: 281-713-6543</p>
+          <p>Phone: 682-582-2989</p>
         </li>
         <li>
           <span className="material-symbols-outlined icon-small white">
             fax
           </span>
-          <p>Fax: 713-999-5342</p>
+          <p>Fax: 682-268-2137</p>
         </li>
         <li>
           <span className="material-symbols-outlined icon-small white">

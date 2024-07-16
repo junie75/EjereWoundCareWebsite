@@ -1,23 +1,22 @@
+//component to fetch and display google reviews
 import React, { useEffect, useState } from "react";
 import { useJsApiLoader } from "@react-google-maps/api";
 import { useGoogleReviews } from "./GoogleReviewsContext";
 import Rating from "@mui/material/Rating"; //star rating ui
 import Avatar from "@mui/material/Avatar"; //avatar ui
+import { useGoogleMaps } from "./GoogleMapsContext";
 
 const GoogleReviews = () => {
   const [reviews, setReviews] = useState([]);
-  const { apiKey, placeId } = useGoogleReviews();
-  const { isLoaded, loadError } = useJsApiLoader({
-    googleMapsApiKey: apiKey,
-  });
-  // const { placeId } = useGoogleReviews();
+  const { placeId } = useGoogleReviews();
+  const { isLoaded, loadError } = useGoogleMaps();
 
   useEffect(() => {
     if (isLoaded && placeId) {
       const service = new window.google.maps.places.PlacesService(
         document.createElement("div")
       );
-      console.log(service);
+
       const request = {
         placeId: placeId,
         fields: ["reviews"],

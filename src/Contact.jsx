@@ -28,13 +28,13 @@ export default function Contact() {
                     <span className="material-symbols-outlined icon-medium">
                       call
                     </span>
-                    <p>Phone: 281-713-6543</p>
+                    <p>Phone: 682-582-2989</p>
                   </div>
                   <div className="iconBox">
                     <span className="material-symbols-outlined icon-medium">
                       fax
                     </span>
-                    <p>Fax: 713-999-5342</p>
+                    <p>Fax: 682-268-2137</p>
                   </div>
                   <div className="iconBox">
                     <span className="material-symbols-outlined icon-medium">
