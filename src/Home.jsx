@@ -13,7 +13,7 @@ export default function Home() {
           <div className="smallerText cormorant-garamond-semibold ">
             For Every Wound, Every Patient, Every Time
           </div>
-          <div className="ctaBtn crimson-pro-reg">Book Now</div>
+          <div className="ctaBtn crimson-pro-reg">Request Appointment</div>
         </div>
       </div>
     </Layout>

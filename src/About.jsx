@@ -94,7 +94,7 @@ export default function About() {
             </div> */}
             <div className="promiseBox">
               <div className="iconBox">
-                <span class="material-symbols-outlined icon-large">
+                <span className="material-symbols-outlined icon-large">
                   visibility
                 </span>
               </div>
@@ -108,7 +108,7 @@ export default function About() {
             </div>
             <div className="promiseBox">
               <div className="iconBox">
-                <span class="material-symbols-outlined icon-large">
+                <span className="material-symbols-outlined icon-large">
                   partner_exchange
                 </span>
               </div>

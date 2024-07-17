@@ -56,10 +56,9 @@ export default function Testimonials() {
 
   // Function to generate a letter avatar for each testimonial
   function stringAvatar(name) {
-    console.log(name);
     const letterAvatar =
       name === "J.R." ? "JR" : name.split(" ")[0][0] + name.split(" ")[1][0];
-    console.log(letterAvatar);
+
     return letterAvatar;
   }
 
@@ -76,10 +75,6 @@ export default function Testimonials() {
         </div>
         <div className="googleReviews"></div>
         <div className="testimonialsSection">
-          {/* <div className="reviewBox">
-            <h3>Name</h3>
-            <p>review</p>
-          </div> */}
           <GoogleReviews />
           {testimonials.map((testimonial, index) => (
             <div key={index} className="reviewBox">

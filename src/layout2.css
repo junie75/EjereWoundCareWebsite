@@ -78,14 +78,18 @@ body {
   padding: 0 calc(1 * var(--rem));
 } */
 
-.menuButton {
+.mobile-menu {
+  display: none;
+}
+
+/* .menuButton {
   display: none;
   font-size: calc(2 * var(--rem));
   cursor: pointer;
   padding: calc(1 * var(--rem));
   position: relative;
   z-index: 1001;
-}
+} */
 
 .linkContainer {
   display: flex;
@@ -165,7 +169,7 @@ body {
 .dropdown-menu .dropdown-item {
   /* width: 100%; */
   padding: calc(1 * var(--rem)) calc(1.5 * var(--rem));
-  font-size: calc(1.1 * var(--rem));
+  /* font-size: calc(1.1 * var(--rem)); */
   color: var(--darker-green);
   cursor: pointer;
   text-align: center;
@@ -282,11 +286,27 @@ body {
   }
 
   .linkContainer.open {
-    display: block;
+    /* display: block; */
+    display: none;
   }
 
   .menuButton {
+    /* display: none; */
+    color: white;
+    /* background-color: yellow; */
+    border: 2px solid var(--lightest-green);
+  }
+
+  .mobile-menu {
     display: block;
+    /* position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%; */
+    background-color: none;
+    color: black;
+    /* border: 2px solid var(--lightest-green); */
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
   }
 
   .navbar-menu {

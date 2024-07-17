@@ -47,6 +47,25 @@ import React, { useState } from "react";
 import Logo from "./assets/LogoDesign3UPSCALEDTransparentv3.png";
 import Logo2 from "./assets/LogoSmaller.png";
 import { Link } from "react-router-dom";
+import { NestedDropdown } from "mui-nested-menu";
+import { styled } from "@mui/system";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import { useNavigate } from "react-router-dom";
+
+const CustomMenu = styled(Menu)({
+  "& .MuiPaper-root": {
+    backgroundColor: "white", // Example background color
+    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)", // Example box shadow
+  },
+});
+
+const CustomMenuItem = styled(MenuItem)({
+  color: "black", // Example text color
+  "&:hover": {
+    backgroundColor: "#f0f0f0", // Example hover background color
+  },
+});
 
 function Navigation({ isHomePage }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -55,13 +74,83 @@ function Navigation({ isHomePage }) {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // const history = useHistory();
+  const navigate = useNavigate();
+
+  const handleMenuItemClick = (event, item) => {
+    // console.log(`Clicked: ${item.label}`);
+    // Example navigation based on item label
+    switch (item.label) {
+      case "Home":
+        navigate("/");
+        break;
+      case "About":
+        navigate("/about");
+        break;
+      case "Wound Care":
+        navigate("/services/woundcare");
+        break;
+      case "Hyperbaric":
+        navigate("/services/hbot");
+        break;
+      case "Contact":
+        navigate("/contact");
+        break;
+      case "Testimonials":
+        navigate("/testimonials");
+        break;
+      case "Patient Portal":
+        // navigate("/services/hbot");
+        break;
+      // Add more cases for other menu items as needed
+      default:
+        break;
+    }
+  };
+
+  const menuItemsData = {
+    label: "☰",
+    items: [
+      {
+        label: "Home",
+        callback: handleMenuItemClick,
+      },
+      {
+        label: "About",
+        callback: handleMenuItemClick,
+      },
+      {
+        label: "Services",
+        items: [
+          {
+            label: "Wound Care",
+            callback: handleMenuItemClick,
+          },
+          {
+            label: "Hyperbaric",
+            callback: handleMenuItemClick,
+          },
+        ],
+      },
+      {
+        label: "Contact",
+        callback: handleMenuItemClick,
+      },
+      {
+        label: "Testimonials",
+        callback: handleMenuItemClick,
+      },
+      {
+        label: "Patient Portal",
+        callback: handleMenuItemClick,
+      },
+    ],
+  };
+
   return (
     <div className={`navbar ${isHomePage ? "" : "navSolidBackground"}`}>
       <div className="logoContainer">
         <img src={Logo2} alt="Logo" className="logo" />
-      </div>
-      <div className={"menuButton"} onClick={toggleMenu}>
-        ☰
       </div>
       <div className={`linkContainer ${isMenuOpen ? "open" : ""}`}>
         <ul className="crimson-pro-bold navbar-menu">
@@ -107,6 +196,16 @@ function Navigation({ isHomePage }) {
             Patient Portal
           </li>
         </ul>
+      </div>
+      <div className="mobile-menu">
+        <NestedDropdown
+          menuItemsData={menuItemsData}
+          MenuProps={{ elevation: 3 }}
+          ButtonProps={{
+            variant: "string",
+          }}
+          // onClick={(event, item) => console.log("Clicked", event, item)}
+        />
       </div>
     </div>
   );
