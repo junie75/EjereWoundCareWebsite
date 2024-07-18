@@ -29,38 +29,128 @@ export default function Hyperbaric() {
           </div>
           <div className="desc hbot">
             <p>
-              Failing to achieve your targeted wound care outcomes can be
-              frustrating and costly, especially if you’re not sure exactly
-              what’s stalling your healing process. Some diagnosis qualify for
-              HBO therapy. For decades, hyperbaric oxygen (HBO) has often been
-              part of the treatment of diagnosis such as osteoradionecrosis,
-              soft tissue radionecrosis, osteomyelitis, diabetic foot ulcers and
-              more!
+              When experiencing challenges in reaching your wound care goals,
+              seeking additional support can make a significant difference,
+              especially if you're uncertain about the factors affecting your
+              healing process. Some diagnosis qualify for HBO therapy. For
+              decades, hyperbaric oxygen (HBO) has often been part of the
+              treatment of diagnosis such as osteoradionecrosis, soft tissue
+              radionecrosis, osteomyelitis, diabetic foot ulcers and more!
             </p>
           </div>
           <div className="desc hbot">
             <h2> Benefits of HBOT </h2>
             <p>
-              Many illnesses and injuries fail to heal due to inadequate oxygen
-              levels. Reduced blood flow, swelling, and edema or inflammation
-              create an environment that lacks the ability to heal from lack of
-              oxygen reaching the damaged tissue. Providing oxygen in a
-              pressurized chamber allows the delivery of 10-15 times more oxygen
-              than if it was delivered at sea level or at normal atmospheric
-              pressure. HBOT allows more oxygen into the body under pressure,
-              oxygen dissolves into all of the body’s fluids, including the
-              plasma, the lymphatic fluids, and the cerebrospinal fluids
-              surrounding the brain and spinal cord. These fluids can carry the
-              extra oxygen to areas where circulation is poor or blocked, either
-              by trickling passed the blockages or by seeping into the affected
-              area. This extra oxygen helps in the healing process and enhances
-              the white blood cells ability to fight infection. It can promote
-              the development of new capillaries, the tiny blood vessels that
-              connect arteries to veins. It also helps the body build new
-              connective tissue.
+              Many health conditions and injuries struggle to heal effectively
+              when oxygen levels are insufficient. Factors such as diminished
+              blood flow, swelling, and inflammation can create conditions where
+              the necessary oxygen for tissue repair is scarce.
+              <br /> <br />
+              Using a pressurized chamber to deliver oxygen can vastly improve
+              the situation, providing 10 to 15 times more oxygen than would be
+              available at normal atmospheric pressure. Hyperbaric Oxygen
+              Therapy (HBOT) facilitates the absorption of oxygen into various
+              bodily fluids, including plasma, lymphatic fluid, and
+              cerebrospinal fluid surrounding the brain and spinal cord. This
+              increased oxygen supply can penetrate areas with limited or
+              obstructed circulation, either by bypassing blockages or directly
+              reaching the affected tissues. Enhanced oxygen levels assist in
+              the healing process by strengthening the immune response,
+              fostering the development of new capillaries, and supporting the
+              formation of new connective tissue.
             </p>
           </div>
-          <div className="listContainer row">
+          <div className="desc hbot">
+            <h2>Insurance Covered Indications</h2>
+            <ol>
+              <li>Gas Gangrene</li>
+              <li>
+                Acute Traumatic Peripheral Ischemia
+                <ul>
+                  <li>
+                    HBOT is a valuable adjunctive treatment to be used in
+                    combination with accepted standard therapeutic measures when
+                    loss of function, limb, or life is threatened.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Crush Injury and Suturing Severed Limbs
+                <ul>
+                  <li>
+                    HBOT would be an adjunctive treatment when loss of function,
+                    limb, or life is threatened.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Progressive Necrotizing Infection
+                <ul>
+                  <li>(e.g., Necrotizing Fasciitis)</li>
+                </ul>
+              </li>
+              <li>Acute Peripheral Arterial Insufficiency</li>
+              <li>
+                Preparation and Preservation of Compromised Skin Grafts
+                <ul>
+                  <li>(Not for primary management of wounds)</li>
+                </ul>
+              </li>
+              <li>
+                Chronic Refractory Osteomyelitis
+                <ul>
+                  <li>
+                    (Unresponsive to conventional medical and surgical
+                    management)
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Osteoradionecrosis
+                <ul>
+                  <li>(As an adjunct to conventional treatment)</li>
+                </ul>
+              </li>
+              <li>
+                Soft Tissue Radio Necrosis
+                <ul>
+                  <li>(As an adjunct to conventional treatment)</li>
+                </ul>
+              </li>
+              <li>
+                Actinomycosis
+                <ul>
+                  <li>
+                    (Only as an adjunct to conventional therapy when the disease
+                    process is refractory to antibiotics and surgical treatment)
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Diabetic Wounds of the Lower Extremities
+                <ul>
+                  <li>
+                    In patients who meet the following criteria:
+                    <ul>
+                      <li>
+                        Patient has type I or II diabetes and has a lower
+                        extremity wound due to diabetes
+                      </li>
+                      <li>
+                        Patient has a wound classified as Wagner Grade III or
+                        higher
+                      </li>
+                      <li>
+                        Patient has failed an adequate course of standard wound
+                        therapy
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+          {/* <div className="listContainer row">
             <div className="list">
               <h2>Insurance covered indications</h2>
               <ul>
@@ -86,7 +176,7 @@ export default function Hyperbaric() {
                 <li>Radiologic imaging and vascular studies</li>
               </ul>
             </div>
-          </div>
+          </div> */}
           <div className="desc hbot center">
             <h2>How to get here...</h2>
             <p>

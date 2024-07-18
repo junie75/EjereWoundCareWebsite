@@ -10,9 +10,9 @@ export default function Home() {
             Respectful, <br /> Professional, <br />
             Loving Care
           </div>
-          <div className="smallerText cormorant-garamond-semibold ">
+          {/* <div className="smallerText cormorant-garamond-semibold ">
             For Every Wound, Every Patient, Every Time
-          </div>
+          </div> */}
           <div className="ctaBtn crimson-pro-reg">Request Appointment</div>
         </div>
       </div>

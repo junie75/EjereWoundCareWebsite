@@ -343,7 +343,9 @@ body {
     background-color: #ddd;
   }
 
-  .footer li {
-    font-size: calc(1 * var(--rem));
+  .footer ul {
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
   }
 }

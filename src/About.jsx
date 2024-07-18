@@ -59,21 +59,24 @@ export default function About() {
             </div>
             <p className="crimson-pro-reg">
               Ejere Wound Care & Hyperbaric Oxygen Therapy is an advanced wound
-              care clinic that aims to provide advanced wound care and
-              hyperbaric services to patients with chronic wounds in Parker
-              County community and environs. Our draw area includes Tarrant
-              County, Paolo Pinto County and Wise County.
+              care clinic that aims to provide personalized, compassionate care
+              to patients with chronic wounds in Parker County and surrounding
+              communities.
             </p>
           </div>
           <div className="desc mission">
             <h2>Our Mission</h2>
             <p>
-              Our mission is to provide specialized wound care services with the
+              {/* Our mission is to provide specialized wound care services with the
               highest level of professionalism, respect, compassion, sincerity
               and transparency to our patients, while collaborating and working
               closely with our referring providers and physician colleagues in
               other specialties to facilitate wound healing, prevent limb loss
-              and improve quality of life.
+              and improve quality of life. */}
+              We are dedicated to providing specialized wound care with
+              professionalism, respect, and transparency, collaborating with
+              referring providers to facilitate healing, prevent limb loss, and
+              enhance quality of life.
             </p>
           </div>
           <div className="desc hbot content">
@@ -101,8 +104,10 @@ export default function About() {
               <div className="motto">
                 <h2>Vision</h2>
                 <p>
-                  To be the leading center of excellence and destination of
-                  choice for treating difficult to heal wounds in North Texas.
+                  {/* To be the leading center of excellence and destination of
+                  choice for treating difficult to heal wounds in North Texas. */}
+                  We strive to be the leading center of excellence for wound
+                  healing in North Texas.
                 </p>
               </div>
             </div>
@@ -115,8 +120,10 @@ export default function About() {
               <div className="motto">
                 <h2>Patient Promise</h2>
                 <p>
-                  To provide compassionate, professional, loving care for every
-                  patient, every wound, every time.
+                  {/* To provide compassionate, professional, loving care for every
+                  patient, every wound, every time. */}
+                  We promise to treat every patient with the same love, dignity,
+                  and respect that we would give to our own family.
                 </p>
               </div>
             </div>

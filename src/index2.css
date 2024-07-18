@@ -164,7 +164,7 @@ main {
   padding: calc(1 * var(--rem));
   letter-spacing: calc(0.15 * var(--rem));
   border-radius: 10px;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* ****** ABOUT PAGE ******* */
@@ -454,7 +454,13 @@ main {
   /* width: 80%; */
   background-color: rgba(5, 104, 101, 0.15);
   /* margin-bottom: calc(5 * var(--rem)); */
-  max-height: calc(25 * var(--rem));
+  max-height: calc(55 * var(--rem));
+  flex-direction: column;
+  /* max-height: unset; */
+  align-items: center;
+  max-width: fit-content;
+  width: 90%;
+  /* border: 2px solid red; */
 }
 
 .hbotAd .text {
@@ -464,7 +470,8 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: var(--rem) calc(1.5 * var(--rem));
+  padding: calc(3 * var(--rem)) calc(1.5 * var(--rem));
+  line-height: 1.5;
   /* width: 50%; */
   /* border: 2px solid red; */
 }
@@ -497,13 +504,15 @@ main {
 
 .hbotAd .image {
   display: flex;
-  /* flex: 1; */
-  justify-content: right;
+  flex: 1;
+  justify-content: left;
   /* height: fit-content; */
+  /* border: 2px solid blue; */
 }
 
 .hbotAd .image img {
   height: 100%;
+  /* border: 2px solid var(--darkest-green); */
   /* height: calc(10 * var(--rem)); */
 }
 
@@ -568,6 +577,24 @@ main {
 .desc.hbot.center {
   text-align: center;
   width: 70%;
+}
+
+.desc.hbot ol {
+  margin-left: 20px;
+  line-height: 1.9;
+}
+
+.desc.hbot ul {
+  margin-left: 20px;
+  /* margin-bottom: calc(1.3 * var(--rem)); */
+}
+
+.desc.hbot ul ul {
+  margin-left: 20px;
+}
+
+.desc.hbot ul ul ul {
+  margin-left: 20px;
 }
 
 .listContainer.row {
