@@ -233,7 +233,7 @@ main {
 .banner p {
   text-align: center;
   /* width: 80%; */
-  flex: 1;
+  flex: 2;
   font-size: calc(1.8 * var(--rem));
   font-family: "Noto Serif", serif;
   padding: var(--rem) calc(1.5 * var(--rem));
@@ -257,7 +257,7 @@ main {
   /* height: 50%; */
   display: flex;
   /* flex-direction: column; */
-  flex: 1;
+  flex: 5;
   /* width: 99vw; */
   overflow: hidden;
   box-shadow: 2px 2px 8px #02211f;

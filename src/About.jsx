@@ -6,7 +6,8 @@ import profileJackie from "./assets/profileJackie.JPG";
 import profileMelanie from "./assets/profileMelanie.jpg";
 import profileJuni from "./assets/profileJuni.jpg";
 import profileHenry from "./assets/henryFormalv5.jpg";
-import building from "./assets/buildingOutdoor.jpg";
+// import building from "./assets/officeFrontv2.jpg";
+import building from "./assets/OfficeFrontv3.jpg";
 
 export default function About() {
   const teamMembers = [
