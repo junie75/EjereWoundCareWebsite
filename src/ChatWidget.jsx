@@ -11,9 +11,42 @@ const ChatWidget = ({ isHomePage }) => {
     sessionStorage.getItem("chatWidgetOpened") === "true"
   );
 
+  const [phoneClicked, setPhoneClicked] = useState(false);
+  const [emailClicked, setEmailClicked] = useState(false);
+  const [addressClicked, setAddressClicked] = useState(false);
+  const [faxClicked, setFaxClicked] = useState(false);
+
+  const toggleIcon = (iconName) => {
+    switch (iconName) {
+      case "phone":
+        setPhoneClicked(!phoneClicked);
+        break;
+      case "email":
+        setEmailClicked(!emailClicked);
+        break;
+      case "address":
+        setAddressClicked(!addressClicked);
+        break;
+      case "fax":
+        setFaxClicked(!faxClicked);
+        break;
+      default:
+        break;
+    }
+  };
+
   const toggleWidget = () => {
     //if the widget is open, close it, if it's closed, open it
     setIsOpen(!isOpen);
+
+    //if widget is being closed, close the icon popups
+    if (!isOpen) {
+      setPhoneClicked(false);
+      setEmailClicked(false);
+      setAddressClicked(false);
+      setFaxClicked(false);
+    }
+
     //if the widget is opened for the fist time, set the opened state to true
     if (!isOpen && !opened) {
       setOpened(true);
@@ -35,7 +68,7 @@ const ChatWidget = ({ isHomePage }) => {
   useEffect(() => {
     // localStorage.removeItem("chatWidgetOpened");
     // Shake animation will last 0.5s, so remove it after that
-    if (isHomePage && !opened) {
+    if (!opened) {
       const timer = setTimeout(() => {
         setShouldShake(true);
       }, 3000);
@@ -47,29 +80,29 @@ const ChatWidget = ({ isHomePage }) => {
         clearTimeout(timer2);
       };
     }
-  }, [isHomePage, opened]);
+  }, [opened]);
 
-  const openUserMaps = (event) => {
-    event.preventDefault();
+  // const openUserMaps = (event) => {
+  //   event.preventDefault();
 
-    const query = encodeURIComponent(
-      "Ejere Wound Care and Hyperbaric Oxygen Therapy, 730 Eureka St, Weatherford, TX 76086"
-    );
-    const userAgent = navigator.userAgent;
+  //   const query = encodeURIComponent(
+  //     "Ejere Wound Care and Hyperbaric Oxygen Therapy, 730 Eureka St, Weatherford, TX 76086"
+  //   );
+  //   const userAgent = navigator.userAgent;
 
-    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-      // Open in Apple Maps on iOS
-      // window.location.href = `http://maps.apple.com/?q=${query}`;
-      window.open(`http://maps.apple.com/?q=${query}`, "_blank");
-    } else {
-      // Open in Google Maps on web and Android
-      // window.location.href = `https://www.google.com/maps/search/?api=1&query=${query}`;
-      window.open(
-        `https://www.google.com/maps/search/?api=1&query=${query}`,
-        "_blank"
-      );
-    }
-  };
+  //   if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+  //     // Open in Apple Maps on iOS
+  //     // window.location.href = `http://maps.apple.com/?q=${query}`;
+  //     window.open(`http://maps.apple.com/?q=${query}`, "_blank");
+  //   } else {
+  //     // Open in Google Maps on web and Android
+  //     // window.location.href = `https://www.google.com/maps/search/?api=1&query=${query}`;
+  //     window.open(
+  //       `https://www.google.com/maps/search/?api=1&query=${query}`,
+  //       "_blank"
+  //     );
+  //   }
+  // };
 
   return (
     <div className="widgetContainer">
@@ -82,65 +115,118 @@ const ChatWidget = ({ isHomePage }) => {
         {isOpen && (
           <div className="chat-widget-content">
             <a
-              href="tel:6825822989"
-              className="chat-widget-item"
+              href="#"
+              className={`chat-widget-item ${isOpen ? "roll-out" : ""}`}
               aria-label="Phone"
             >
-              <span className="material-symbols-outlined icon-contact">
+              <span
+                className={`material-symbols-outlined icon-contact ${
+                  phoneClicked ? "join" : ""
+                }`}
+                onClick={() => toggleIcon("phone")}
+              >
+                <span
+                  className={`icon-contact rollOut ${
+                    !phoneClicked ? "hide" : ""
+                  }`}
+                >
+                  {phoneClicked ? "Phone: (682) 582-2898" : ""}
+                </span>
                 phone
-                {/* <span>{"Call us at (682) 582-2898"}</span> */}
               </span>
             </a>
             <a
-              href="mailto:referrals@ejerewoundcare.com"
-              className="chat-widget-item"
+              href="#"
+              className={`chat-widget-item ${isOpen ? "roll-out" : ""}`}
               aria-label="Email"
             >
-              <span className="material-symbols-outlined icon-contact">
+              <span
+                className={`material-symbols-outlined icon-contact ${
+                  emailClicked ? "join" : ""
+                }`}
+                onClick={() => toggleIcon("email")}
+              >
+                <span
+                  className={`icon-contact rollOut ${
+                    !emailClicked ? "hide" : ""
+                  }`}
+                >
+                  {emailClicked ? "referrals@ejerewoundcare.com" : ""}
+                </span>
                 Mail
               </span>
             </a>
             <a
               href="#"
-              onClick={openUserMaps}
-              className="chat-widget-item"
+              // onClick={openUserMaps}
+              className={`chat-widget-item ${isOpen ? "roll-out" : ""}`}
               aria-label="Address"
             >
-              <span className="material-symbols-outlined icon-contact">
+              <span
+                className={`material-symbols-outlined icon-contact ${
+                  addressClicked ? "join" : ""
+                }`}
+                onClick={() => toggleIcon("address")}
+              >
+                <span
+                  className={`icon-contact rollOut ${
+                    !addressClicked ? "hide" : ""
+                  }`}
+                >
+                  {addressClicked
+                    ? "730 Eureka St., Weatherford, TX, 76086"
+                    : ""}
+                </span>
                 location_on
               </span>
             </a>
             <a
-              href="fax:6822682137"
-              className="chat-widget-item"
+              href="#"
+              className={`chat-widget-item ${isOpen ? "roll-out" : ""}`}
               aria-label="Fax"
             >
-              <span className="material-symbols-outlined icon-contact">
+              <span
+                className={`material-symbols-outlined icon-contact ${
+                  faxClicked ? "join" : ""
+                }`}
+                onClick={() => toggleIcon("fax")}
+              >
+                <span
+                  className={`icon-contact rollOut ${
+                    !faxClicked ? "hide" : ""
+                  }`}
+                >
+                  {faxClicked ? "Fax: 682-268-2137" : ""}
+                </span>
                 fax
               </span>
             </a>
           </div>
         )}
         {isOpen ? (
-          <span
-            className="material-symbols-outlined icon-contact chat-widget-toggle"
-            onClick={toggleWidget}
-          >
-            close
-          </span>
-        ) : (
-          <span
-            className={`material-symbols-outlined icon-contact chat-widget-toggle ${
-              shouldShake ? "shake-animation" : ""
-            }`}
-            onClick={toggleWidget}
-          >
-            chat
-            {/* {showNotification && <span className="notifBubble">2</span>} */}
-            <span className={`notifBubble ${showNotification ? "" : "hide"}`}>
-              2
+          <div className="toggleContainer">
+            <span
+              className="material-symbols-outlined icon-contact chat-widget-toggle"
+              onClick={toggleWidget}
+            >
+              close
             </span>
-          </span>
+          </div>
+        ) : (
+          <div className="toggleContainer">
+            <span
+              className={`material-symbols-outlined icon-contact chat-widget-toggle ${
+                shouldShake ? "shake-animation" : ""
+              }`}
+              onClick={toggleWidget}
+            >
+              chat
+              {/* {showNotification && <span className="notifBubble">2</span>} */}
+              <span className={`notifBubble ${showNotification ? "" : "hide"}`}>
+                2
+              </span>
+            </span>
+          </div>
         )}
       </div>
     </div>

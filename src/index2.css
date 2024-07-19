@@ -41,9 +41,9 @@ body {
   background-color: white;
   background-color: var(--watermelon-pink);
   color: white;
-  padding: calc(01 * var(--rem));
+  padding: calc(1 * var(--rem));
   border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .home-background {
