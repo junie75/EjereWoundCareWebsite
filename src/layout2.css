@@ -48,8 +48,8 @@
 
 .logoContainer {
   display: flex;
-  flex: 1;
-  justify-content: left;
+  /* flex: 1; */
+  /* justify-content: left; */
   align-items: center;
   /* border: 2px solid blue; */
 }
@@ -305,6 +305,11 @@
     border: 2px solid var(--lightest-green);
   }
 
+  /* revered menu and logo so that nested menu opens easily on the right side */
+  .navbar {
+    flex-direction: row-reverse;
+  }
+
   .mobile-menu {
     display: block;
     /* position: absolute;
@@ -383,16 +388,14 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow for visibility */
   }
 
-  .linkContainer.open {
-    /* display: block; */
+  /* .linkContainer.open {
     display: none;
-  }
+  } */
 
-  .menuButton {
-    /* display: none; */
-    color: white;
-    /* background-color: yellow; */
-    border: 2px solid var(--lightest-green);
+  .navbar {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    border: 2px solid red;
   }
 
   .mobile-menu {
