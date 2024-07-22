@@ -810,7 +810,7 @@ main {
 @media screen and (max-width: 768px) {
   /* Adjustments for smaller screens (e.g., mobile devices)*/
   :root {
-    --rem: 0.47rem; /* Adjust as needed */
+    --rem: 0.5rem; /* Adjust as needed */
   }
   .home-background {
     background-position: 100% 10%;

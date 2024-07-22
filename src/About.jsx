@@ -15,8 +15,7 @@ export default function About() {
       photo: profileHenry,
       name: "Henry Ejere, MD, MS, FAPWCA, MACP",
       role: "Medical Director",
-      blurb: `Melanie began her nursing career in 2004 as a registered nurse. She holds a Master of Science in nursing and is also certified in hyperbaric oxygen therapy.  She found her calling in wound care and hyperbaric oxygen therapy in 2018.  
-              “I am passionate about impacting my patient’s lives by empowering them with the knowledge and support they need to achieve optimal health and quality of life.”`,
+      blurb: `Dr. Ejere has a background in internal medicine with a special interest, focus, and expertise in treating difficult-to-heal wounds using advanced wound care modalities, including hyperbaric oxygen therapy. With over 30 years of experience as a physician and more than 12 years dedicated to wound care, he boasts a proven track record with a healing rate of over 95%. Discovering the wound care specialty allowed Dr. Ejere to find his true purpose in life. He promises to provide compassionate, professional, and loving care for every patient, treating each one like family.`,
       email: "henry.ejere@ejerewoundcare.com",
       phone: "682-582-2989",
     },
