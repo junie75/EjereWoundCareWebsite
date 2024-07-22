@@ -361,12 +361,17 @@ main {
   background-color: rgba(180, 209, 139, 0.2);
 }
 
-.name {
+.teamMember .name {
   font-size: calc(1.5 * var(--rem));
 }
 
-.role {
+.teamMember .role {
   font-size: calc(1.2 * var(--rem));
+  /* font-style: italic; */
+}
+
+.teamMember .blurb {
+  font-size: calc(1.5 * var(--rem));
   /* font-style: italic; */
 }
 
