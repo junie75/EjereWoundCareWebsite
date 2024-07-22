@@ -55,9 +55,10 @@
 }
 
 .logo {
-  width: calc(25 * var(--rem));
-  margin: calc(0.5 * var(--rem)) calc(1 * var(--rem));
+  /* width: calc(25 * var(--rem)); */
+  margin: calc(0.6 * var(--rem)) calc(1 * var(--rem));
   /* border: 2px solid var(--lightest-green); */
+  max-height: 7vh;
 }
 
 /* .linkContainer {
@@ -270,8 +271,9 @@
 /* Portrait tablets and large phones */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .logo {
-    width: calc(20 * var(--rem));
+    /* width: calc(20 * var(--rem)); */
     /* margin: calc(0.5 * var(--rem)) 0; */
+    max-height: 5vh;
   }
 
   /* .linkContainer {
@@ -309,6 +311,7 @@
   .navbar {
     flex-direction: row-reverse;
     justify-content: space-between;
+    /* width: 62%; */
   }
 
   .mobile-menu {
@@ -366,8 +369,9 @@
 
 @media (max-width: 768px) {
   .logo {
-    width: calc(20 * var(--rem));
+    /* width: calc(20 * var(--rem)); */
     /* margin: calc(0.5 * var(--rem)) 0; */
+    max-height: 5vh;
   }
 
   /* .linkContainer {
@@ -396,6 +400,7 @@
   .navbar {
     flex-direction: row-reverse;
     justify-content: space-between;
+    /* width: 80vw; */
     /* border: 2px solid red; */
   }
 

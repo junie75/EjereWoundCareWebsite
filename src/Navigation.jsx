@@ -45,7 +45,8 @@
 
 import React, { useState } from "react";
 import Logo from "./assets/LogoDesign3UPSCALEDTransparentv3.png";
-import Logo2 from "./assets/LogoSmaller.png";
+import Logo2 from "./assets/RedoneLogoTransLargerv2.png";
+// import Logo2 from "./assets/LogoSmaller.png";
 import { Link } from "react-router-dom";
 import { NestedDropdown } from "mui-nested-menu";
 import { styled } from "@mui/system";
