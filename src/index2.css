@@ -814,7 +814,7 @@ main {
 /* Portrait tablets and large phones */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   :root {
-    --rem: 0.5rem; /* Adjust as needed */
+    --rem: 0.6rem; /* Adjust as needed */
   }
   .home-background {
     background-position: 100% 10%;
@@ -950,7 +950,7 @@ main {
 @media screen and (max-width: 768px) {
   /* Adjustments for smaller screens (e.g., mobile devices)*/
   :root {
-    --rem: 0.5rem; /* Adjust as needed */
+    --rem: 0.6rem; /* Adjust as needed */
   }
   .home-background {
     background-position: 100% 10%;
