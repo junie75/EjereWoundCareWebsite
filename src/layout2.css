@@ -308,6 +308,7 @@
   /* revered menu and logo so that nested menu opens easily on the right side */
   .navbar {
     flex-direction: row-reverse;
+    justify-content: space-between;
   }
 
   .mobile-menu {
@@ -395,7 +396,7 @@
   .navbar {
     flex-direction: row-reverse;
     justify-content: space-between;
-    border: 2px solid red;
+    /* border: 2px solid red; */
   }
 
   .mobile-menu {
