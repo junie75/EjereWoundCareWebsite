@@ -802,13 +802,148 @@ main {
 }
 
 @media screen and (max-width: 1024px) {
-  /* Adjustments for smaller screens (e.g., mobile devices)*/
   /* .homeDiv {
     width: 90vw;
     height: 40%;
   } */
   .home-background {
     background-position: 35% 10%;
+  }
+}
+
+/* Portrait tablets and large phones */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  :root {
+    --rem: 0.5rem; /* Adjust as needed */
+  }
+  .home-background {
+    background-position: 100% 10%;
+  }
+
+  .homeDiv {
+    height: 40%;
+    width: 90vw;
+    /* border: 2px solid red; */
+    /* justify-content: center; */
+  }
+
+  .hugeText {
+    font-size: calc(6.5 * var(--rem));
+  }
+
+  .smallerText {
+    font-size: calc(3.5 * var(--rem));
+  }
+
+  .ctaBtn {
+    font-size: calc(2 * var(--rem));
+  }
+
+  .container {
+    justify-content: center;
+  }
+
+  .pageContainer {
+    width: 100%;
+  }
+
+  .homeDiv {
+    height: 60%;
+  }
+
+  .rowSection {
+    flex-direction: column;
+
+    p {
+      text-align: left;
+      padding: unset;
+      padding-top: calc(2 * var(--rem));
+    }
+
+    /* img {
+      height: calc(10 * var(--rem));
+    } */
+  }
+
+  .aboutSection .banner {
+    flex-direction: column;
+    /* object-fit: cover; */
+    object-position: center 30%;
+    justify-content: space-around;
+    /* margin-bottom:  */
+    width: 90%;
+
+    p {
+      width: 100%;
+      flex: unset;
+      margin-top: calc(2 * var(--rem));
+    }
+  }
+
+  .photos {
+    flex-direction: column;
+  }
+
+  .desc.mission {
+    width: 100%;
+  }
+
+  .teamMember {
+    /* flex-direction: column; */
+    width: 90%;
+    align-items: center;
+  }
+
+  .aboutSection .desc.hbot.content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    row-gap: calc(2 * var(--rem));
+  }
+
+  .motto {
+    /* width: 100%; */
+    height: unset;
+    justify-content: left;
+  }
+
+  .contactSection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonialsSection {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+
+  .hbotAd {
+    flex-direction: column;
+    max-height: unset;
+    align-items: center;
+    max-width: fit-content;
+    width: 90%;
+    /* width: 100%;
+    margin-bottom: calc(2 * var(--rem)); */
+
+    .text {
+      padding: calc(1.5 * var(--rem)) 0;
+      flex: 1;
+      height: 100%;
+    }
+
+    .image {
+      flex: 1;
+      justify-content: center;
+    }
+
+    .image img {
+      height: calc(20 * var(--rem));
+      /* height: unset; */
+      /* width: 100%; */
+      /* max-height: 100%; */
+    }
   }
 }
 
