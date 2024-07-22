@@ -964,7 +964,7 @@ main {
   }
 
   .hugeText {
-    font-size: calc(6.3 * var(--rem));
+    font-size: calc(6 * var(--rem));
   }
 
   .smallerText {
