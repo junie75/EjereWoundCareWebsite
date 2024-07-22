@@ -42,8 +42,8 @@ export default function About() {
       photo: profileJuni,
       name: "Juni Ejere, BA CIS",
       role: "Software Optimization Specialist",
-      blurb: `Melanie began her nursing career in 2004 as a registered nurse. She holds a Master of Science in nursing and is also certified in hyperbaric oxygen therapy.  She found her calling in wound care and hyperbaric oxygen therapy in 2018.  
-              “I am passionate about impacting my patient’s lives by empowering them with the knowledge and support they need to achieve optimal health and quality of life.”`,
+      blurb: `Juni began her career in 2024 after graduating Summa Cum Laude in Computer Information Systems. She is  serving as the Software Optimization Specialist for the clinic, where she leverages technology to optimize operations through implementing automation opportunities, digitizing paper-based processes, and developing custom software solutions. 
+"Innovation begins by simply asking how a task can be performed more efficiently and then building the solution. I am passionate about simplifying the lives of healthcare professionals and transforming any vision into reality."`,
       email: "juni.ejere@ejerewoundcare.com",
       phone: "682-582-2989",
     },
