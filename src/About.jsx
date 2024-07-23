@@ -41,7 +41,7 @@ export default function About() {
       photo: profileJuni,
       name: "Juni Ejere, BA CIS",
       role: "Software Optimization Specialist",
-      blurb: `Juni began her career in 2024 after graduating Summa Cum Laude in Computer Information Systems. She is  serving as the Software Optimization Specialist for the clinic, where she leverages technology to optimize operations through implementing automation opportunities, digitizing paper-based processes, and developing custom software solutions. 
+      blurb: `Juni began her career after graduating from St. Mary's University with a degree in Computer Information Systems. She is  serving as the Software Optimization Specialist for the clinic, where she leverages technology to optimize operations through implementing automation opportunities, digitizing paper-based processes, and developing custom software solutions. 
 "Innovation begins by simply asking how a task can be performed more efficiently and then building the solution. I am passionate about simplifying the lives of healthcare professionals and transforming any vision into reality."`,
       email: "juni.ejere@ejerewoundcare.com",
       phone: "682-582-2989",
