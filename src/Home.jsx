@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "./Layout";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -13,7 +14,14 @@ export default function Home() {
           {/* <div className="smallerText cormorant-garamond-semibold ">
             For Every Wound, Every Patient, Every Time
           </div> */}
-          <div className="ctaBtn crimson-pro-reg">Request Appointment</div>
+          <div className="ctaBtn crimson-pro-reg">
+            <Link
+              to={"https://patientportal.advancedmd.com/159009/onlineintake"}
+              target="_blank"
+            >
+              Request Appointment
+            </Link>
+          </div>
         </div>
       </div>
     </Layout>

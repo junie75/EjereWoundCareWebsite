@@ -166,7 +166,18 @@ main {
   letter-spacing: calc(0.15 * var(--rem));
   border-radius: 10px;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+  text-decoration-line: none;
 }
+
+.ctaBtn a {
+  text-decoration-line: none;
+  color: white;
+}
+
+/* .ctaBtn:visited {
+  color: white;
+  text-decoration-line: none;
+} */
 
 /* ****** ABOUT PAGE ******* */
 

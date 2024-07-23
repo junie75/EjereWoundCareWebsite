@@ -80,6 +80,7 @@ function Navigation({ isHomePage }) {
   // const history = useHistory();
   const navigate = useNavigate();
 
+  //mobile menu location clicks
   const handleMenuItemClick = (event, item) => {
     // console.log(`Clicked: ${item.label}`);
     // Example navigation based on item label
@@ -103,7 +104,11 @@ function Navigation({ isHomePage }) {
         navigate("/testimonials");
         break;
       case "Patient Portal":
-        // navigate("/services/hbot");
+        //open patient portal in new tab
+        window.open(
+          "https://pp-wfe-100.advancedmd.com/159009/account/logon",
+          "_blank"
+        );
         break;
       // Add more cases for other menu items as needed
       default:
@@ -196,7 +201,12 @@ function Navigation({ isHomePage }) {
             </Link>
           </li>
           <li className={`navbar-item ${isMenuOpen ? "" : "portal"}`}>
-            Patient Portal
+            <Link
+              to="https://pp-wfe-100.advancedmd.com/159009/account/logon"
+              target="_blank"
+            >
+              Patient Portal
+            </Link>
           </li>
         </ul>
       </div>

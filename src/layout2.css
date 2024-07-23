@@ -150,6 +150,10 @@
   /* border: 2px solid blue; */
 }
 
+.navbar-item.portal a {
+  color: white;
+}
+
 .navbar-item.services {
   position: relative;
 }
