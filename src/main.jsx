@@ -10,6 +10,7 @@ import WoundCare from "./WoundCare.jsx";
 import Hyperbaric from "./Hyperbaric.jsx";
 import Contact from "./Contact.jsx";
 import Testimonials from "./Testimonials.jsx";
+import NotFound from "./NotFound.jsx";
 import { GoogleMapsProvider } from "./GoogleMapsContext.jsx";
 
 const router = createBrowserRouter([
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/testimonials",
     element: <Testimonials />,
+  },
+  {
+    path: "*", // This is a catch-all route
+    element: <NotFound />, // This component will be displayed when no other route matches
   },
 ]);
 
