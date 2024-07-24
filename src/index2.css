@@ -47,8 +47,10 @@ body {
 }
 
 .home-background {
-  /* background-image: url(public/assets/aitree.jpg); */
-  background-image: url(aitree.jpg);
+  /* background-image: url(src/assets/johann-siemens-EPy0gBJzzZU-unsplash.jpg); */
+  /* background-image: url(src/assets/unsplashTree.jpg); */
+
+  background-image: url(unsplashTree.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 20%;
@@ -132,7 +134,7 @@ main {
   flex-direction: column;
   /* flex: 1; */
   height: 70%;
-  width: 70vw;
+  width: 50vw;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -789,6 +791,16 @@ main {
   height: 80vh;
 }
 
+/* for huge screens */
+@media (min-width: 1920px) {
+  .hugeText {
+    font-size: calc(8 * var(--rem));
+  }
+  .ctaBtn {
+    font-size: calc(2.5 * var(--rem));
+  }
+}
+
 @media (max-width: 1445px) {
   :root {
     --rem: 0.56rem; /* Adjust as needed */
@@ -876,7 +888,7 @@ main {
   }
 
   .ctaBtn {
-    font-size: calc(2 * var(--rem));
+    font-size: calc(3 * var(--rem));
   }
 
   .container {
@@ -1004,7 +1016,7 @@ main {
   }
 
   .hugeText {
-    font-size: calc(5.8 * var(--rem));
+    font-size: calc(5.3 * var(--rem));
   }
 
   .smallerText {

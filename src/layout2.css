@@ -40,6 +40,7 @@
   /* background-color: var(--lightest-green); */
   /* border: 2px blue solid; */
   z-index: 1000;
+  padding: calc(0.5 * var(--rem)) calc(1 * var(--rem));
 }
 
 .navSolidBackground {
@@ -52,13 +53,14 @@
   /* justify-content: left; */
   align-items: center;
   /* border: 2px solid blue; */
+  /* padding: calc(1 * var(--rem)); */
 }
 
 .logo {
   /* width: calc(25 * var(--rem)); */
-  margin: calc(0.6 * var(--rem)) calc(1 * var(--rem));
+  /* margin: calc(0.6 * var(--rem)) calc(1 * var(--rem)); */
   /* border: 2px solid var(--lightest-green); */
-  max-height: 7vh;
+  max-height: 10vh;
 }
 
 /* .linkContainer {
@@ -96,6 +98,7 @@
   display: flex;
   flex: 4;
   margin: 0 calc(1 * var(--rem));
+  /* border: 2px yellow solid; */
 }
 
 .navbar-menu {
@@ -277,7 +280,7 @@
   .logo {
     /* width: calc(20 * var(--rem)); */
     /* margin: calc(0.5 * var(--rem)) 0; */
-    max-height: 5vh;
+    max-height: 7vh;
   }
 
   /* .linkContainer {
@@ -375,7 +378,7 @@
   .logo {
     /* width: calc(20 * var(--rem)); */
     /* margin: calc(0.5 * var(--rem)) 0; */
-    max-height: 5vh;
+    max-height: 7vh;
   }
 
   /* .linkContainer {
