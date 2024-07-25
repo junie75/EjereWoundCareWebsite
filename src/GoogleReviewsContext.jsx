@@ -1,19 +1,21 @@
 //context that provides the Google API key and place ID to the GoogleReviews component
-import React, { createContext, useContext } from "react";
+// ****NO LONGER USED*****
 
-// src/GoogleReviewsContext.js
 // import React, { createContext, useContext } from "react";
 
-const GoogleReviewsContext = createContext();
+// // src/GoogleReviewsContext.js
+// // import React, { createContext, useContext } from "react";
 
-export const GoogleReviewsProvider = ({ apiKey, children }) => {
-  return (
-    <GoogleReviewsContext.Provider value={{ apiKey }}>
-      {children}
-    </GoogleReviewsContext.Provider>
-  );
-};
+// const GoogleReviewsContext = createContext();
 
-export const useGoogleReviews = () => {
-  return useContext(GoogleReviewsContext);
-};
+// export const GoogleReviewsProvider = ({ apiKey, children }) => {
+//   return (
+//     <GoogleReviewsContext.Provider value={{ apiKey }}>
+//       {children}
+//     </GoogleReviewsContext.Provider>
+//   );
+// };
+
+// export const useGoogleReviews = () => {
+//   return useContext(GoogleReviewsContext);
+// };
