@@ -42,7 +42,7 @@ export default function Contact() {
                     <span className="material-symbols-outlined icon-medium">
                       mail
                     </span>
-                    <p>Email: info@ejerewoundcare.com</p>
+                    <p>Email: referrals@ejerewoundcare.com</p>
                   </div>
                 </div>
               </div>

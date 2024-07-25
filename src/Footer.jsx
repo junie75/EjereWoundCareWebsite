@@ -30,7 +30,7 @@ const Footer = () => {
           <span className="material-symbols-outlined icon-small white">
             mail
           </span>
-          <p>Email: info@ejerewoundcare.com</p>
+          <p>Email: referrals@ejerewoundcare.com</p>
         </li>
       </ul>
       {/* </div> */}
