@@ -700,9 +700,14 @@ main {
 .testimonialsSection {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* grid-template-rows: repeat(2, 1fr); */
   gap: calc(3 * var(--rem));
-  /* border: 2px solid red; */
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-wrap: wrap;
+   */
+  width: 80%;
 }
 
 .reviewBox {
@@ -719,30 +724,31 @@ main {
   text-align: center;
   line-height: 1.3;
   box-shadow: 2px 2px 12px #02211f56;
+  /* margin: 0 calc(8 * var(--rem)); */
 }
 
 /* ***** GOOGLE REVIEWS ***** */
 
-.googleReviewContainer {
+/* .googleReviewContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: calc(3 * var(--rem)) calc(10 * var(--rem));
-}
+} */
 
-.googleReviewBox {
+/* .googleReviewBox {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: calc(2 * var(--rem));
-  background-color: white;
-  /* border: 2px solid red; */
-  /* height: calc(20 * var(--rem));
+  background-color: white; */
+/* border: 2px solid red; */
+/* height: calc(20 * var(--rem));
   width: calc(50 * var(--rem)); */
-  text-align: left;
+/* text-align: left;
   line-height: 1.3;
   box-shadow: 2px 2px 12px #02211f56;
-}
+} */
 
 /* Media queries for responsive design */
 /* @media (min-width: 1600px) {

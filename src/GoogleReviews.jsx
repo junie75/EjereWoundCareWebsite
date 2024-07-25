@@ -1,58 +1,66 @@
 //component to fetch and display google reviews
-import React, { useEffect, useState } from "react";
-import { useJsApiLoader } from "@react-google-maps/api";
-import { useGoogleReviews } from "./GoogleReviewsContext";
-import Rating from "@mui/material/Rating"; //star rating ui
-import Avatar from "@mui/material/Avatar"; //avatar ui
-import { useGoogleMaps } from "./GoogleMapsContext";
+//***NO LONGER USING THIS COMPONENT *** */
 
-const GoogleReviews = () => {
-  const [reviews, setReviews] = useState([]);
-  const { placeId } = useGoogleReviews();
-  const { isLoaded, loadError } = useGoogleMaps();
+// import React, { useEffect, useState } from "react";
+// import { useJsApiLoader } from "@react-google-maps/api";
+// import { useGoogleReviews } from "./GoogleReviewsContext";
+// import Rating from "@mui/material/Rating"; //star rating ui
+// import Avatar from "@mui/material/Avatar"; //avatar ui
+// import { useGoogleMaps } from "./GoogleMapsContext";
 
-  useEffect(() => {
-    if (isLoaded && placeId) {
-      const service = new window.google.maps.places.PlacesService(
-        document.createElement("div")
-      );
+// const GoogleReviews = () => {
+//   const [reviews, setReviews] = useState([]);
+//   const { placeId } = useGoogleReviews();
+//   const { isLoaded, loadError } = useGoogleMaps();
 
-      const request = {
-        placeId: placeId,
-        fields: ["reviews"],
-      };
+//   useEffect(() => {
+//     if (isLoaded && placeId) {
+//       const service = new window.google.maps.places.PlacesService(
+//         document.createElement("div")
+//       );
 
-      service.getDetails(request, (place, status) => {
-        if (status === window.google.maps.places.PlacesServiceStatus.OK) {
-          setReviews(place.reviews || []);
-        }
-      });
-    }
-  }, [isLoaded, placeId]);
+//       const request = {
+//         placeId: placeId,
+//         fields: ["reviews"],
+//       };
 
-  if (loadError)
-    return <p>Error loading Google Maps API: {loadError.message}</p>;
-  if (!isLoaded) return <p>Loading Google Maps API...</p>;
+//       service.getDetails(request, (place, status) => {
+//         if (status === window.google.maps.places.PlacesServiceStatus.OK) {
+//           setReviews(place.reviews || []);
+//         }
+//       });
+//     }
+//   }, [isLoaded, placeId]);
 
-  return (
-    // <div className="testimonialsSection">
-    <>
-      {reviews.length > 0 ? (
-        reviews.map((review, index) => (
-          <div key={index} className="googleReviewBox">
-            <Avatar src={review.profile_photo_url} alt="author photo" />
-            <h3 className="crimson-pro-bold">{review.author_name}</h3>
-            <Rating name="read-only" value={review.rating} readOnly />
-            <p className="crimson-pro-reg">{review.text}</p>
-            {/* <p>Rating: {review.rating}</p> */}
-          </div>
-        ))
-      ) : (
-        <p>No reviews available.</p>
-      )}
-    </>
-    // </div>
-  );
-};
+//   if (loadError)
+//     return <p>Error loading Google Maps API: {loadError.message}</p>;
+//   if (!isLoaded) return <p>Loading Google Maps API...</p>;
 
-export default GoogleReviews;
+//   return (
+//     // <div className="testimonialsSection">
+//     <>
+//       {reviews.length > 0 ? (
+//         reviews
+//           .filter(
+//             (review) =>
+//               !review.text.toLowerCase().includes("medical city") &&
+//               !review.text.toLowerCase().includes("jenne")
+//           )
+//           .map((review, index) => (
+//             <div key={index} className="googleReviewBox">
+//               <Avatar src={review.profile_photo_url} alt="author photo" />
+//               <h3 className="crimson-pro-bold">{review.author_name}</h3>
+//               <Rating name="read-only" value={review.rating} readOnly />
+//               <p className="crimson-pro-reg">{review.text}</p>
+//               {/* <p>Rating: {review.rating}</p> */}
+//             </div>
+//           ))
+//       ) : (
+//         <p>No reviews available.</p>
+//       )}
+//     </>
+//     // </div>
+//   );
+// };
+
+// export default GoogleReviews;

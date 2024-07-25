@@ -46,12 +46,12 @@ const router = createBrowserRouter([
 ]);
 
 const apiKey = "AIzaSyBwuvKlEH3rxAxRLVOgENDdwfHORHGhAa4"; // Replace with your actual API Key
-const placeId = "ChIJIy47zAH-UYYRh60sdRD_Blw"; // Replace with your actual Place ID
+// const placeId = "ChIJIy47zAH-UYYRh60sdRD_Blw"; // ***** NO LONGER USING FOR REVIEWS *****
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <GoogleMapsProvider apiKey={apiKey}>
-      <GoogleReviewsProvider placeId={placeId}>
+      <GoogleReviewsProvider>
         <RouterProvider router={router} />
       </GoogleReviewsProvider>
     </GoogleMapsProvider>

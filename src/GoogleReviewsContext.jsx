@@ -6,9 +6,9 @@ import React, { createContext, useContext } from "react";
 
 const GoogleReviewsContext = createContext();
 
-export const GoogleReviewsProvider = ({ apiKey, placeId, children }) => {
+export const GoogleReviewsProvider = ({ apiKey, children }) => {
   return (
-    <GoogleReviewsContext.Provider value={{ apiKey, placeId }}>
+    <GoogleReviewsContext.Provider value={{ apiKey }}>
       {children}
     </GoogleReviewsContext.Provider>
   );

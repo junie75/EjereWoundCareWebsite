@@ -3,7 +3,7 @@ import React, { createContext, useContext } from "react";
 import { useJsApiLoader } from "@react-google-maps/api";
 
 const GoogleMapsContext = createContext();
-const libraries = ["places"];
+// const libraries = ["places"];
 
 export const GoogleMapsProvider = ({ apiKey, children }) => {
   //deine libraries as a constant array to load google places api
@@ -11,7 +11,7 @@ export const GoogleMapsProvider = ({ apiKey, children }) => {
   //load google maps api seperately from google reviews
   const { isLoaded, loadError } = useJsApiLoader({
     googleMapsApiKey: apiKey,
-    libraries: libraries,
+    // libraries: libraries,
   });
 
   return (
