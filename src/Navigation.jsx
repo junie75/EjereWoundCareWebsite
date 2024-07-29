@@ -158,7 +158,9 @@ function Navigation({ isHomePage }) {
   return (
     <div className={`navbar ${isHomePage ? "" : "navSolidBackground"}`}>
       <div className="logoContainer">
-        <img src={Logo2} alt="Logo" className="logo" />
+        <Link to="/">
+          <img src={Logo2} alt="Logo" className="logo" />
+        </Link>
       </div>
       <div className={`linkContainer ${isMenuOpen ? "open" : ""}`}>
         <ul className="crimson-pro-bold navbar-menu">
