@@ -8,6 +8,72 @@ import profileJuni from "./assets/profileJuni.jpg";
 import profileHenry from "./assets/henryFormalv5.jpg";
 // import building from "./assets/officeFrontv2.jpg";
 import building from "./assets/OfficeFrontv3.jpg";
+import carousel1 from "./assets/carousel1-min.jpg";
+import carousel2 from "./assets/carousel2-min.jpg";
+import carousel3 from "./assets/carousel3-min.jpg";
+import carousel4 from "./assets/carousel4-min.JPG";
+import carousel5 from "./assets/carousel5-min.JPG";
+import carousel6 from "./assets/carousel6-min.jpg";
+import { Carousel } from "react-responsive-carousel";
+
+const carouselImages = [
+  carousel1,
+  carousel2,
+  carousel3,
+  carousel4,
+  carousel5,
+  carousel6,
+];
+
+const tooglesGroupId = "Toggles";
+const valuesGroupId = "Values";
+const mainGroupId = "Main";
+
+const getConfigurableProps = () => ({
+  showArrows: true,
+  showStatus: true,
+  showIndicators: true,
+  infiniteLoop: true,
+  showThumbs: true,
+  useKeyboardArrows: true,
+  autoPlay: true,
+  stopOnHover: true,
+  swipeable: true,
+  dynamicHeight: true,
+  emulateTouch: true,
+  autoFocus: false,
+  thumbWidth: 100,
+  selectedItem: 0,
+  interval: 5000,
+  transitionTime: 500,
+  swipeScrollTolerance: 5,
+  ariaLabel: undefined,
+});
+
+const slideShow = () => (
+  <Carousel
+    {...getConfigurableProps()}
+    // showArrows={true}
+    // showStatus={true}
+    // showIndicators={true}
+    // infiniteLoop={true}
+    // useKeyboardArrows={true}
+    // autoPlay={true}
+    // swipeable={true}
+  >
+    {carouselImages.map((image, index) => (
+      <div key={index}>
+        <img src={image} alt={`carousel${index + 1}`} />
+        <p className="legend crimson-pro-reg">
+          Ejere Wound Care & Hyperbaric Oxygen Therapy is an advanced wound care
+          clinic that aims to provide personalized, compassionate care to
+          patients with chronic wounds in Parker County and surrounding
+          communities.
+        </p>
+      </div>
+    ))}
+  </Carousel>
+);
 
 export default function About() {
   const teamMembers = [
@@ -53,16 +119,17 @@ export default function About() {
         <div className="aboutSection">
           <div className="title">About Our Clinic</div>
           <div className="banner">
-            <div className="photos">
+            {/* <div className="photos">
               <img src={building} alt="aboutImg1" />
-              {/* <img src={aboutImg2} alt="aboutImg2" /> */}
-            </div>
-            <p className="crimson-pro-reg">
+              {/* <img src={aboutImg2} alt="aboutImg2" /> /}
+            </div> */}
+            {slideShow()}
+            {/* <p className="crimson-pro-reg">
               Ejere Wound Care & Hyperbaric Oxygen Therapy is an advanced wound
               care clinic that aims to provide personalized, compassionate care
               to patients with chronic wounds in Parker County and surrounding
               communities.
-            </p>
+            </p> */}
           </div>
           <div className="desc mission">
             <h2>Our Mission</h2>
