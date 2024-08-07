@@ -31,7 +31,7 @@ const valuesGroupId = "Values";
 const mainGroupId = "Main";
 
 const getConfigurableProps = () => ({
-  showArrows: true,
+  showArrows: false,
   showStatus: false,
   showIndicators: true,
   infiniteLoop: true,
