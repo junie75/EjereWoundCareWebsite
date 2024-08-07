@@ -15,6 +15,7 @@ import carousel4 from "./assets/carousel4-min.JPG";
 import carousel5 from "./assets/carousel5-min.JPG";
 import carousel6 from "./assets/carousel6-min.jpg";
 import { Carousel } from "react-responsive-carousel";
+import "./CustomCarousel.css";
 
 const carouselImages = [
   carousel1,
@@ -31,15 +32,15 @@ const mainGroupId = "Main";
 
 const getConfigurableProps = () => ({
   showArrows: true,
-  showStatus: true,
+  showStatus: false,
   showIndicators: true,
   infiniteLoop: true,
-  showThumbs: true,
+  showThumbs: false,
   useKeyboardArrows: true,
   autoPlay: true,
   stopOnHover: true,
   swipeable: true,
-  dynamicHeight: true,
+  dynamicHeight: false,
   emulateTouch: true,
   autoFocus: false,
   thumbWidth: 100,
@@ -62,9 +63,9 @@ const slideShow = () => (
     // swipeable={true}
   >
     {carouselImages.map((image, index) => (
-      <div key={index}>
-        <img src={image} alt={`carousel${index + 1}`} />
-        <p className="legend crimson-pro-reg">
+      <div className="slide" key={index}>
+        <img className="slideImage" src={image} alt={`carousel${index + 1}`} />
+        <p className=" slideText legend crimson-pro-reg ">
           Ejere Wound Care & Hyperbaric Oxygen Therapy is an advanced wound care
           clinic that aims to provide personalized, compassionate care to
           patients with chronic wounds in Parker County and surrounding
@@ -124,12 +125,12 @@ export default function About() {
               {/* <img src={aboutImg2} alt="aboutImg2" /> /}
             </div> */}
             {slideShow()}
-            {/* <p className="crimson-pro-reg">
+            <p className="crimson-pro-reg bannerText">
               Ejere Wound Care & Hyperbaric Oxygen Therapy is an advanced wound
               care clinic that aims to provide personalized, compassionate care
               to patients with chronic wounds in Parker County and surrounding
               communities.
-            </p> */}
+            </p>
           </div>
           <div className="desc mission">
             <h2>Our Mission</h2>

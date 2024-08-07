@@ -236,7 +236,7 @@ main {
 .banner {
   display: flex;
   /* height: 50%; */
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: calc(5 * var(--rem));
@@ -244,7 +244,8 @@ main {
   width: 100%;
 }
 
-.banner p {
+.bannerText {
+  display: none;
   text-align: center;
   /* width: 80%; */
   flex: 2;
@@ -959,6 +960,10 @@ main {
     /* border: 2px solid red; */
     row-gap: calc(2 * var(--rem));
   }
+  .bannerText {
+    display: unset;
+    font-size: calc(1.8 * var(--rem));
+  }
 
   .motto {
     /* width: 100%; */
@@ -1067,11 +1072,16 @@ main {
     /* margin-bottom:  */
     width: 90%;
 
-    p {
+    /* p {
       width: 100%;
       flex: unset;
       margin-top: calc(2 * var(--rem));
-    }
+    } */
+  }
+
+  .bannerText {
+    display: unset;
+    font-size: calc(1.8 * var(--rem));
   }
 
   .photos {
