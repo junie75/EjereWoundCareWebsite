@@ -103,10 +103,30 @@
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwuvKlEH3rxAxRLVOgENDdwfHORHGhAa4&libraries=places"></script> -->
 
     <!-- react-responsive-carousel css link -->
+    <!-- <link
+      rel="stylesheet"
+      href="node_modules/react-responsive-carousel/lib/styles/carousel.min.css"
+    /> -->
+
+    <!-- Preload the carousel CSS -->
+    <link
+      rel="preload"
+      href="node_modules/react-responsive-carousel/lib/styles/carousel.min.css"
+      as="style"
+    />
+
+    <!-- Load the carousel CSS asynchronously -->
     <link
       rel="stylesheet"
       href="node_modules/react-responsive-carousel/lib/styles/carousel.min.css"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="node_modules/react-responsive-carousel/lib/styles/carousel.min.css"
+    /></noscript>
 
     <!-- canonical link for SEO -->
     <link rel="canonical" href="https://ejerewoundcare.com" />
