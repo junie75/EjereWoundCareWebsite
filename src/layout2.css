@@ -60,6 +60,8 @@
   /* width: calc(25 * var(--rem)); */
   /* margin: calc(0.6 * var(--rem)) calc(1 * var(--rem)); */
   /* border: 2px solid var(--lightest-green); */
+  width: 100%;
+  height: auto;
   max-height: 10vh;
 }
 
@@ -255,6 +257,10 @@
   justify-content: left;
   align-items: center;
   column-gap: calc(0.2 * var(--rem));
+}
+
+.footer-placeholder {
+  height: 76px; /* Adjust based on the actual height of the footer */
 }
 
 .icon-small.white {
