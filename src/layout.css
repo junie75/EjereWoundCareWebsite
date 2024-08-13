@@ -34,8 +34,9 @@ body {
   /* background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px); */
   position: fixed;
-  width: 100%;
+  width: 100vw;
   left: 0;
+  min-height: 50px;
   /* background-color: var(--lightest-green); */
   /* border: 2px blue solid; */
   z-index: 1000;
@@ -140,7 +141,7 @@ main {
   /* position: fixed;
   bottom: 0;
   left: 0; */
-  width: 100%;
+  width: 100vw;
   /* z-index: 1000; */
   /* border: 2px solid var(--lightest-green); */
 }
@@ -163,6 +164,12 @@ ul {
   justify-content: left;
   align-items: center;
   column-gap: 0.2rem;
+}
+
+.footer-placeholder {
+  height: 60px;
+  border: 2px solid red;
+  width: 100vw;
 }
 
 .material-symbols-outlined {
