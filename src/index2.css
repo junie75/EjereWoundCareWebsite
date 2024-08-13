@@ -125,12 +125,12 @@ main {
   /* height: calc(100vh-6.6rem); */
   /* max-height: 100vh; */
   /* height: 100%; */
-  border: 2px solid blue;
-  /* overflow-y: clip; */
+  /* border: 2px solid blue; */
+  overflow-y: clip;
 }
 
 .homeDiv {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   display: flex;
   flex-direction: column;
   /* flex: 1; */

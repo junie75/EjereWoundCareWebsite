@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
       {children}
       {/* </main> */}
       <ChatWidget isHomePage={isHomePage} />
-      {/* <Footer /> */}
+      {/* if it is not the home page, render the footer, otherwise render a div with the class of footer-placeholder */}
       {!isHomePage ? <Footer /> : <div className="footer-placeholder"></div>}
     </div>
   );
