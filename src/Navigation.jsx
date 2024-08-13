@@ -159,7 +159,13 @@ function Navigation({ isHomePage }) {
     <div className={`navbar ${isHomePage ? "" : "navSolidBackground"}`}>
       <div className="logoContainer">
         <Link to="/">
-          <img src={Logo2} alt="Logo" className="logo" />
+          <img
+            src={Logo2}
+            alt="Logo"
+            className="logo"
+            width="200"
+            height="100"
+          />
         </Link>
       </div>
       <div className={`linkContainer ${isMenuOpen ? "open" : ""}`}>
