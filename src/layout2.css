@@ -34,8 +34,9 @@
   /* padding: calc(1 * var(--rem)) calc(2 * var(--rem)); */
   /* background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px); */
-  position: relative;
-  width: 100%;
+  position: fixed;
+  width: 100vw;
+  min-height: 50px;
   left: 0;
   /* background-color: var(--lightest-green); */
   /* border: 2px blue solid; */
@@ -228,7 +229,7 @@
     left: 0; */
   position: static;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
   opacity: 0.9;
   z-index: 1000;
   /* border: 2px solid blue; */
@@ -261,6 +262,9 @@
 
 .footer-placeholder {
   height: 76px; /* Adjust based on the actual height of the footer */
+  height: 60px;
+  /* border: 2px solid red; */
+  width: 100vw;
 }
 
 .icon-small.white {
