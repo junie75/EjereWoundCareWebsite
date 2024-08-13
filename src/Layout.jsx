@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
       {/* </main> */}
       <ChatWidget isHomePage={isHomePage} />
       {/* <Footer /> */}
-      {!isHomePage && <Footer />}
+      {!isHomePage ? <Footer /> : <div className="footer-placeholder"></div>}
     </div>
   );
 };
