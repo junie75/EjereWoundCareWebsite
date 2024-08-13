@@ -17,6 +17,8 @@
 
 body {
   background-color: var(--lightest-green);
+  /* border: 1px solid orange; */
+  /* max-width: 100vw; */
 }
 
 .material-symbols-outlined {
@@ -102,8 +104,9 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  flex: 1;
+  /* flex: 1; */
   min-height: 100vh;
+  /* max-width: 100vw; */
 }
 
 main {
@@ -194,7 +197,7 @@ main {
   justify-content: space-around;
   align-items: center;
   /* height: 100vh; */
-  width: 80%;
+  width: 80vw;
   margin: 0 auto;
   margin-bottom: calc(6.6 * var(--rem));
   margin-top: calc(8 * var(--rem));
