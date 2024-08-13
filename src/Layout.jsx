@@ -15,7 +15,9 @@ const Layout = ({ children }) => {
       }`}
     >
       <Navigation isHomePage={isHomePage} />
-      <main>{children}</main>
+      {/* <main> */}
+      {children}
+      {/* </main> */}
       <ChatWidget isHomePage={isHomePage} />
       {/* <Footer /> */}
       {!isHomePage && <Footer />}

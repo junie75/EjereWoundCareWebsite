@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <Layout>
-      <div className="container">
+      <div className="homeContainer">
         <div className="homeDiv">
           <div className="noto-serif-bold hugeText">
             Respectful, <br /> Professional, <br />
