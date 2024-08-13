@@ -197,6 +197,7 @@ main {
   width: 80%;
   margin: 0 auto;
   margin-bottom: calc(6.6 * var(--rem));
+  margin-top: calc(8 * var(--rem));
   /* row-gap: calc(2 * var(--rem)); */
   /* border: 2px solid red; */
 }
@@ -1048,7 +1049,7 @@ main {
   }
 
   .pageContainer {
-    width: 100%;
+    width: 100vw;
   }
 
   .homeDiv {
