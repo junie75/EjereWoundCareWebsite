@@ -13,6 +13,7 @@
   border: 2px solid red;
   object-fit: cover;
   height: 100%;
+  width: 100%;
   /* height: 100%; */
   /* height: calc(50 * var(--rem)); */
   /* width: calc(2 * var(--rem)); */
