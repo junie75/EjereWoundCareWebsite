@@ -820,7 +820,7 @@ main {
 
 @media (max-width: 1445px) {
   :root {
-    --rem: 0.56rem; /* Adjust as needed */
+    --rem: 0.6rem; /*Adjust as needed*/
   }
 
   .homeDiv {
@@ -837,6 +837,11 @@ main {
 
   .ctaBtn {
     font-size: calc(3 * var(--rem));
+  }
+
+  .pageContainer {
+    min-height: 100vh;
+    margin-top: calc(12 * var(--rem));
   }
 }
 

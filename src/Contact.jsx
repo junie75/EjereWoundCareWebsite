@@ -64,6 +64,7 @@ export default function Contact() {
               loading="lazy"
               className="mapContainer"
               referrerPolicy="no-referrer-when-downgrade"
+              title="Google maps pinpoint of Ejere Wound Care and Hyperbaric Oxygen Therapy"
             ></iframe>
             {/* <div className="mapContainer"> */}
             {/* <Map /> */}
