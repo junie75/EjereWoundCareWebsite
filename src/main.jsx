@@ -11,6 +11,7 @@ import Hyperbaric from "./Hyperbaric.jsx";
 import Contact from "./Contact.jsx";
 import Testimonials from "./Testimonials.jsx";
 import NotFound from "./NotFound.jsx";
+import PrivacyNotice from "./PrivacyNotice.jsx";
 // import { GoogleMapsProvider } from "./GoogleMapsContext.jsx";
 
 const router = createBrowserRouter([
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: "/testimonials",
     element: <Testimonials />,
+  },
+  {
+    path: "/privacyNotice",
+    element: <PrivacyNotice />,
   },
   {
     path: "*", // This is a catch-all route
