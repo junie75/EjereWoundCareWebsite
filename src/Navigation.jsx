@@ -106,7 +106,7 @@ function Navigation({ isHomePage }) {
       case "Patient Portal":
         //open patient portal in new tab
         window.open(
-          "https://pp-wfe-100.advancedmd.com/159009/account/logon",
+          "https://pp-wfe-100.advancedmd.com/127093/account/logon",
           "_blank"
         );
         break;
@@ -210,7 +210,7 @@ function Navigation({ isHomePage }) {
           </li>
           <li className={`navbar-item ${isMenuOpen ? "" : "portal"}`}>
             <Link
-              to="https://pp-wfe-100.advancedmd.com/159009/account/logon"
+              to="https://pp-wfe-100.advancedmd.com/127093/account/logon"
               target="_blank"
             >
               Patient Portal

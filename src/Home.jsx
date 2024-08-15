@@ -16,7 +16,7 @@ export default function Home() {
           </div> */}
           <div className="ctaBtn crimson-pro-reg">
             <Link
-              to={"https://patientportal.advancedmd.com/159009/onlineintake"}
+              to={"https://patientportal.advancedmd.com/127093/onlineintake"}
               target="_blank"
             >
               Request Appointment
