@@ -262,6 +262,11 @@
   column-gap: calc(0.2 * var(--rem));
 }
 
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
 .footer-placeholder {
   height: 76px; /* Adjust based on the actual height of the footer */
   height: 60px;

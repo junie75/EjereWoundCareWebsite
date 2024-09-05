@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -31,6 +32,14 @@ const Footer = () => {
             mail
           </span>
           <p>Email: referrals@ejerewoundcare.com</p>
+        </li>
+        <li>
+          {/* <span className="material-symbols-outlined icon-small white">
+            mail
+          </span> */}
+          <Link to="/privacyNotice">
+            <p>Notice of Privacy Practices</p>
+          </Link>
         </li>
       </ul>
       {/* </div> */}
