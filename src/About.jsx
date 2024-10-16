@@ -5,7 +5,8 @@ import aboutImg2 from "./assets/aboutImg2.jpg";
 import profileJackie from "./assets/profileJackie.JPG";
 import profileMelanie from "./assets/profileMelanie.jpg";
 import profileJuni from "./assets/profileJuni.jpg";
-import profileHenry from "./assets/henryFormalv5.jpg";
+// import profileHenry from "./assets/henryFormalv5.jpg";
+import profileHenry from "./assets/profileHenry.jpg";
 
 // import carousel1 from "./assets/carousel1-min.jpg";
 // import carousel2 from "./assets/carousel2-min.jpg";
