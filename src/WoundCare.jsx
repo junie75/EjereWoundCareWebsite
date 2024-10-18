@@ -82,7 +82,9 @@ export default function WoundCare() {
               For some patients, hyperbaric oxygen therapy may be necessary as a
               component of their individualized treatment plan.
             </p>
-            <div className="ctaBtn crimson-pro-reg">Learn More</div>
+            <a href="/services/hbot" style={{ textDecoration: "none" }}>
+              <div className="ctaBtn crimson-pro-reg">Learn More</div>
+            </a>
           </div>
           <div className="image">
             <img src={Illustration} alt="HBOTimage" />
