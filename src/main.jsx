@@ -12,6 +12,7 @@ import Contact from "./Contact.jsx";
 import Testimonials from "./Testimonials.jsx";
 import NotFound from "./NotFound.jsx";
 import PrivacyNotice from "./PrivacyNotice.jsx";
+import Careers from "./Careers.jsx";
 // import { GoogleMapsProvider } from "./GoogleMapsContext.jsx";
 
 const router = createBrowserRouter([
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
   {
     path: "*", // This is a catch-all route
     element: <NotFound />, // This component will be displayed when no other route matches
+  },
+  {
+    path: "/careers",
+    element: <Careers />,
   },
 ]);
 

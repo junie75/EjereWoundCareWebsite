@@ -808,6 +808,63 @@ main {
   height: 80vh;
 }
 
+/* Careers Page */
+.careersContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+
+  /* border: 2px solid red; */
+  margin: 20px 0;
+}
+
+.job {
+  border-top: 1px solid #64727b;
+  padding: 20px 0;
+  /* border: 2px solid orange; */
+}
+
+.careersContainer .job section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: 5px 0;
+  a {
+    text-decoration: none;
+  }
+}
+
+.apply {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.jobCharacteristics {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0;
+}
+
+.jobType {
+  font-weight: bold;
+  border: 2px solid var(--darkest-green);
+  padding: 5px;
+  border-radius: 50px;
+  color: var(--darkest-green);
+  margin: 0 5px;
+}
+
+.jobTitle,
+.apply h2 {
+  color: var(--darkest-green);
+}
+
 /* for huge screens */
 /* @media (min-width: 1920px) {
   .hugeText {
