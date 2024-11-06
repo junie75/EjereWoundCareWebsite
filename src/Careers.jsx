@@ -20,6 +20,7 @@ const JobModal = ({ job, onClose }) => {
 export default function Careers() {
   const [modalJob, setModalJob] = useState(null);
   const jobPostings = getJobPostings();
+  // const jobPostings = [];
   return (
     <Layout>
       <div className="pageContainer">

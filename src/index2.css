@@ -809,6 +809,7 @@ main {
 }
 
 /* Careers Page */
+
 .careersContainer {
   display: flex;
   flex: 1;
@@ -816,15 +817,24 @@ main {
   justify-content: flex-start;
   align-items: center;
   width: 80%;
-
+  min-height: 80vh;
   /* border: 2px solid red; */
   margin: 20px 0;
 }
 
 .job {
-  border-top: 1px solid #64727b;
-  padding: 20px 0;
+  /* border-top: 1px solid #64727b; */
+  padding: 20px 10px;
+  background-color: white;
+  box-shadow: 2px 2px 10px #02211fa4;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: box-shadow 0.3s;
   /* border: 2px solid orange; */
+}
+
+.job:hover {
+  box-shadow: 0px 0px 10px #02211fa4;
 }
 
 .careersContainer .job section {
@@ -861,9 +871,18 @@ main {
 }
 
 .jobTitle,
-.apply h2 {
+.apply h2,
+.apply span {
   color: var(--darkest-green);
   cursor: pointer;
+  transition: color 0.3s;
+}
+
+.jobTitle:hover,
+.apply:hover h2,
+.apply:hover span {
+  color: var(--watermelon-pink);
+  /* box-shadow: 0px 0px 10px #05686549; */
 }
 
 .modal {
@@ -884,6 +903,7 @@ main {
 }
 
 .modalContent {
+  position: fixed;
   background-color: #fefefe;
   /* background-color: var(--lightest-green); */
   border-radius: 30px;

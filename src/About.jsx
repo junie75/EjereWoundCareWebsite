@@ -8,18 +8,21 @@ import profileJuni from "./assets/profileJuni.jpg";
 // import profileHenry from "./assets/henryFormalv5.jpg";
 import profileHenry from "./assets/profileHenry.jpg";
 
-// import carousel1 from "./assets/carousel1-min.jpg";
-// import carousel2 from "./assets/carousel2-min.jpg";
-// import carousel3 from "./assets/carousel3-min.jpg";
-// import carousel4 from "./assets/carousel4-min.JPG";
-// import carousel5 from "./assets/carousel5-min.JPG";
-// import carousel6 from "./assets/carousel6-min.jpg";
+//FOR DEVELOPMENT
 import carousel1 from "../public/assets/carousel1.jpg";
 import carousel2 from "../public/assets/carousel2.jpg";
 import carousel3 from "../public/assets/carousel3.jpg";
 import carousel4 from "../public/assets/carousel4.JPG";
 import carousel5 from "../public/assets/carousel5.JPG";
 import carousel6 from "../public/assets/carousel6.jpg";
+
+//FOR PRODUCTION
+// import carousel1 from "../assets/carousel1.jpg";
+// import carousel2 from "../assets/carousel2.jpg";
+// import carousel3 from "../assets/carousel3.jpg";
+// import carousel4 from "../assets/carousel4.JPG";
+// import carousel5 from "../assets/carousel5.JPG";
+// import carousel6 from "../assets/carousel6.jpg";
 import { Carousel } from "react-responsive-carousel";
 import "./CustomCarousel.css";
 
