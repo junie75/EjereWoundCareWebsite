@@ -645,7 +645,7 @@ main {
   justify-content: center;
   align-items: center;
   width: 80%;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   min-height: 100vh;
 }
 
