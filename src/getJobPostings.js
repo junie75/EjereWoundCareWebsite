@@ -1,7 +1,5 @@
 //utility function to get job postings from markdown files
-import matter from "gray-matter";
 import fm from "front-matter";
-import Markdown from "react-markdown";
 
 export const getJobPostings = () => {
   const modules = import.meta.glob("/src/jobPostings/*.md", {
