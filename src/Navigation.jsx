@@ -58,6 +58,9 @@ function Navigation({ isHomePage }) {
       case "Testimonials":
         navigate("/testimonials");
         break;
+      case "Careers":
+        navigate("/careers");
+        break;
       case "Patient Portal":
         //open patient portal in new tab
         window.open(
@@ -100,8 +103,17 @@ function Navigation({ isHomePage }) {
         callback: handleMenuItemClick,
       },
       {
-        label: "Testimonials",
-        callback: handleMenuItemClick,
+        label: "More",
+        items: [
+          {
+            label: "Testimonials",
+            callback: handleMenuItemClick,
+          },
+          {
+            label: "Careers",
+            callback: handleMenuItemClick,
+          },
+        ],
       },
       {
         label: "Patient Portal",
@@ -170,14 +182,20 @@ function Navigation({ isHomePage }) {
               Contact
             </Link>
           </li>
-          <li className="navbar-item">
-            <Link
-              className="navUnderline"
-              to="/testimonials"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Testimonials
-            </Link>
+          <li className="navbar-item services">
+            More
+            <ul className="dropdown-menu">
+              <li className="dropdown-item">
+                <Link to="/testimonials" onClick={() => setIsMenuOpen(false)}>
+                  Testimonials
+                </Link>
+              </li>
+              <li className="dropdown-item">
+                <Link to={"/careers"} onClick={() => setIsMenuOpen(false)}>
+                  Careers
+                </Link>
+              </li>
+            </ul>
           </li>
           <li className={`navbar-item ${isMenuOpen ? "" : "portal"}`}>
             <Link

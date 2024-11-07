@@ -1,7 +1,7 @@
 ---
 jobID: "1"
 jobTitle: "Medical Assistant(MA)/Licensed Vocational Nurse(LVN)"
-jobDesc: "We are looking for a Wound Care Specialist to join our team. The ideal candidate will have a strong background in wound care and be able to work independently. This is a full-time position with competitive pay and benefits."
+jobDesc: "Ejere Wound Care and Hyperbaric Oxygen Therapy is seeking a talented Medical Assistant (MA) or LVN. The ideal candidate will have a strong background in wound care and be able to work independently. CHT certification and experience in hyperbarics are a plus."
 jobLocation: "On-site"
 jobType: "Full-time"
 applyLink: "https://www.example.com/apply"

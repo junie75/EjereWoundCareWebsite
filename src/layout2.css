@@ -177,7 +177,12 @@
   /* width: 20%; */
   min-width: calc(10 * var(--rem));
   text-align: center;
+  transition: background-color 0.3s ease;
   /* border: 2px solid blue; */
+}
+
+.navbar-item.portal:hover {
+  background-color: var(--watermelon-pink);
 }
 
 .navbar-item.portal a {

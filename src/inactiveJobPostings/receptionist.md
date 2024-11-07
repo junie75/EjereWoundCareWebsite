@@ -1,7 +1,7 @@
 ---
 jobID: "2"
 jobTitle: "Receptionist"
-jobDesc: "We are looking for a Wound Care Specialist to join our team. The ideal candidate will have a strong background in wound care and be able to work independently. This is a full-time position with competitive pay and benefits."
+jobDesc: "We are looking for a friendly, organized individual to join our team as a Receptionist. The ideal candidate will greet patients, manage appointments, and assist with check-ins. This is an on-site role with varying hours and competitive pay."
 jobLocation: "On-site"
 jobType: "Full-time"
 applyLink: "https://www.example.com/apply"

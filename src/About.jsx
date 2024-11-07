@@ -9,7 +9,7 @@ import profileJuni from "./assets/profileJuni.jpg";
 import profileHenry from "./assets/profileHenry.jpg";
 
 //FOR DEVELOPMENT
-import carousel1 from "../public/assets/carousel1.jpg";
+// import carousel1 from "../public/assets/carousel1.jpg";
 import carousel2 from "../public/assets/carousel2.jpg";
 import carousel3 from "../public/assets/carousel3.jpg";
 import carousel4 from "../public/assets/carousel4.JPG";
