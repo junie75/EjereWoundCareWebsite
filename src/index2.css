@@ -1,4 +1,4 @@
-:root {
+index2.css :root {
   --rem: 0.8rem;
   --darkest-green: #054643;
   --darker-green: #094948;
@@ -645,7 +645,8 @@ main {
   justify-content: center;
   align-items: center;
   width: 80%;
-  /* border: 2px solid red; */
+  border: 2px solid red;
+  min-height: 100vh;
 }
 
 .contactSection {
@@ -655,7 +656,7 @@ main {
   justify-content: space-around;
   align-items: flex-start;
   width: 100%;
-  /* border: 2px solid red; */
+  /* border: 2px solid blue; */
 }
 
 .contactSection img {
@@ -809,6 +810,7 @@ main {
 }
 
 /* Careers Page */
+
 .careersContainer {
   display: flex;
   flex: 1;
@@ -816,15 +818,25 @@ main {
   justify-content: flex-start;
   align-items: center;
   width: 80%;
-
+  min-height: 80vh;
   /* border: 2px solid red; */
   margin: 20px 0;
 }
 
 .job {
-  border-top: 1px solid #64727b;
-  padding: 20px 0;
+  /* border-top: 1px solid #64727b; */
+  padding: 20px 10px;
+  background-color: white;
+  box-shadow: 2px 2px 10px #02211fa4;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: box-shadow 0.3s;
+  width: 100%;
   /* border: 2px solid orange; */
+}
+
+.job:hover {
+  box-shadow: 0px 0px 10px #02211fa4;
 }
 
 .careersContainer .job section {
@@ -861,8 +873,77 @@ main {
 }
 
 .jobTitle,
-.apply h2 {
+.apply h2,
+.apply span {
   color: var(--darkest-green);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.jobTitle:hover,
+.apply:hover h2,
+.apply:hover span {
+  color: var(--watermelon-pink);
+  /* box-shadow: 0px 0px 10px #05686549; */
+}
+
+.modal {
+  /* display: none; */
+  position: absolute;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* overflow: auto; */
+  /* background-color: rgb(0, 0, 0); */
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modalContent {
+  position: fixed;
+  background-color: #fefefe;
+  /* background-color: var(--lightest-green); */
+  border-radius: 30px;
+  box-shadow: 2px 2px 8px #02211f;
+  /* margin: 15px auto; */
+  margin-top: 10rem;
+  padding: 30px 20px;
+  border: 1px solid #888;
+  width: 60vw;
+  min-height: fit-content;
+  font-family: "Crimson Pro", serif;
+  font-size: 1.2rem;
+
+  h2 {
+    color: var(--darkest-green);
+    text-align: center;
+  }
+
+  h3 {
+    color: var(--darkest-green);
+  }
+
+  p {
+    padding: 10px 0;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  .close {
+    color: #aaa;
+    color: var(--darkest-green);
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
 }
 
 /* for huge screens */
@@ -919,6 +1000,16 @@ main {
   .ctaBtn {
     font-size: calc(2 * var(--rem));
   }
+  .careersContainer .job section .jobTitle {
+    flex: 3;
+    /* border: 2px solid red; */
+  }
+  .careersContainer .job section .apply {
+    flex: 1;
+    /* border: 2px solid red; */
+    text-align: right;
+    align-self: flex-start;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -930,6 +1021,12 @@ main {
   .home-background {
     background-position: 35% 10%;
   }
+
+  .careersContainer .jobTitle,
+  .careersContainer .apply h2,
+  .careersContainer .apply span {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -940,6 +1037,17 @@ main {
   .home-background {
     background-position: 35% 10%;
   }
+
+  /* .careersContainer .job section .jobTitle {
+    flex: 3;
+    border: 2px solid red;
+  }
+  .careersContainer .job section .apply {
+    flex: 1;
+    border: 2px solid red;
+    text-align: right;
+    align-self: flex-start;
+  } */
 }
 
 /* Portrait tablets and large phones */
@@ -1078,6 +1186,24 @@ main {
       /* height: unset; */
       /* width: 100%; */
       /* max-height: 100%; */
+    }
+  }
+
+  .careersContainer {
+    .jobTitle,
+    .apply h2,
+    .apply span {
+      font-size: 18px;
+    }
+  }
+
+  .modalContent {
+    p {
+      font-size: 1rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
     }
   }
 }
@@ -1222,6 +1348,30 @@ main {
     }
   }
 
+  /* .careersContainer .jobTitle,
+  .careersContainer .apply h2,
+  .careersContainer .apply span {
+    font-size: 18px;
+  } */
+
+  .careersContainer {
+    .jobTitle,
+    .apply h2,
+    .apply span {
+      font-size: 18px;
+    }
+  }
+
+  .modalContent {
+    p {
+      font-size: 1rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+
   /* .hugeText {
     font-size: calc(4 * var(--rem));  Adjust as needed /
   }
@@ -1255,5 +1405,36 @@ main {
     width: calc(30 * var(--rem));
     border: unset;
     /* border: 4px solid var(--darkest-green); */
+  }
+
+  .careersContainer .job section {
+    flex-direction: column;
+
+    .apply {
+      display: none;
+      /* float: right; */
+    }
+
+    .jobTitle {
+      font-size: 1rem;
+    }
+  }
+
+  .jobDesc {
+    font-size: 0.95rem;
+  }
+
+  .jobType {
+    font-size: 0.8rem;
+  }
+
+  .modalContent {
+    width: 90vw;
+    padding: 20px;
+    font-size: 1rem;
+
+    h2 {
+      font-size: 1.5rem;
+    }
   }
 }

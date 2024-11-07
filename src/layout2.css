@@ -140,6 +140,29 @@
 .navbar-item a {
   text-decoration: none;
   color: var(--darker-green);
+  /* position: relative; */
+}
+
+.navUnderline {
+  position: relative;
+}
+
+.navUnderline::after {
+  content: ""; /* Required to make the pseudo-element display */
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Position it at the bottom of the link */
+  width: 100%; /* Initially full width to span under the text */
+  height: 2px; /* Height of the underline */
+  background-color: currentColor; /* Matches the text color */
+  border-radius: 50px; /* Rounded corners */
+  transform: scaleX(0); /* Start with no underline visible */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+  transform-origin: center; /* Animates from left to right */
+}
+
+.navUnderline:hover::after {
+  transform: scaleX(1);
 }
 
 .navbar-item.portal {
@@ -154,7 +177,12 @@
   /* width: 20%; */
   min-width: calc(10 * var(--rem));
   text-align: center;
+  transition: background-color 0.3s ease;
   /* border: 2px solid blue; */
+}
+
+.navbar-item.portal:hover {
+  background-color: var(--watermelon-pink);
 }
 
 .navbar-item.portal a {
