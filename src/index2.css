@@ -956,6 +956,33 @@ main {
   }
 } */
 
+@media (max-width: 4000px) {
+  :root {
+    --rem: 0.7rem; /*Adjust as needed*/
+  }
+
+  .homeDiv {
+    height: 70vh;
+  }
+
+  .hugeText {
+    font-size: calc(8 * var(--rem));
+  }
+
+  .smallerText {
+    font-size: calc(4 * var(--rem));
+  }
+
+  .ctaBtn {
+    font-size: calc(3 * var(--rem));
+  }
+
+  .pageContainer {
+    min-height: 100vh;
+    margin-top: calc(12 * var(--rem));
+  }
+}
+
 @media (max-width: 1445px) {
   :root {
     --rem: 0.6rem; /*Adjust as needed*/
