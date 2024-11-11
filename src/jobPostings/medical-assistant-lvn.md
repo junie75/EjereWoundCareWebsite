@@ -4,7 +4,7 @@ jobTitle: "Medical Assistant(MA)/Licensed Vocational Nurse(LVN)"
 jobDesc: "Ejere Wound Care and Hyperbaric Oxygen Therapy is seeking a talented Medical Assistant (MA) or LVN. The ideal candidate will have a strong background in wound care and be able to work independently. CHT certification and experience in hyperbarics are a plus."
 jobLocation: "On-site"
 jobType: "Full-time"
-applyLink: "https://www.example.com/apply"
+applyLink: "https://ejerewoundcare.com/careers"
 ---
 
 ## Job Description
