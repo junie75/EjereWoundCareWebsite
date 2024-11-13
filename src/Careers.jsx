@@ -75,7 +75,7 @@ export default function Careers() {
             Ejere Wound Care & Hyperbaric Oxygen Therapy is always looking for
             talented individuals to join our team. If you are interested in
             working with us, please send your resume to
-            careers@ejerewoundcare.com .
+            melanie.parker@ejerewoundcare.com .
           </p>
         </div>
         <div className="careersContainer">
