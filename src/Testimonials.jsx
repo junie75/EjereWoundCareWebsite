@@ -8,6 +8,18 @@ import Rating from "@mui/material/Rating"; //star rating ui
 export default function Testimonials() {
   const testimonials = [
     {
+      name: "Justin Miles",
+      rating: 5,
+      review:
+        "Great customer service is nearly impossible to come by these days, so I wanted to take a moment to express my heartfelt gratitude for the exceptional care and attention I received during my visit today! From the moment I arrived, I felt welcomed and supported by your entire team. Your professionalism and genuine concern for my well-being truly made a difference in my experience. I appreciate the time you took to listen to my concerns and answer all my questions with patience and clarity. Thank you once again for your dedication and compassion. I look forward to continuing my care with your team in the future!",
+    },
+    {
+      name: "Jim Collins",
+      rating: 5,
+      review:
+        "Back in 2017 my mother was in a local care center and had a wound that was ongoing and painful, I would take her for her appointments and she would want me to go back with her to see the Dr. and every time Dr. Ejere and the nurses were very caring to her and friendly to both of us. Then in January and February of 2019 and again in July and August of 2020 I had some issues with a wound on my foot due to diabetes and did hyperbaric treatments at the center. During my many sessions, I was treated with kindness and professionalism that made a bad thing bearable. So, I can honestly say that Dr. Ejere and the staff of skilled nurses and office personnel are at the top of their profession and rate up there with any other wound care center.",
+    },
+    {
       name: "Bonnie Tisdale",
       rating: 5,
       review:
@@ -19,17 +31,18 @@ export default function Testimonials() {
       review:
         "I am so very thankful for Dr Ejere. And ALL of his team I am a cancer patient, I had a very large open wound due to radiation therapy. Dr Ejere and his team are the absolute BEST. They treat me like I matter. This is the one Dr I don't dread going to. I actually enjoy coming here. when I leave, I know I feel better, and they truly care. Special shout out to Jackie.",
     },
-    {
-      name: "Jim Collins",
-      rating: 5,
-      review:
-        "Back in 2017 my mother was in a local care center and had a wound that was ongoing and painful, I would take her for her appointments and she would want me to go back with her to see the Dr. and every time Dr. Ejere and the nurses were very caring to her and friendly to both of us. Then in January and February of 2019 and again in July and August of 2020 I had some issues with a wound on my foot due to diabetes and did hyperbaric treatments at the center. During my many sessions, I was treated with kindness and professionalism that made a bad thing bearable. So, I can honestly say that Dr. Ejere and the staff of skilled nurses and office personnel are at the top of their profession and rate up there with any other wound care center.",
-    },
+
     {
       name: "Jay Hayes",
       rating: 5,
       review:
         "I would like to say thank you to Dr Ejere and everyone at Wound Care Weatherford for the best care from the beginning to the end in healing me. It has been a long process and they made it as professional and caring as it could possibly be. Your efforts will not be forgotten.",
+    },
+    {
+      name: "Chris Woodrum",
+      rating: 5,
+      review:
+        "Dr. Ejere and the entire staff were awesome. Everyone went above and beyond in my treatment. Highly recommend",
     },
     {
       name: "Lori Smith",
