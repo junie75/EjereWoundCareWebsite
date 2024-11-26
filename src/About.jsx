@@ -9,20 +9,35 @@ import profileJuni from "./assets/profileJuni.jpg";
 import profileHenry from "./assets/profileHenry.jpg";
 
 //FOR DEVELOPMENT
-import carousel1 from "../public/assets/carousel1.jpg";
-import carousel2 from "../public/assets/carousel2.jpg";
-import carousel3 from "../public/assets/carousel3.jpg";
-import carousel4 from "../public/assets/carousel4.JPG";
-import carousel5 from "../public/assets/carousel5.JPG";
-import carousel6 from "../public/assets/carousel6.jpg";
+// import carousel1 from "../public/assets/carousel1.jpg";
+// import carousel2 from "../public/assets/carousel2.jpg";
+// import carousel3 from "../public/assets/carousel3.jpg";
+// import carousel4 from "../public/assets/carousel4.JPG";
+// import carousel5 from "../public/assets/carousel5.JPG";
+// import carousel6 from "../public/assets/carousel6.jpg";
+
+// import carousel1desk from "../public/assets/carousel1.avif";
+// import carousel2desk from "../public/assets/carousel2.avif";
+// import carousel3desk from "../public/assets/carousel3.avif";
+// import carousel4desk from "../public/assets/carousel4.avif";
+// import carousel5desk from "../public/assets/carousel5.avif";
+// import carousel6desk from "../public/assets/carousel6.avif";
 
 //FOR PRODUCTION
-// import carousel1 from "../assets/carousel1.jpg";
-// import carousel2 from "../assets/carousel2.jpg";
-// import carousel3 from "../assets/carousel3.jpg";
-// import carousel4 from "../assets/carousel4.JPG";
-// import carousel5 from "../assets/carousel5.JPG";
-// import carousel6 from "../assets/carousel6.jpg";
+import carousel1 from "/assets/carousel1.jpg";
+import carousel2 from "/assets/carousel2.jpg";
+import carousel3 from "/assets/carousel3.jpg";
+import carousel4 from "/assets/carousel4.JPG";
+import carousel5 from "/assets/carousel5.JPG";
+import carousel6 from "/assets/carousel6.jpg";
+
+import carousel1desk from "/assets/carousel1.avif";
+import carousel2desk from "/assets/carousel2.avif";
+import carousel3desk from "/assets/carousel3.avif";
+import carousel4desk from "/assets/carousel4.avif";
+import carousel5desk from "/assets/carousel5.avif";
+import carousel6desk from "/assets/carousel6.avif";
+
 import { Carousel } from "react-responsive-carousel";
 import "./CustomCarousel.css";
 
@@ -33,6 +48,15 @@ const carouselImages = [
   carousel4,
   carousel5,
   carousel6,
+];
+
+const desktopCarousel = [
+  carousel1desk,
+  carousel2desk,
+  carousel3desk,
+  carousel4desk,
+  carousel5desk,
+  carousel6desk,
 ];
 
 const tooglesGroupId = "Toggles";
@@ -61,28 +85,44 @@ const getConfigurableProps = () => ({
 });
 
 const slideShow = () => (
-  <Carousel
-    {...getConfigurableProps()}
-    // showArrows={true}
-    // showStatus={true}
-    // showIndicators={true}
-    // infiniteLoop={true}
-    // useKeyboardArrows={true}
-    // autoPlay={true}
-    // swipeable={true}
-  >
-    {carouselImages.map((image, index) => (
-      <div className="slide" key={index}>
-        <img className="slideImage" src={image} alt={`carousel${index + 1}`} />
-        <p className=" slideText legend crimson-pro-reg ">
-          Ejere Wound Care & Hyperbaric Oxygen Therapy is an advanced wound care
-          clinic that aims to provide personalized, compassionate care to
-          patients with chronic wounds in Parker County and surrounding
-          communities.
-        </p>
-      </div>
-    ))}
-  </Carousel>
+  <>
+    {/* Carousel optimized for desktop, images have dimensions of 1920px x 700px with an object-fit of cover*/}
+    <Carousel {...getConfigurableProps()} className="desktopCarousel">
+      {desktopCarousel.map((image, index) => (
+        <div className="slide desktop" key={index}>
+          <img
+            className="slideImage desktop"
+            src={image}
+            alt={`carousel${index + 1}`}
+          />
+          <p className=" slideText legend crimson-pro-reg ">
+            Ejere Wound Care & Hyperbaric Oxygen Therapy is an advanced wound
+            care clinic that aims to provide personalized, compassionate care to
+            patients with chronic wounds in Parker County and surrounding
+            communities.
+          </p>
+        </div>
+      ))}
+    </Carousel>
+    {/* Carousel optimized for mobile, images have their normal dimensions with an object-fit of contain*/}
+    <Carousel {...getConfigurableProps()} className="mobileCarousel">
+      {carouselImages.map((image, index) => (
+        <div className="slide mobile" key={index}>
+          <img
+            className="slideImage mobile"
+            src={image}
+            alt={`carousel${index + 1}`}
+          />
+          <p className=" slideText legend crimson-pro-reg">
+            Ejere Wound Care & Hyperbaric Oxygen Therapy is an advanced wound
+            care clinic that aims to provide personalized, compassionate care to
+            patients with chronic wounds in Parker County and surrounding
+            communities.
+          </p>
+        </div>
+      ))}
+    </Carousel>
+  </>
 );
 
 export default function About() {
