@@ -1,5 +1,5 @@
 .slide.desktop {
-  height: 48vh;
+  height: 51vh;
   width: 12vw;
   justify-content: space-between;
   /* border: 2px solid blue; */
@@ -7,7 +7,7 @@
 
 .slideImage.desktop {
   /* border: 2px solid red; */
-  object-fit: contain;
+  object-fit: cover;
   height: 100%;
   width: 100%;
 }
