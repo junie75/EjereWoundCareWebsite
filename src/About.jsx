@@ -9,27 +9,35 @@ import profileJuni from "./assets/profileJuni.jpg";
 import profileHenry from "./assets/profileHenry.jpg";
 
 //FOR DEVELOPMENT
+// import carousel1 from "../public/assets/carousel1.jpg";
+// import carousel2 from "../public/assets/carousel2.jpg";
+// import carousel3 from "../public/assets/carousel3.jpg";
+// import carousel4 from "../public/assets/carousel4.JPG";
+// import carousel5 from "../public/assets/carousel5.JPG";
+// import carousel6 from "../public/assets/carousel6.jpg";
 
-import carousel1 from "../public/assets/carousel1.jpg";
-import carousel2 from "../public/assets/carousel2.jpg";
-import carousel3 from "../public/assets/carousel3.jpg";
-import carousel4 from "../public/assets/carousel4.JPG";
-import carousel5 from "../public/assets/carousel5.JPG";
-import carousel6 from "../public/assets/carousel6.jpg";
+// import carousel1desk from "../public/assets/carousel1.avif";
+// import carousel2desk from "../public/assets/carousel2.avif";
+// import carousel3desk from "../public/assets/carousel3.avif";
+// import carousel4desk from "../public/assets/carousel4.avif";
+// import carousel5desk from "../public/assets/carousel5.avif";
+// import carousel6desk from "../public/assets/carousel6.avif";
 
-import carousel1desk from "../public/assets/carousel1.avif";
-import carousel2desk from "../public/assets/carousel2.avif";
-import carousel3desk from "../public/assets/carousel3.avif";
-import carousel4desk from "../public/assets/carousel4.avif";
-import carousel5desk from "../public/assets/carousel5.avif";
-import carousel6desk from "../public/assets/carousel6.avif";
 //FOR PRODUCTION
-// import carousel1 from "../assets/carousel1.jpg";
-// import carousel2 from "../assets/carousel2.jpg";
-// import carousel3 from "../assets/carousel3.jpg";
-// import carousel4 from "../assets/carousel4.JPG";
-// import carousel5 from "../assets/carousel5.JPG";
-// import carousel6 from "../assets/carousel6.jpg";
+import carousel1 from "/assets/carousel1.jpg";
+import carousel2 from "/assets/carousel2.jpg";
+import carousel3 from "/assets/carousel3.jpg";
+import carousel4 from "/assets/carousel4.JPG";
+import carousel5 from "/assets/carousel5.JPG";
+import carousel6 from "/assets/carousel6.jpg";
+
+import carousel1desk from "/assets/carousel1.avif";
+import carousel2desk from "/assets/carousel2.avif";
+import carousel3desk from "/assets/carousel3.avif";
+import carousel4desk from "/assets/carousel4.avif";
+import carousel5desk from "/assets/carousel5.avif";
+import carousel6desk from "/assets/carousel6.avif";
+
 import { Carousel } from "react-responsive-carousel";
 import "./CustomCarousel.css";
 
