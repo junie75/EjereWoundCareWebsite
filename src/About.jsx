@@ -39,7 +39,7 @@ const carouselImages = [
   carousel3,
   carousel4,
   carousel5,
-  // carousel6,
+  carousel6,
 ];
 
 const desktopCarousel = [

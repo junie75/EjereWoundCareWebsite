@@ -1,12 +1,13 @@
 .slide.desktop {
-  height: 60vh;
+  height: 48vh;
   width: 12vw;
   justify-content: space-between;
+  /* border: 2px solid blue; */
 }
 
 .slideImage.desktop {
-  border: 2px solid red;
-  object-fit: cover;
+  /* border: 2px solid red; */
+  object-fit: contain;
   height: 100%;
   width: 100%;
 }
