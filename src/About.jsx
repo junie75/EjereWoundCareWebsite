@@ -30,6 +30,10 @@ import carousel3 from "/assets/carousel3.jpg";
 import carousel4 from "/assets/carousel4.JPG";
 import carousel5 from "/assets/carousel5.JPG";
 import carousel6 from "/assets/carousel6.jpg";
+import carousel7 from "/assets/carousel7.jpg";
+import carousel8 from "/assets/carousel8.jpg";
+import carousel9 from "/assets/carousel9.jpg";
+import carousel10 from "/assets/carousel10.jpg";
 
 import carousel1desk from "/assets/carousel1.avif";
 import carousel2desk from "/assets/carousel2.avif";
@@ -37,6 +41,10 @@ import carousel3desk from "/assets/carousel3.avif";
 import carousel4desk from "/assets/carousel4.avif";
 import carousel5desk from "/assets/carousel5.avif";
 import carousel6desk from "/assets/carousel6.avif";
+import carousel7desk from "/assets/carousel7desk.avif";
+import carousel8desk from "/assets/carousel8desk.avif";
+import carousel9desk from "/assets/carousel9desk.avif";
+import carousel10desk from "/assets/carousel10desk.avif";
 
 import { Carousel } from "react-responsive-carousel";
 import "./CustomCarousel.css";
@@ -48,6 +56,10 @@ const carouselImages = [
   carousel4,
   carousel5,
   carousel6,
+  carousel7,
+  carousel8,
+  carousel9,
+  carousel10,
 ];
 
 const desktopCarousel = [
@@ -57,6 +69,10 @@ const desktopCarousel = [
   carousel4desk,
   carousel5desk,
   carousel6desk,
+  carousel7desk,
+  carousel8desk,
+  carousel9desk,
+  carousel10desk,
 ];
 
 const tooglesGroupId = "Toggles";
