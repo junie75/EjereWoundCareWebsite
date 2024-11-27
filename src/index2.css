@@ -261,7 +261,7 @@ main {
 }
 
 .bannerText {
-  display: none;
+  /* display: none; */
   text-align: center;
   /* width: 80%; */
   flex: 2;

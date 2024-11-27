@@ -1,13 +1,14 @@
 .slide.desktop {
   height: 51vh;
-  width: 12vw;
+  width: 8vw;
+  display: flex;
   justify-content: space-between;
   /* border: 2px solid blue; */
 }
 
 .slideImage.desktop {
   /* border: 2px solid red; */
-  object-fit: cover;
+  object-fit: contain;
   height: 100%;
   width: 100%;
 }
@@ -17,6 +18,29 @@
   font-size: 20px;
   opacity: 100% !important;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  /* position: absolute; */
+  /* bottom: 20px;
+  left: 60%;
+  width: 70%; */
+  /* bottom: unset; */
+  position: fixed;
+  display: block;
+  z-index: 1001;
+  left: unset;
+  width: unset;
+  text-align: center;
+  border: 2px solid red;
+}
+
+.textttt {
+  position: absolute;
+  text-shadow: 0 0 10px rgb(0, 0, 0);
+  color: white;
+  z-index: 10002;
+  bottom: 6%;
+  left: 10%;
+  padding: 10px 0;
+  width: 80%;
 }
 
 .mobileCarousel {

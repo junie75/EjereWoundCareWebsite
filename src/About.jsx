@@ -104,6 +104,8 @@ const slideShow = () => (
   <>
     {/* Carousel optimized for desktop, images have dimensions of 1920px x 700px with an object-fit of cover*/}
     <Carousel {...getConfigurableProps()} className="desktopCarousel">
+      {/* <p className=" slideText legend crimson-pro-reg "> */}
+
       {desktopCarousel.map((image, index) => (
         <div className="slide desktop" key={index}>
           <img
@@ -111,12 +113,12 @@ const slideShow = () => (
             src={image}
             alt={`carousel${index + 1}`}
           />
-          <p className=" slideText legend crimson-pro-reg ">
+          {/* <p className="textttt">
             Ejere Wound Care & Hyperbaric Oxygen Therapy is an advanced wound
             care clinic that aims to provide personalized, compassionate care to
             patients with chronic wounds in Parker County and surrounding
             communities.
-          </p>
+          </p> */}
         </div>
       ))}
     </Carousel>
@@ -129,12 +131,12 @@ const slideShow = () => (
             src={image}
             alt={`carousel${index + 1}`}
           />
-          <p className=" slideText legend crimson-pro-reg">
+          {/* <p className=" slideText legend crimson-pro-reg">
             Ejere Wound Care & Hyperbaric Oxygen Therapy is an advanced wound
             care clinic that aims to provide personalized, compassionate care to
             patients with chronic wounds in Parker County and surrounding
             communities.
-          </p>
+          </p> */}
         </div>
       ))}
     </Carousel>
