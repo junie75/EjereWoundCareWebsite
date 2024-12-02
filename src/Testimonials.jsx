@@ -1,7 +1,7 @@
+//Component to display testimonials from patients
+
 import React from "react";
 import Layout from "./Layout";
-// import WrappedGoogleReviews from "./GoogleReviews";
-// import GoogleReviews from "./GoogleReviews";
 import Avatar from "@mui/material/Avatar";
 import Rating from "@mui/material/Rating"; //star rating ui
 
@@ -140,9 +140,8 @@ export default function Testimonials() {
             know how we can improve – please send us details of your experience.
           </p>
         </div>
-        {/* <div className="googleReviews"></div> */}
+        {/* Create a review box for each testimonial with a profile photo and a rating */}
         <div className="testimonialsSection">
-          {/* <GoogleReviews /> */}
           {testimonials.map((testimonial, index) => (
             <div key={index} className="reviewBox">
               <Avatar

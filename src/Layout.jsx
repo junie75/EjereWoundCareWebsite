@@ -1,3 +1,5 @@
+//Component to display the layout of the website including the navigation bar, footer, and chat widget
+
 import React from "react";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
@@ -15,13 +17,10 @@ const Layout = ({ children }) => {
       }`}
     >
       <Navigation isHomePage={isHomePage} />
-      {/* <main> */}
       {children}
-      {/* </main> */}
       <ChatWidget isHomePage={isHomePage} />
       {/* if it is not the home page, render the footer, otherwise render a div with the class of footer-placeholder */}
-      {!isHomePage ? <Footer /> : <div className="footer-placeholder"></div>}      
-      {/* {!isHomePage && <Footer />} */}
+      {!isHomePage ? <Footer /> : <div className="footer-placeholder"></div>}
     </div>
   );
 };

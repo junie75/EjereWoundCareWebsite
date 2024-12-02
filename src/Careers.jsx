@@ -1,9 +1,11 @@
+//Component to display job postings and job details
+
 import React, { useState } from "react";
 import Layout from "./Layout";
-// import jobPostings from "./jobPostings.json";
 import { getJobPostings } from "./getJobPostings";
 import Markdown from "react-markdown";
 
+// Modal component to display job details
 const JobModal = ({ job, onClose }) => {
   // Utility function to strip markdown syntax
   const stripMarkdown = (markdownText) => {
@@ -17,8 +19,8 @@ const JobModal = ({ job, onClose }) => {
 
   // Convert markdown content to plain text for the description
   const plainTextContent = stripMarkdown(job.content);
-  // Define JSON-LD schema data for the job posting
 
+  // Define JSON-LD schema data for the job posting to be available to search engines
   const schemaData = {
     "@context": "http://schema.org",
     "@type": "JobPosting",
@@ -40,8 +42,8 @@ const JobModal = ({ job, onClose }) => {
         addressCountry: "US", // Update with actual country
       },
     },
-    datePosted: "2024-11-11", // Example date; replace with actual date
-    validThrough: "2024-12-31", // Replace with expiration date
+    datePosted: "2024-11-11",
+    validThrough: "2024-12-31", //expiration date
     applyLink: job.applyLink,
   };
 
@@ -51,8 +53,9 @@ const JobModal = ({ job, onClose }) => {
         <div className="close" onClick={onClose}>
           &times;
         </div>
+        {/* Render Job content after parsing markdown */}
         <Markdown>{job.content}</Markdown>
-        {/* JSON-LD Schema Script */}
+        {/* Render JSON-LD schema data as a script tag to be crawled by search engines */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
@@ -63,9 +66,8 @@ const JobModal = ({ job, onClose }) => {
 };
 
 export default function Careers() {
-  const [modalJob, setModalJob] = useState(null);
-  const jobPostings = getJobPostings();
-  // const jobPostings = [];
+  const [modalJob, setModalJob] = useState(null); // State to manage the modal
+  const jobPostings = getJobPostings(); // Get job postings from the getJobPostings function
   return (
     <Layout>
       <div className="pageContainer">
@@ -79,47 +81,55 @@ export default function Careers() {
           </p>
         </div>
         <div className="careersContainer">
-          {jobPostings.length === 0 ? (
-            <div className="noJobs crimson-pro-reg">
-              No job postings at this time
-            </div>
-          ) : (
-            jobPostings.map((post) => (
-              <div
-                className="job"
-                key={post.jobID}
-                onClick={() => setModalJob(post)}
-              >
-                <section>
-                  <h2 className="jobTitle crimson-pro-bold">{post.jobTitle}</h2>
-                  {/* <a href={post.applyLink} target="_blank"> */}
-                  <div
-                    className="apply crimson-pro-reg"
-                    onClick={() => setModalJob(post)}
-                  >
-                    <h2>Learn More</h2>
-
-                    <span className="material-symbols-outlined icon-medium">
-                      north_east
-                    </span>
-                  </div>
-                  {/* </a> */}
-                </section>
-                <div className="jobDesc crimson-pro-reg">
-                  <p>{post.jobDesc}</p>
-                </div>
-                <div className="jobCharacteristics">
-                  <div className="jobType crimson-pro-reg">{post.jobType}</div>
-                  <div className="jobType crimson-pro-reg">
-                    {post.jobLocation}
-                  </div>
-                </div>
+          {
+            // If there are no job postings, display a message else display the job postings
+            jobPostings.length === 0 ? (
+              <div className="noJobs crimson-pro-reg">
+                No job postings at this time
               </div>
-            ))
-          )}
-          {modalJob && (
-            <JobModal job={modalJob} onClose={() => setModalJob(null)} />
-          )}
+            ) : (
+              jobPostings.map((post) => (
+                <div
+                  className="job"
+                  key={post.jobID}
+                  onClick={() => setModalJob(post)} // Open the modal when a job is clicked
+                >
+                  <section>
+                    <h2 className="jobTitle crimson-pro-bold">
+                      {post.jobTitle}
+                    </h2>
+                    <div
+                      className="apply crimson-pro-reg"
+                      onClick={() => setModalJob(post)}
+                    >
+                      <h2>Learn More</h2>
+
+                      <span className="material-symbols-outlined icon-medium">
+                        north_east
+                      </span>
+                    </div>
+                  </section>
+                  <div className="jobDesc crimson-pro-reg">
+                    <p>{post.jobDesc}</p>
+                  </div>
+                  <div className="jobCharacteristics">
+                    <div className="jobType crimson-pro-reg">
+                      {post.jobType}
+                    </div>
+                    <div className="jobType crimson-pro-reg">
+                      {post.jobLocation}
+                    </div>
+                  </div>
+                </div>
+              ))
+            )
+          }
+          {
+            // If a job is clicked, display the modal
+            modalJob && (
+              <JobModal job={modalJob} onClose={() => setModalJob(null)} />
+            )
+          }
         </div>
       </div>
     </Layout>

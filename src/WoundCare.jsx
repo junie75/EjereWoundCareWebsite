@@ -1,3 +1,5 @@
+//Component to display information about wound care services
+
 import React from "react";
 import Layout from "./Layout";
 import Illustration from "./assets/hbotIllustrationv4.png";
@@ -17,23 +19,6 @@ export default function WoundCare() {
           </p>
         </div>
         <div className="listContainer">
-          {/* <div className="list">
-            <h2>We specialize in:</h2>
-            <ul>
-              <li>Hyperbaric oxygen therapy</li>
-              <li>
-                {
-                  "Biological skin substitute grafts (Cellular, acellular and matrix-like products)"
-                }
-              </li>
-              <li>Bi-layer compression</li>
-              <li>Negative pressure therapy</li>
-              <li>Surgical and sharp debridement</li>
-              <li>Transcutaneous Oxygen Mapping</li>
-              <li>Advanced dressings</li>
-              <li>Total contact casting</li>
-            </ul>
-          </div> */}
           <div className="list">
             <h2>Conditions Treated:</h2>
             <ul>
@@ -59,13 +44,8 @@ export default function WoundCare() {
               <li>Bioengineered skin substitute grafts</li>
               <li>Bi-layer compression therapy</li>
               <li>Negative pressure therapy</li>
-              {/* <li>Surgical and sharp debridement</li> */}
               <li>Transcutaneous Oxygen Mapping</li>
-              {/* <li>Advanced dressings</li> */}
               <li>Total contact casting</li>
-              {/* <li>Bioengineered skin substitutes</li> */}
-              {/* <li>Laboratory studies</li> */}
-              {/* <li>Hyperbaric oxygen therapy</li> */}
               <li>Referral for radiologic imaging</li>
               <li>Vascular studies</li>
               <li>Education on wound care and prevention</li>
@@ -77,8 +57,6 @@ export default function WoundCare() {
           <div className="text">
             <h3 className="crimson-pro-reg">Hyperbaric Medicine</h3>
             <p className="crimson-pro-reg">
-              {/* In some instances, the use of hyperbaric oxygen therapy may be
-              needed as part of a patients individualized treatment plan. */}
               For some patients, hyperbaric oxygen therapy may be necessary as a
               component of their individualized treatment plan.
             </p>

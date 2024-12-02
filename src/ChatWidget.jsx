@@ -1,3 +1,6 @@
+//Component for the chat widget that appears on the bottom right of the screen
+//and displays contact information when clicked
+
 import React, { useState, useEffect } from "react";
 import "./ChatWidget.css";
 
@@ -63,23 +66,6 @@ const ChatWidget = ({ isHomePage }) => {
     }
   };
 
-  // useEffect(() => {
-  //   //if the widget has not been opened for the first time, set a timer to shake the widget and show the notification
-  //   if (!opened) {
-  //     const timer = setTimeout(() => {
-  //       setShouldShake(true);
-  //     }, 3000);
-  //     const timer2 = setTimeout(() => {
-  //       setShowNotification(true);
-  //     }, 4000);
-  //     //clear the timers when the component is unmounted
-  //     return () => {
-  //       clearTimeout(timer);
-  //       clearTimeout(timer2);
-  //     };
-  //   }
-  // }, [opened]);
-
   useEffect(() => {
     //if the widget has not been opened for the first time, set a timer to shake the widget
     //and show the notification
@@ -111,28 +97,6 @@ const ChatWidget = ({ isHomePage }) => {
       };
     }
   }, [opened]);
-
-  // const openUserMaps = (event) => {
-  //   event.preventDefault();
-
-  //   const query = encodeURIComponent(
-  //     "Ejere Wound Care and Hyperbaric Oxygen Therapy, 730 Eureka St, Weatherford, TX 76086"
-  //   );
-  //   const userAgent = navigator.userAgent;
-
-  //   if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-  //     // Open in Apple Maps on iOS
-  //     // window.location.href = `http://maps.apple.com/?q=${query}`;
-  //     window.open(`http://maps.apple.com/?q=${query}`, "_blank");
-  //   } else {
-  //     // Open in Google Maps on web and Android
-  //     // window.location.href = `https://www.google.com/maps/search/?api=1&query=${query}`;
-  //     window.open(
-  //       `https://www.google.com/maps/search/?api=1&query=${query}`,
-  //       "_blank"
-  //     );
-  //   }
-  // };
 
   return (
     <div className="widgetContainer">

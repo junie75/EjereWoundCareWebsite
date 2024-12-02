@@ -1,3 +1,5 @@
+//Component for 404 Not Found Page
+
 import React from "react";
 import { Link } from "react-router-dom";
 import notFoundImage from "./assets/notFoundImage.png";

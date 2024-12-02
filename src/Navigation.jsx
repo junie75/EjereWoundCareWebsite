@@ -1,9 +1,7 @@
-import React, { useState } from "react";
-// import Logo from "./assets/LogoDesign3UPSCALEDTransparentv3.png";
-// import Logo2 from "./assets/RedoneLogoTransLargerv2.png";
-import Logo2 from "./assets/RedoneLogoTrans400x118.png";
+//Component for the navigation bar
 
-// import Logo2 from "./assets/LogoSmaller.png";
+import React, { useState } from "react";
+import Logo2 from "./assets/RedoneLogoTrans400x118.png";
 import { Link } from "react-router-dom";
 import { NestedDropdown } from "mui-nested-menu";
 import { styled } from "@mui/system";
@@ -11,13 +9,15 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useNavigate } from "react-router-dom";
 
+// Styles for the custom menu
 const CustomMenu = styled(Menu)({
   "& .MuiPaper-root": {
-    backgroundColor: "white", // Example background color
+    backgroundColor: "white",
     boxShadow: "0 8px 16px rgba(0, 0, 0, 0.2)", // Example box shadow
   },
 });
 
+// Styles for the custom menu item
 const CustomMenuItem = styled(MenuItem)({
   color: "black", // Example text color
   "&:hover": {
@@ -37,7 +37,6 @@ function Navigation({ isHomePage }) {
 
   //mobile menu location clicks
   const handleMenuItemClick = (event, item) => {
-    // console.log(`Clicked: ${item.label}`);
     // Example navigation based on item label
     switch (item.label) {
       case "Home":
@@ -214,7 +213,6 @@ function Navigation({ isHomePage }) {
           ButtonProps={{
             variant: "string",
           }}
-          // onClick={(event, item) => console.log("Clicked", event, item)}
         />
       </div>
     </div>

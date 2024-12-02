@@ -1,13 +1,10 @@
+// Desc: Footer component for the website
 import React from "react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <div className="footer crimson-pro-reg">
-      {/* <div></div> */}
-      {/* <> */}
-      {/* <div className="contact">Contact Us</div> */}
-      {/* <div className="info"> */}
       <ul>
         <li>
           <span className="material-symbols-outlined icon-small white">
@@ -34,16 +31,11 @@ const Footer = () => {
           <p>Email: referrals@ejerewoundcare.com</p>
         </li>
         <li>
-          {/* <span className="material-symbols-outlined icon-small white">
-            mail
-          </span> */}
           <Link to="/privacyNotice">
             <p>Notice of Privacy Practices</p>
           </Link>
         </li>
       </ul>
-      {/* </div> */}
-      {/* </> */}
     </div>
   );
 };

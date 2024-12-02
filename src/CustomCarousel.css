@@ -1,13 +1,14 @@
+/* CSS file for the carousel on the About page */
+/* Important tags are due to some conflicting CSS in the imported carousel's css */
+
 .slide.desktop {
   height: 51vh;
   width: 8vw;
   display: flex;
   justify-content: space-between;
-  /* border: 2px solid blue; */
 }
 
 .slideImage.desktop {
-  /* border: 2px solid red; */
   object-fit: contain;
   height: 100%;
   width: 100%;
@@ -18,11 +19,6 @@
   font-size: 20px;
   opacity: 100% !important;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-  /* position: absolute; */
-  /* bottom: 20px;
-  left: 60%;
-  width: 70%; */
-  /* bottom: unset; */
   position: fixed;
   display: block;
   z-index: 1001;
@@ -51,6 +47,7 @@
   display: none;
 }
 
+/* Responsive code for tablets in portrait mode */
 @media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
   .desktopCarousel {
     display: none;
@@ -81,6 +78,7 @@
   }
 }
 
+/* Responsive mode for tablets in landscape mode and smaller screens */
 @media (max-width: 768px) {
   .desktopCarousel {
     display: none;

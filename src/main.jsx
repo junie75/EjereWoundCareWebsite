@@ -1,9 +1,10 @@
+//Code for the main entry point of the application
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Home from "./Home.jsx";
 import "./index2.css";
 import "./layout2.css";
-// import { GoogleReviewsProvider } from "./GoogleReviewsContext.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./About.jsx";
 import WoundCare from "./WoundCare.jsx";
@@ -13,7 +14,6 @@ import Testimonials from "./Testimonials.jsx";
 import NotFound from "./NotFound.jsx";
 import PrivacyNotice from "./PrivacyNotice.jsx";
 import Careers from "./Careers.jsx";
-// import { GoogleMapsProvider } from "./GoogleMapsContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -57,10 +57,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* <GoogleMapsProvider apiKey={apiKey}>
-      <GoogleReviewsProvider> */}
     <RouterProvider router={router} />
-    {/* </GoogleReviewsProvider>
-    </GoogleMapsProvider> */}
   </React.StrictMode>
 );

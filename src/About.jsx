@@ -1,3 +1,5 @@
+//Component to display information about the clinic and the team members
+
 import React from "react";
 import Layout from "./Layout";
 import aboutImg1 from "./assets/happyDoctors.png";
@@ -104,8 +106,6 @@ const slideShow = () => (
   <>
     {/* Carousel optimized for desktop, images have dimensions of 1920px x 700px with an object-fit of cover*/}
     <Carousel {...getConfigurableProps()} className="desktopCarousel">
-      {/* <p className=" slideText legend crimson-pro-reg "> */}
-
       {desktopCarousel.map((image, index) => (
         <div className="slide desktop" key={index}>
           <img
@@ -113,12 +113,6 @@ const slideShow = () => (
             src={image}
             alt={`carousel${index + 1}`}
           />
-          {/* <p className="textttt">
-            Ejere Wound Care & Hyperbaric Oxygen Therapy is an advanced wound
-            care clinic that aims to provide personalized, compassionate care to
-            patients with chronic wounds in Parker County and surrounding
-            communities.
-          </p> */}
         </div>
       ))}
     </Carousel>
@@ -131,12 +125,6 @@ const slideShow = () => (
             src={image}
             alt={`carousel${index + 1}`}
           />
-          {/* <p className=" slideText legend crimson-pro-reg">
-            Ejere Wound Care & Hyperbaric Oxygen Therapy is an advanced wound
-            care clinic that aims to provide personalized, compassionate care to
-            patients with chronic wounds in Parker County and surrounding
-            communities.
-          </p> */}
         </div>
       ))}
     </Carousel>
@@ -187,10 +175,6 @@ export default function About() {
         <div className="aboutSection">
           <div className="title">About Our Clinic</div>
           <div className="banner">
-            {/* <div className="photos">
-              <img src={building} alt="aboutImg1" />
-              {/* <img src={aboutImg2} alt="aboutImg2" /> /}
-            </div> */}
             {slideShow()}
             <p className="crimson-pro-reg bannerText">
               Ejere Wound Care & Hyperbaric Oxygen Therapy is an advanced wound
@@ -202,12 +186,6 @@ export default function About() {
           <div className="desc mission">
             <h2>Our Mission</h2>
             <p>
-              {/* Our mission is to provide specialized wound care services with the
-              highest level of professionalism, respect, compassion, sincerity
-              and transparency to our patients, while collaborating and working
-              closely with our referring providers and physician colleagues in
-              other specialties to facilitate wound healing, prevent limb loss
-              and improve quality of life. */}
               We are dedicated to providing specialized wound care with
               professionalism, respect, and transparency, collaborating with
               referring providers to facilitate healing, prevent limb loss, and
@@ -215,21 +193,6 @@ export default function About() {
             </p>
           </div>
           <div className="desc hbot content">
-            {/* <div className="promiseBox">
-              <div className="iconBox">
-                <span class="material-symbols-outlined icon-large">
-                  stethoscope
-                </span>
-              </div>
-              <div className="motto">
-                <h2>Our Mission</h2>
-                <p>
-                  To provide wound care services with the highest level of
-                  professionalism, respect, compassion, and transparency to our
-                  patients.
-                </p>
-              </div>
-            </div> */}
             <div className="promiseBox">
               <div className="iconBox">
                 <span className="material-symbols-outlined icon-large">
@@ -239,8 +202,6 @@ export default function About() {
               <div className="motto">
                 <h2>Vision</h2>
                 <p>
-                  {/* To be the leading center of excellence and destination of
-                  choice for treating difficult to heal wounds in North Texas. */}
                   We strive to be the leading center of excellence for wound
                   healing in North Texas.
                 </p>
@@ -255,8 +216,6 @@ export default function About() {
               <div className="motto">
                 <h2>Patient Promise</h2>
                 <p>
-                  {/* To provide compassionate, professional, loving care for every
-                  patient, every wound, every time. */}
                   We promise to treat every patient with the same love, dignity,
                   and respect that we would give to our own family.
                 </p>

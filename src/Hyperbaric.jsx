@@ -1,3 +1,5 @@
+//Component to display information about Hyperbaric Oxygen Therapy services
+
 import React from "react";
 import hbot from "./assets/hbot.jpg";
 import Layout from "./Layout";
@@ -150,33 +152,6 @@ export default function Hyperbaric() {
               </li>
             </ol>
           </div>
-          {/* <div className="listContainer row">
-            <div className="list">
-              <h2>Insurance covered indications</h2>
-              <ul>
-                <li>Chronic, non-healing wounds</li>
-                <li>Diabetic foot/leg ulcers</li>
-                <li>Decubitus ulcers (pressure ulcers, bedsores)</li>
-                <li>Burns</li>
-                <li>Traumatic wounds</li>
-                <li>Surgical wounds</li>
-                <li>Wounds caused by infection</li>
-                <li>Wounds due to circulatory problems</li>
-              </ul>
-            </div>
-            <div className="list">
-              <h2>Non-covered indications</h2>
-              <ul>
-                <li>Advanced wound dressings</li>
-                <li>Debridement</li>
-                <li>Hyperbaric oxygen therapy</li>
-                <li>Bioengineered skin substitutes</li>
-                <li>Negative pressure wound therapy</li>
-                <li>Laboratory studies</li>
-                <li>Radiologic imaging and vascular studies</li>
-              </ul>
-            </div>
-          </div> */}
           <div className="desc hbot center">
             <h2>How to get here...</h2>
             <p>

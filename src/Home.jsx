@@ -1,3 +1,5 @@
+//Home page component with a call to action button
+
 import React from "react";
 import Layout from "./Layout";
 import { Link } from "react-router-dom";
@@ -11,9 +13,6 @@ export default function Home() {
             Respectful, <br /> Professional, <br />
             Loving Care
           </div>
-          {/* <div className="smallerText cormorant-garamond-semibold ">
-            For Every Wound, Every Patient, Every Time
-          </div> */}
           <div className="ctaBtn crimson-pro-reg">
             <Link
               to={"https://patientportal.advancedmd.com/127093/onlineintake"}
