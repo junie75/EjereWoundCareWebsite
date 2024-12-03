@@ -183,7 +183,7 @@ export default function About() {
               communities.
             </p>
           </div>
-          <div className="desc mission">
+          {/* <div className="desc mission">
             <h2>Our Mission</h2>
             <p>
               We are dedicated to providing specialized wound care with
@@ -191,8 +191,24 @@ export default function About() {
               referring providers to facilitate healing, prevent limb loss, and
               enhance quality of life.
             </p>
-          </div>
-          <div className="desc hbot content">
+          </div> */}
+          {/* <div className="desc hbot content">
+            <div className="promiseBox">
+              <div className="iconBox">
+                <span className="material-symbols-outlined icon-large">
+                  target
+                </span>
+              </div>
+              <div className="motto">
+                <h2>Our Mission</h2>
+                <p>
+                  We are dedicated to providing specialized wound care with
+                  professionalism, respect, and transparency, collaborating with
+                  referring providers to facilitate healing, prevent limb loss,
+                  and enhance quality of life.
+                </p>
+              </div>
+            </div>
             <div className="promiseBox">
               <div className="iconBox">
                 <span className="material-symbols-outlined icon-large">
@@ -200,7 +216,7 @@ export default function About() {
                 </span>
               </div>
               <div className="motto">
-                <h2>Vision</h2>
+                <h2>Our Vision</h2>
                 <p>
                   We strive to be the leading center of excellence for wound
                   healing in North Texas.
@@ -221,6 +237,102 @@ export default function About() {
                 </p>
               </div>
             </div>
+          </div> */}
+          {/* <div className="valuesSection">
+            <div className="iconRow">
+              <div className="iconBox">
+                <span className="material-symbols-outlined icon-large">
+                  visibility
+                </span>
+              </div>
+              <div className="iconBox">
+                <span className="material-symbols-outlined icon-large">
+                  target
+                </span>
+              </div>
+              <div className="iconBox">
+                <span className="material-symbols-outlined icon-large">
+                  partner_exchange
+                </span>
+              </div>
+            </div>
+            <div className="mottoRow">
+              <div className="motto">
+                <h2>Our Vision</h2>
+                <p>
+                  We strive to be the leading center of excellence for wound
+                  healing in North Texas.
+                </p>
+              </div>
+              <div className="motto">
+                <h2>Our Mission</h2>
+                <p>
+                  We are dedicated to providing specialized wound care with
+                  professionalism, respect, and transparency, collaborating with
+                  referring providers to facilitate healing, prevent limb loss,
+                  and enhance quality of life.
+                </p>
+              </div>
+
+              <div className="motto">
+                <h2>Patient Promise</h2>
+                <p>
+                  We promise to treat every patient with the same love, dignity,
+                  and respect that we would give to our own family.
+                </p>
+              </div>
+            </div>
+          </div> */}
+          <div className="valuesSection">
+            {/* <div className="iconRow"> */}
+            <div className="value">
+              <div className="iconBox">
+                <span className="material-symbols-outlined icon-large">
+                  visibility
+                </span>
+              </div>
+              <div className="motto">
+                <h2>Our Vision</h2>
+                <p>
+                  We strive to be the leading center of excellence for wound
+                  healing in North Texas.
+                </p>
+              </div>
+            </div>
+            <div className="value">
+              <div className="iconBox">
+                <span className="material-symbols-outlined icon-large">
+                  target
+                </span>
+              </div>
+              <div className="motto">
+                <h2>Our Mission</h2>
+                <p>
+                  We are dedicated to providing specialized wound care with
+                  professionalism, respect, and transparency, collaborating with
+                  referring providers to facilitate healing, prevent limb loss,
+                  and enhance quality of life.
+                </p>
+              </div>
+            </div>
+            <div className="value">
+              <div className="iconBox">
+                <span className="material-symbols-outlined icon-large">
+                  partner_exchange
+                </span>
+              </div>
+              <div className="motto">
+                <h2>Patient Promise</h2>
+                <p>
+                  We promise to treat every patient with the same love, dignity,
+                  and respect that we would give to our own family.
+                </p>
+              </div>
+            </div>
+            {/* </div> */}
+            {/* <div className="mottoRow"> */}
+
+            {/* </div> */}
           </div>
         </div>
         <div className="teamSection">
