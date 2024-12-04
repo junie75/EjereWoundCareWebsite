@@ -47,17 +47,18 @@ body {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+/* note: file path must be the file name alone */
 .home-background {
-  background-image: url("./assets/unsplashTreeOpt.jpg");
+  background-image: url("unsplashTreeOpt.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 20%;
   background-attachment: fixed;
 }
 
-@supports (background-image: url("./assets/unsplashTreeOptv3.avif")) {
+@supports (background-image: url("unsplashTreeOptv3.avif")) {
   .home-background {
-    background-image: url("./assets/unsplashTreeOptv3.avif");
+    background-image: url("unsplashTreeOptv3.avif");
   }
 }
 
