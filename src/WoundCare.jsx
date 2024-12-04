@@ -65,7 +65,7 @@ export default function WoundCare() {
             </a>
           </div>
           <div className="image">
-            <img src={Illustration} alt="HBOTimage" />
+            <img src={Illustration} alt="HBOTimage" width={602} height={322} />
           </div>
         </div>
       </div>

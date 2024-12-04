@@ -1,7 +1,7 @@
 //Component to display information about Hyperbaric Oxygen Therapy services
 
 import React from "react";
-import hbot from "./assets/hbot.jpg";
+import hbot from "./assets/hbotv2.jpg";
 import Layout from "./Layout";
 
 export default function Hyperbaric() {
@@ -15,6 +15,8 @@ export default function Hyperbaric() {
               src={hbot}
               alt="Hyperbaric Oxygen Therapy"
               className="hbotImage"
+              width={395}
+              height={224}
             />
             <div className="rowText">
               <p>
