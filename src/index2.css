@@ -119,7 +119,7 @@ main {
   align-items: center;
   width: 100vw;
   min-height: 80vh;
-  overflow-y: clip;
+  overflow-y: hidden;
 }
 
 .homeDiv {
