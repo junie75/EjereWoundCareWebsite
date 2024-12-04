@@ -125,6 +125,7 @@ const slideShow = () => (
         //browser will choose the appropriate image based on the media query
         <picture className="slide desktop" key={index}>
           <source
+            type="image/avif"
             srcSet={image.desktop}
             media="(min-width: 1024px)"
             className="slideImage desktop"
