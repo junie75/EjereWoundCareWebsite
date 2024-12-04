@@ -14,6 +14,12 @@
   width: 100%;
 }
 
+.slideImage {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
 .slideText.legend.crimson-pro-reg {
   background-color: unset !important;
   font-size: 20px;

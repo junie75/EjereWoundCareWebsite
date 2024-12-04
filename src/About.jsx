@@ -51,30 +51,43 @@ import carousel10desk from "/assets/carousel10desk.avif";
 import { Carousel } from "react-responsive-carousel";
 import "./CustomCarousel.css";
 
-const carouselImages = [
-  carousel1,
-  carousel2,
-  carousel3,
-  carousel4,
-  carousel5,
-  carousel6,
-  carousel7,
-  carousel8,
-  carousel9,
-  carousel10,
-];
+// const carouselImages = [
+//   carousel1,
+//   carousel2,
+//   carousel3,
+//   carousel4,
+//   carousel5,
+//   carousel6,
+//   carousel7,
+//   carousel8,
+//   carousel9,
+//   carousel10,
+// ];
 
-const desktopCarousel = [
-  carousel1desk,
-  carousel2desk,
-  carousel3desk,
-  carousel4desk,
-  carousel5desk,
-  carousel6desk,
-  carousel7desk,
-  carousel8desk,
-  carousel9desk,
-  carousel10desk,
+// const desktopCarousel = [
+//   carousel1desk,
+//   carousel2desk,
+//   carousel3desk,
+//   carousel4desk,
+//   carousel5desk,
+//   carousel6desk,
+//   carousel7desk,
+//   carousel8desk,
+//   carousel9desk,
+//   carousel10desk,
+// ];
+
+const carouselImages = [
+  { mobile: carousel1, desktop: carousel1desk },
+  { mobile: carousel2, desktop: carousel2desk },
+  { mobile: carousel3, desktop: carousel3desk },
+  { mobile: carousel4, desktop: carousel4desk },
+  { mobile: carousel5, desktop: carousel5desk },
+  { mobile: carousel6, desktop: carousel6desk },
+  { mobile: carousel7, desktop: carousel7desk },
+  { mobile: carousel8, desktop: carousel8desk },
+  { mobile: carousel9, desktop: carousel9desk },
+  { mobile: carousel10, desktop: carousel10desk },
 ];
 
 const tooglesGroupId = "Toggles";
@@ -103,36 +116,30 @@ const getConfigurableProps = () => ({
 });
 
 const slideShow = () => (
-  <>
-    {/* Carousel optimized for desktop, images have dimensions of 1920px x 700px with an object-fit of cover*/}
-    <Carousel {...getConfigurableProps()} className="desktopCarousel">
-      {desktopCarousel.map((image, index) => (
-        <div className="slide desktop" key={index}>
-          <img
+  <Carousel {...getConfigurableProps()} className="">
+    {
+      //iterate over the array of objects
+      carouselImages.map((image, index) => (
+        //for each object, create a picture element with a
+        //source element for the mobile image and a source element for the desktop image
+        //browser will choose the appropriate image based on the media query
+        <picture className="slide desktop" key={index}>
+          <source
+            srcSet={image.desktop}
+            media="(min-width: 1024px)"
             className="slideImage desktop"
-            src={image}
-            alt={`carousel${index + 1}`}
-            width={1920}
-            height={700}
           />
-        </div>
-      ))}
-    </Carousel>
-    {/* Carousel optimized for mobile, images have their normal dimensions with an object-fit of contain*/}
-    <Carousel {...getConfigurableProps()} className="mobileCarousel">
-      {carouselImages.map((image, index) => (
-        <div className="slide mobile" key={index}>
           <img
-            className="slideImage mobile"
-            src={image}
+            className="slideImage"
+            src={image.mobile}
             alt={`carousel${index + 1}`}
             width={1200}
             height={900}
           />
-        </div>
-      ))}
-    </Carousel>
-  </>
+        </picture>
+      ))
+    }
+  </Carousel>
 );
 
 export default function About() {
