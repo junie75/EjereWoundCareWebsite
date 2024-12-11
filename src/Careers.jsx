@@ -7,47 +7,6 @@ import Markdown from "react-markdown";
 
 // Modal component to display job details
 const JobModal = ({ job, onClose }) => {
-  // // Utility function to strip markdown syntax
-  // const stripMarkdown = (markdownText) => {
-  //   return markdownText
-  //     .replace(/!\[.*\]\(.*\)/g, "") // Remove images
-  //     .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1") // Convert links to text
-  //     .replace(/[#>*_`~\-]/g, "") // Remove markdown characters
-  //     .replace(/\r?\n|\r/g, " ") // Replace line breaks with spaces
-  //     .trim();
-  // };
-
-  // // Convert markdown content to plain text for the description
-  // const plainTextContent = stripMarkdown(job.content);
-
-  // Define JSON-LD schema data for the job posting to be available to search engines
-  // const schemaData = {
-  //   "@context": "http://schema.org",
-  //   "@type": "JobPosting",
-  //   title: job.jobTitle,
-  //   description: plainTextContent,
-  //   hiringOrganization: {
-  //     "@type": "MedicalClinic",
-  //     name: "Ejere Wound Care and Hyperbaric Oxygen Therapy",
-  //     url: "https://ejerewoundcare.com",
-  //     logo: "https://www.ejerewoundcare.com/assets/RedoneLogoTrans400x118-Z3vkd7aU.png",
-  //   },
-  //   employmentType: "FULL-TIME" /*job.jobType.toUpperCase(),*/,
-  //   jobLocation: {
-  //     "@type": "Place",
-  //     address: {
-  //       "@type": "PostalAddress",
-  //       addressLocality: "Weatherford",
-  //       addressRegion: "TX",
-  //       addressCountry: "US",
-  //       postalCode: "76086",
-  //     },
-  //   },
-  //   datePosted: "2024-11-11",
-  //   validThrough: "2024-12-31", //expiration date
-  //   applyLink: job.applyLink,
-  // };
-
   return (
     <div className="modal" key={job.jobID}>
       <div className="modalContent">
@@ -56,11 +15,6 @@ const JobModal = ({ job, onClose }) => {
         </div>
         {/* Render Job content after parsing markdown */}
         <Markdown>{job.content}</Markdown>
-        {/* Render JSON-LD schema data as a script tag to be crawled by search engines */}
-        {/* <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-        /> */}
       </div>
     </div>
   );
