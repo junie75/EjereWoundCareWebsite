@@ -34,8 +34,6 @@ export default function Careers() {
       .trim();
   };
 
-  // Convert markdown content to plain text for the description
-  // const plainTextContent = stripMarkdown(job.content);
   return (
     <Layout>
       <div className="pageContainer">
@@ -57,7 +55,9 @@ export default function Careers() {
               </div>
             ) : (
               jobPostings.map((post) => {
+                // Convert markdown content to plain text for the description
                 const plainTextContent = stripMarkdown(post.content);
+                // Schema data for job posting
                 const schemaData = {
                   "@context": "http://schema.org",
                   "@type": "JobPosting",
@@ -127,7 +127,7 @@ export default function Careers() {
                     <script
                       type="application/ld+json"
                       dangerouslySetInnerHTML={{
-                        __html: JSON.stringify(schemaData),
+                        __html: JSON.stringify(schemaData), // Set the schema data as innerHTML
                       }}
                     />
                   </div>
