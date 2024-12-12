@@ -234,6 +234,12 @@
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .logo {
     max-height: 7vh;
+    width: unset;
+  }
+
+  .logoContainer {
+    width: 100%;
+    justify-content: right;
   }
 
   .linkContainer {
@@ -308,6 +314,12 @@
 @media (max-width: 768px) {
   .logo {
     max-height: 7vh;
+    width: unset;
+  }
+
+  .logoContainer {
+    width: 100%;
+    justify-content: right;
   }
 
   .linkContainer {

@@ -129,8 +129,8 @@ function Navigation({ isHomePage }) {
             src={Logo2}
             alt="Logo"
             className="logo"
-            width="200"
-            height="100"
+            width="400"
+            height="118"
           />
         </Link>
       </div>
