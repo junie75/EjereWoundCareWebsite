@@ -137,7 +137,7 @@ const ChatWidget = ({ isHomePage }) => {
                   >
                     {phoneClicked ? "Phone: (682) 582-2898" : ""}
                   </span>
-                  phone
+                  call
                 </span>
               </a>
               <a
@@ -161,7 +161,7 @@ const ChatWidget = ({ isHomePage }) => {
                   >
                     {emailClicked ? "referrals@ejerewoundcare.com" : ""}
                   </span>
-                  Mail
+                  mail
                 </span>
               </a>
               <a
