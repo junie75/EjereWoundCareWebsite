@@ -366,6 +366,11 @@ main {
   border-radius: 50%;
 }
 
+/* flips images horizontally */
+.memberPic.profileFlip {
+  transform: scaleX(-1);
+}
+
 .teamMember p {
   margin-bottom: calc(0.5 * var(--rem));
 }

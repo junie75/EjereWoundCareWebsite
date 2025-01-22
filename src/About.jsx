@@ -4,11 +4,15 @@ import React from "react";
 import Layout from "./Layout";
 import aboutImg1 from "./assets/happyDoctors.png";
 import aboutImg2 from "./assets/aboutImg2.jpg";
-import profileJackie from "./assets/profileJackie.JPG";
-import profileMelanie from "./assets/profileMelanie.jpg";
-import profileJuni from "./assets/profileJuni.jpg";
+import profileJackie from "./assets/profileJackie2.jpg";
+import profileMelanie from "./assets/profileMelanie2.jpg";
+import profileJuni from "./assets/profileJuni2.jpg";
 // import profileHenry from "./assets/henryFormalv5.jpg";
-import profileHenry from "./assets/profileHenry.jpg";
+import profileHenry from "./assets/profileHenry5.jpg";
+import profileTeresa from "./assets/profileTeresa2.jpg";
+import profileLinda from "./assets/profileLinda2.jpg";
+import profileLarissa from "./assets/profileLarissa2.jpeg";
+import profileFelicia from "./assets/profileFelicia.jpg";
 
 //FOR DEVELOPMENT
 // import carousel1 from "../public/assets/carousel1.jpg";
@@ -152,6 +156,7 @@ export default function About() {
       blurb: `Dr. Ejere has a background in internal medicine with a special interest, focus, and expertise in treating difficult-to-heal wounds using advanced wound care modalities, including hyperbaric oxygen therapy. With over 30 years of experience as a physician and more than 12 years dedicated to wound care, he boasts a proven track record with a healing rate of over 95%. Discovering the wound care specialty allowed Dr. Ejere to find his true purpose in life. He promises to provide compassionate, professional, and loving care for every patient, treating each one like family.`,
       email: "henry.ejere@ejerewoundcare.com",
       phone: "682-582-2989",
+      profileFlip: true,
     },
     {
       photo: profileJackie,
@@ -161,6 +166,7 @@ export default function About() {
                 “I take pride in treating our patients physically, but also in addressing the emotional and mental strain these situations have on their lives and that of their families.” `,
       email: "jacki.morgan@ejerewoundcare.com",
       phone: "682-582-2989",
+      profileFlip: false,
     },
     {
       photo: profileMelanie,
@@ -170,6 +176,7 @@ export default function About() {
             “I am passionate about impacting my patient’s lives by empowering them with the knowledge and support they need to achieve optimal health and quality of life.”`,
       email: "melanie.parker@ejerewoundcare.com",
       phone: "682-582-2989",
+      profileFlip: false,
     },
     {
       photo: profileJuni,
@@ -179,6 +186,50 @@ export default function About() {
 "Innovation begins by simply asking how a task can be performed more efficiently and then building the solution. I am passionate about simplifying the lives of healthcare professionals and transforming any vision into reality."`,
       email: "juni.ejere@ejerewoundcare.com",
       phone: "682-582-2989",
+      profileFlip: false,
+    },
+    {
+      photo: profileTeresa,
+      name: "Teresa Correa, BSc, CNA ",
+      role: "Office Coordinator",
+      blurb: `Teresa began her career in 2012 as a Certified Nursing Assistant (CNA) and earned her Bachelor of Science in Health Care Management in 2020. Currently serving as the Office Coordinator at the clinic, she brings over 7 years of experience in administrative support, excellent organizational skills, attention to detail, and a proactive approach to managing office operations. Teresa is passionate about making a difference in patients' lives and ensuring they receive the highest quality care possible. “My goal is to enhance efficiency and contribute to a positive and collaborative workplace culture.”`,
+      email: "tcorrea@ejerewoundcare.com",
+      phone: "682-582-2989",
+      profileFlip: true,
+    },
+    {
+      photo: profileLinda,
+      name: "Linda Philipski, RN CHWS",
+      role: "Certified Hyperbaric Wound Specialist Registered Nurse",
+      blurb: `Linda has been a registered nurse for 30 plus years. Her passion for wound care started in 2004. She later became Hyperbaric and Wound Care certified. “I have always enjoyed helping people in their time of need and feel I’m mutually rewarded from patient bonds.”`,
+      email: "linda.philipski@ejerewoundcare.com",
+      phone: "682-582-2989",
+      profileFlip: true,
+    },
+    {
+      photo: profileFelicia,
+      name: "Felicia Rogers, CPT-NPA, CCMA",
+      role: "Certified Clinical Medical Assistant",
+      blurb: `Felicia began her career in the medical field over 13 years ago. She is
+a dedicated phlebotomist (CPT-NPA) and a Certified Clinical Medical
+Assistant (CCMA) Throughout her career, she has developed a deep
+passion for patient care and a commitment to excellence in her work.
+She takes pride in her ability to connect with patients and ensure their
+comfort, all while maintaining a high standard of professionalism. Her
+journey in healthcare has equipped her with a diverse skill set and a
+wealth of knowledge that she will continue to build upon every day. `,
+      email: "felicia.rogers@ejerewoundcare.com",
+      phone: "682-582-2989",
+      profileFlip: false,
+    },
+    {
+      photo: profileLarissa,
+      name: "Larissa Sugg, RN-BSN, CWON",
+      role: "PRN HBO Nurse",
+      blurb: `Larissa has 24 years of nursing experience and is also a certified wound and ostomy nurse. Larissa began working with Dr. Ejere in 2021 and enjoys providing specialized wound care to the many patients she meets. "I enjoy educating the patients and their families on complex wounds and seeing their satisfaction once the wound closes". `,
+      email: "referrals@ejerewoundcare.com",
+      phone: "682-582-2989",
+      profileFlip: false,
     },
   ];
   return (
@@ -248,7 +299,11 @@ export default function About() {
           <div className="teamBoxes">
             {teamMembers.map((member, index) => (
               <div key={index} className="teamMember">
-                <div className="memberPic">
+                <div
+                  className={`memberPic ${
+                    member.profileFlip ? "profileFlip" : ""
+                  }`}
+                >
                   <img
                     src={member.photo}
                     alt="memberPhoto"
