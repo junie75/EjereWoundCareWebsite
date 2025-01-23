@@ -3,7 +3,7 @@
 
 .slide.desktop {
   height: 51vh;
-  width: 8vw;
+  /* width: 8vw; */
   display: flex;
   justify-content: space-between;
 }
@@ -105,6 +105,17 @@
     height: 40vh;
     width: 100% !important;
   }
+
+  .slide.desktop {
+    height: 30vh;
+    width: 100% !important;
+    /* width: 4vw; */
+  }
+
+  .slideImage {
+    object-fit: cover;
+  }
+
   .slideImage.mobile {
     object-fit: contain;
   }

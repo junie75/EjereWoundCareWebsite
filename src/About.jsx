@@ -5,13 +5,13 @@ import Layout from "./Layout";
 import aboutImg1 from "./assets/happyDoctors.png";
 import aboutImg2 from "./assets/aboutImg2.jpg";
 import profileJackie from "./assets/profileJackie2.jpg";
-import profileMelanie from "./assets/profileMelanie2.jpg";
+import profileMelanie from "./assets/profileMelanie3.jpg";
 import profileJuni from "./assets/profileJuni2.jpg";
 // import profileHenry from "./assets/henryFormalv5.jpg";
 import profileHenry from "./assets/profileHenry5.jpg";
 import profileTeresa from "./assets/profileTeresa2.jpg";
 import profileLinda from "./assets/profileLinda2.jpg";
-import profileLarissa from "./assets/profileLarissa2.jpeg";
+import profileLarissa from "./assets/profileLarissa3.jpg";
 import profileFelicia from "./assets/profileFelicia.jpg";
 
 //FOR DEVELOPMENT
@@ -30,6 +30,7 @@ import profileFelicia from "./assets/profileFelicia.jpg";
 // import carousel6desk from "../public/assets/carousel6.avif";
 
 //FOR PRODUCTION
+import carousel0 from "/assets/carousel0.jpg";
 import carousel1 from "/assets/carousel1.jpg";
 import carousel2 from "/assets/carousel2.jpg";
 import carousel3 from "/assets/carousel3.jpg";
@@ -40,7 +41,9 @@ import carousel7 from "/assets/carousel7.jpg";
 import carousel8 from "/assets/carousel8.jpg";
 import carousel9 from "/assets/carousel9.jpg";
 import carousel10 from "/assets/carousel10.jpg";
+import carousel11 from "/assets/carousel11.jpg";
 
+import carousel0desk from "/assets/carousel0.avif";
 import carousel1desk from "/assets/carousel1.avif";
 import carousel2desk from "/assets/carousel2.avif";
 import carousel3desk from "/assets/carousel3.avif";
@@ -51,6 +54,7 @@ import carousel7desk from "/assets/carousel7desk.avif";
 import carousel8desk from "/assets/carousel8desk.avif";
 import carousel9desk from "/assets/carousel9desk.avif";
 import carousel10desk from "/assets/carousel10desk.avif";
+import carousel11desk from "/assets/carousel11desk.avif";
 
 import { Carousel } from "react-responsive-carousel";
 import "./CustomCarousel.css";
@@ -81,7 +85,10 @@ import "./CustomCarousel.css";
 //   carousel10desk,
 // ];
 
+//mobile image dimensions are 1200 x 900 (or at very least a width of 1200)
+//destop image dimensions are 1920 x 700 exactly
 const carouselImages = [
+  { mobile: carousel0, desktop: carousel0desk },
   { mobile: carousel1, desktop: carousel1desk },
   { mobile: carousel2, desktop: carousel2desk },
   { mobile: carousel3, desktop: carousel3desk },
@@ -92,6 +99,7 @@ const carouselImages = [
   { mobile: carousel8, desktop: carousel8desk },
   { mobile: carousel9, desktop: carousel9desk },
   { mobile: carousel10, desktop: carousel10desk },
+  { mobile: carousel11, desktop: carousel11desk },
 ];
 
 const tooglesGroupId = "Toggles";
@@ -316,12 +324,12 @@ wealth of knowledge that she will continue to build upon every day. `,
                   <div className="name noto-serif-bold">{member.name}</div>
                   <p className="role">{member.role}</p>
                   <p className="blurb crimson-pro-reg">{member.blurb}</p>
-                  <div className="email">
+                  {/* <div className="email">
                     <span>Email:</span> {member.email}
-                  </div>
-                  <div className="phone">
+                  </div> */}
+                  {/* <div className="phone">
                     <span>Phone:</span> {member.phone}
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}
