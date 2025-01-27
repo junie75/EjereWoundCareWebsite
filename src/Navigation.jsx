@@ -60,6 +60,9 @@ function Navigation({ isHomePage }) {
       case "Careers":
         navigate("/careers");
         break;
+      case "Privacy Notice":
+        navigate("/privacyNotice");
+        break;
       case "Patient Portal":
         //open patient portal in new tab
         window.open(
@@ -110,6 +113,10 @@ function Navigation({ isHomePage }) {
           },
           {
             label: "Careers",
+            callback: handleMenuItemClick,
+          },
+          {
+            label: "Privacy Notice",
             callback: handleMenuItemClick,
           },
         ],
@@ -192,6 +199,11 @@ function Navigation({ isHomePage }) {
               <li className="dropdown-item">
                 <Link to={"/careers"} onClick={() => setIsMenuOpen(false)}>
                   Careers
+                </Link>
+              </li>
+              <li className="dropdown-item">
+                <Link to="/privacyNotice" onClick={() => setIsMenuOpen(false)}>
+                  Privacy Notice
                 </Link>
               </li>
             </ul>
