@@ -1,6 +1,6 @@
 // Desc: Footer component for the website
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Logo2 from "./assets/RedoneLogoTrans400x118.png";
 import instagram from "../public/assets/instagramIcon.svg";
 import facebook from "../public/assets/facebookIcon.svg";
@@ -41,16 +41,14 @@ const Footer = () => {
           </Link>
         </li>
       </ul> */}
-      <section className="footerTop">
+      <div className="footerTop">
         <div className="footerNameAddy">
           <p>
             <b>Ejere Wound Care & Hyperbaric Oxygen Therapy</b>
             <br />
             730 East Eureka Street
             <br />
-            Weatherford,TX
-            <br />
-            76086
+            Weatherford,TX 76086
           </p>
         </div>
         <div className="footerSocialMedia">
@@ -107,9 +105,12 @@ const Footer = () => {
             Patient Portal
           </Link>
         </div> */}
-      </section>
-      {/* <section className="footerBottom">
-        <div className="footerSocialMedia">
+      </div>
+      <div className="footerBottom">
+        <p className="footerCopyRight">
+          &copy; 2024 Ejere Wound Care & Hyperbaric Oxygen Therapy
+        </p>
+        {/* <div className="footerSocialMedia">
           <a
             href="https://www.instagram.com/ejerewoundcare/"
             target="_blank"
@@ -168,8 +169,8 @@ const Footer = () => {
             // width="400"
             // height="118"
           />
-        </div> *}
-      </section> */}
+        </div> *}*/}
+      </div>
     </div>
   );
 };

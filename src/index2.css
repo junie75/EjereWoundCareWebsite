@@ -59,6 +59,7 @@ body {
 @supports (background-image: url("unsplashTreeOptv3.avif")) {
   .home-background {
     background-image: url("unsplashTreeOptv3.avif");
+    background-image: url("../public/assets/unsplashTreeOptv3.avif");
   }
 }
 
@@ -117,12 +118,18 @@ main {
   flex: 1;
   justify-content: right;
   align-items: center;
-  width: 100vw;
-  min-height: 80vh;
+  /* width: 100vw; */
+  min-height: 100vh;
   overflow-y: hidden;
+  /* border: 2px solid red; */
+  /* margin-top: 80px; */
+  /* margin: 0 auto; */
+  /* margin-bottom: calc(6.6 * var(--rem));
+  margin-top: calc(8 * var(--rem)); */
 }
 
 .homeDiv {
+  position: fixed;
   display: flex;
   flex-direction: column;
   height: 70vh;
@@ -130,6 +137,7 @@ main {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  /* border: 2px solid black; */
 }
 
 .hugeText {
@@ -173,6 +181,7 @@ main {
   align-items: center;
   width: 80vw;
   margin: 0 auto;
+  padding-bottom: 40px;
   margin-bottom: calc(6.6 * var(--rem));
   margin-top: calc(8 * var(--rem));
 }
@@ -571,7 +580,7 @@ main {
 .contactSections {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 80%;
   min-height: 100vh;
@@ -856,6 +865,10 @@ main {
     min-height: 100vh;
     margin-top: calc(12 * var(--rem));
   }
+
+  /* .pageContainer.higher {
+    margin-top: calc(6 * var(--rem));
+  } */
 }
 
 @media screen and (max-width: 1280px) {

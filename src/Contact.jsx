@@ -7,8 +7,8 @@ export default function Contact() {
   return (
     <Layout>
       <div className="pageContainer">
+        <div className="title">Contact Us</div>
         <div className="contactSections">
-          <div className="title">Contact Us</div>
           <div className="contactSection">
             <div className="contactInfo">
               <div className="desc hbot">

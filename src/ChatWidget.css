@@ -53,8 +53,10 @@
   display: flex;
   justify-content: right;
   bottom: calc(2 * var(--rem));
-  width: 99%;
+  right: 0;
+  /* width: 99%; */
   z-index: 1001;
+  /* border: 2px solid red; */
 }
 
 .messageBubble {
@@ -162,7 +164,6 @@
   display: flex;
   flex-direction: column;
   align-items: right;
-  backdrop-filter: blur(0.5px);
 }
 
 .chat-widget-item {
