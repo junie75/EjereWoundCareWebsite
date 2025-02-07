@@ -160,7 +160,7 @@ main {
   font-size: calc(3 * var(--rem));
   color: white;
   background-color: var(--watermelon-pink);
-  padding: calc(1 * var(--rem));
+  padding: calc(1.3 * var(--rem)) calc(1 * var(--rem));
   letter-spacing: calc(0.15 * var(--rem));
   border-radius: 10px;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
@@ -1113,7 +1113,7 @@ main {
   }
 
   .ctaBtn {
-    font-size: calc(2 * var(--rem));
+    font-size: calc(1.5 * var(--rem));
   }
 
   .homeContainer {
