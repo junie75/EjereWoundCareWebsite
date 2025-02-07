@@ -334,7 +334,7 @@
     font-size: calc(1.6 * var(--rem));
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
   .footer {
     font-size: calc(1.4 * var(--rem));
   }
