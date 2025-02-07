@@ -157,7 +157,7 @@ main {
 
 .ctaBtn {
   text-transform: uppercase;
-  font-size: calc(1.5 * var(--rem));
+  font-size: calc(3 * var(--rem));
   color: white;
   background-color: var(--watermelon-pink);
   padding: calc(1 * var(--rem));
@@ -830,13 +830,19 @@ main {
     font-size: calc(4 * var(--rem));
   }
 
-  .ctaBtn {
+  /* .ctaBtn {
     font-size: calc(3 * var(--rem));
-  }
+  } */
 
   .pageContainer {
     min-height: 100vh;
     margin-top: calc(12 * var(--rem));
+  }
+}
+
+@media (max-width: 1600px) {
+  .ctaBtn {
+    font-size: calc(2 * var(--rem));
   }
 }
 
@@ -847,6 +853,8 @@ main {
 
   .homeDiv {
     height: 70vh;
+    justify-content: center;
+    row-gap: 20px;
   }
 
   .hugeText {
@@ -858,7 +866,7 @@ main {
   }
 
   .ctaBtn {
-    font-size: calc(3 * var(--rem));
+    font-size: calc(1.5 * var(--rem));
   }
 
   .pageContainer {
@@ -885,7 +893,7 @@ main {
   }
 
   .ctaBtn {
-    font-size: calc(2 * var(--rem));
+    /* font-size: calc(1.3 * var(--rem)); */
   }
   .careersContainer .job section .jobTitle {
     flex: 3;
