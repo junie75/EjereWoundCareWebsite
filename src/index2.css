@@ -871,8 +871,8 @@ main {
 
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  line-clamp: 1;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
   overflow: hidden;
   /* overflow-wrap: break-word; */
   /* width: 70%; */
@@ -907,7 +907,7 @@ main {
   flex: 1;
   /* border: 1px solid orange; */
   img {
-    height: 8rem;
+    height: 9rem;
     width: 14rem;
     object-fit: cover;
   }
