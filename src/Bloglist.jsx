@@ -8,27 +8,34 @@ export default function Bloglist() {
   console.log(blogPosts);
   return (
     <Layout>
-      <div className="bloglistContainer">
-        <div className="bloglistBox">
-          <div className="blogPreview">
-            <div className="blogInfo">
-              <div className="blogTitle">
-                Oxygen Toxicity in HBOT: The Importance of Individualized
-                Treatment
-              </div>
-              <div className="blogDesc">
-                This extra oxygen helps in the healing process and enhances the
-                white blood cells ability to fight infection. It...
-              </div>
-              <div className="blogTags">
-                <div className="blogDate">Nov 18. 2024</div>
-                <div className="blogCategory">Hyperbaric Oxygen Therapy </div>
-                <div className="blogReadTime">2 min read</div>
-              </div>
-            </div>
-            <div className="blogThumbnail">
-              <img src={thumb1} alt="thumbnail" />
-            </div>
+      <div className="pageContainer">
+        <div className="bloglistContainer">
+          <div className="bloglistBox ">
+            {blogPosts.map((blog, index) => {
+              return (
+                <div className="blogPreview" key={index}>
+                  <div className="blogInfo">
+                    <div className="blogTitle">{blog.title}</div>
+                    <div className="blogDesc">{blog.description}</div>
+                    <div className="blogTags">
+                      <div className="blogDate">Nov. 18. 2024</div>
+                      <div className="blogCategory">
+                        Hyperbaric Oxygen Therapy{" "}
+                      </div>
+                      <div className="blogReadTime">2 min read</div>
+                    </div>
+                  </div>
+                  <div className="blogThumbnail">
+                    <img
+                      src={blog.thumbnail}
+                      alt="thumbnail"
+                      // width={100}
+                      // height={200}
+                    />
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
