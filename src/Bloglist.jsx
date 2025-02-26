@@ -27,7 +27,7 @@ export default function Bloglist() {
                   </div>
                   <div className="blogThumbnail">
                     <img
-                      src={blog.thumbnail}
+                      src={blog.thumbnail.replace("/public", "")}
                       alt="thumbnail"
                       // width={100}
                       // height={200}
