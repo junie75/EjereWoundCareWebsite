@@ -11,31 +11,33 @@ export default function Bloglist() {
       <div className="pageContainer">
         <div className="bloglistContainer">
           <div className="bloglistBox ">
-            {blogPosts.map((blog, index) => {
-              return (
-                <div className="blogPreview" key={index}>
-                  <div className="blogInfo">
-                    <div className="blogTitle">{blog.title}</div>
-                    <div className="blogDesc">{blog.description}</div>
-                    <div className="blogTags">
-                      <div className="blogDate">Nov. 18. 2024</div>
-                      <div className="blogCategory">
-                        Hyperbaric Oxygen Therapy{" "}
+            {blogPosts
+              .sort((a, b) => b.date - a.date)
+              .map((blog, index) => {
+                return (
+                  <div className="blogPreview" key={index}>
+                    <div className="blogInfo">
+                      <div className="blogTitle">{blog.title}</div>
+                      <div className="blogDesc">{blog.description}</div>
+                      <div className="blogTags">
+                        <div className="blogDate">Nov. 18. 2024</div>
+                        <div className="blogCategory">
+                          Hyperbaric Oxygen Therapy{" "}
+                        </div>
+                        <div className="blogReadTime">2 min read</div>
                       </div>
-                      <div className="blogReadTime">2 min read</div>
+                    </div>
+                    <div className="blogThumbnail">
+                      <img
+                        src={blog.thumbnail.replace("/public", "")}
+                        alt="thumbnail"
+                        // width={100}
+                        // height={200}
+                      />
                     </div>
                   </div>
-                  <div className="blogThumbnail">
-                    <img
-                      src={blog.thumbnail.replace("/public", "")}
-                      alt="thumbnail"
-                      // width={100}
-                      // height={200}
-                    />
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })}
           </div>
         </div>
       </div>

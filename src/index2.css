@@ -992,9 +992,6 @@ main {
     font-size: calc(3.5 * var(--rem));
   }
 
-  .ctaBtn {
-    /* font-size: calc(1.3 * var(--rem)); */
-  }
   .careersContainer .job section .jobTitle {
     flex: 3;
   }

@@ -3,8 +3,9 @@ layout: blog
 title: Understanding Machine Learning Basics
 description: A beginner’s guide to understanding the key concepts behind machine learning.
 date: 2025-02-26T10:37:00.000Z
-thumbnail: /public/assets/ki-roboter-loest-mathe-probleme.webp
+thumbnail: /public/assets/uploads/ki-roboter-loest-mathe-probleme.webp
 ---
+
 # Understanding Machine Learning Basics
 
 Machine learning (ML) is a subset of artificial intelligence (AI) that allows systems to learn from data and improve over time. It’s a broad field, but here are some key concepts to get started:
