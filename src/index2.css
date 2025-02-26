@@ -813,6 +813,67 @@ main {
   }
 }
 
+/* BLOGLIST PAGE */
+.bloglistContainer {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.bloglistBox {
+  background-color: white;
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.blogPreview {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  /* justify-content: space-between; */
+}
+
+.blogInfo {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  row-gap: 10px;
+  /* column */
+}
+
+.blogTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--darkest-green);
+  overflow-wrap: break-word;
+}
+
+.blogDesc {
+  font-size: 1.3rem;
+  color: gray;
+  width: 80%;
+}
+
+.blogTags {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+  font-size: 1.1rem;
+  color: black;
+}
+
+.blogCategory {
+  color: var(--watermelon-pink);
+}
+
 @media (max-width: 4000px) {
   :root {
     --rem: 0.7rem;
