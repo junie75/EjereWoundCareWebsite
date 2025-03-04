@@ -63,7 +63,7 @@ function Navigation({ isHomePage }) {
       case "Privacy Notice":
         navigate("/privacyNotice");
         break;
-      case "Bloglist":
+      case "Blog":
         navigate("/blogs");
         break;
       case "Patient Portal":
@@ -123,7 +123,7 @@ function Navigation({ isHomePage }) {
             callback: handleMenuItemClick,
           },
           {
-            label: "Bloglist",
+            label: "Blog",
             callback: handleMenuItemClick,
           },
         ],

@@ -15,9 +15,10 @@ export default function Bloglist() {
             {blogPosts
               .sort((a, b) => b.date - a.date)
               .map((blog, index) => {
+                console.log(blog.preview_path);
                 return (
                   <div className="blogPreview" key={index}>
-                    <Link to={"/blogs/" + blog.slug2}>
+                    <Link to={"/blogs/" + blog.preview_path}>
                       <div className="blogInfo">
                         <div className="blogTitle">{blog.title}</div>
                         <div className="blogDesc">{blog.description}</div>
