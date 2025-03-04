@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "./Layout";
 import thumb1 from "./assets/aboutImg1.jpeg";
 import { getBlogPosts } from "./getBlogPosts";
+import { Link } from "react-router-dom";
 
 export default function Bloglist() {
   const blogPosts = getBlogPosts();
@@ -16,25 +17,27 @@ export default function Bloglist() {
               .map((blog, index) => {
                 return (
                   <div className="blogPreview" key={index}>
-                    <div className="blogInfo">
-                      <div className="blogTitle">{blog.title}</div>
-                      <div className="blogDesc">{blog.description}</div>
-                      <div className="blogTags">
-                        <div className="blogDate">Nov. 18. 2024</div>
-                        <div className="blogCategory">
-                          Hyperbaric Oxygen Therapy{" "}
+                    <Link to={"/blogs/" + blog.slug2}>
+                      <div className="blogInfo">
+                        <div className="blogTitle">{blog.title}</div>
+                        <div className="blogDesc">{blog.description}</div>
+                        <div className="blogTags">
+                          <div className="blogDate">Nov. 18. 2024</div>
+                          <div className="blogCategory">
+                            Hyperbaric Oxygen Therapy{" "}
+                          </div>
+                          <div className="blogReadTime">2 min read</div>
                         </div>
-                        <div className="blogReadTime">2 min read</div>
                       </div>
-                    </div>
-                    <div className="blogThumbnail">
-                      <img
-                        src={blog.thumbnail.replace("/public", "")}
-                        alt="thumbnail"
-                        // width={100}
-                        // height={200}
-                      />
-                    </div>
+                      <div className="blogThumbnail">
+                        <img
+                          src={blog.thumbnail.replace("/public", "")}
+                          alt="thumbnail"
+                          // width={100}
+                          // height={200}
+                        />
+                      </div>
+                    </Link>
                   </div>
                 );
               })}

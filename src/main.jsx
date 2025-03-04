@@ -15,6 +15,7 @@ import NotFound from "./NotFound.jsx";
 import PrivacyNotice from "./PrivacyNotice.jsx";
 import Careers from "./Careers.jsx";
 import Bloglist from "./Bloglist.jsx";
+import BlogDetails from "./BlogDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
   {
     path: "/blogs",
     element: <Bloglist />,
+  },
+  {
+    path: "/blogs/:slug",
+    element: <BlogDetails />,
   },
 ]);
 
