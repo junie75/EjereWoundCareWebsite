@@ -1,4 +1,5 @@
 import fm from "front-matter";
+import { defaultUrlTransform } from "react-markdown";
 
 export const getBlogPosts = () => {
   //gets every markdown file in blog posts folder and pulls raw content eagerly
@@ -13,7 +14,9 @@ export const getBlogPosts = () => {
     const markdown = modules[path].default;
     const { attributes: data, body: content } = fm(markdown);
     const slug = createSlug(data.title);
-    blogPosts.push({ ...data, content, slug });
+    const postDate = formattedDate(data.date);
+    // const slug = defaultUrlTransform(data.title); //MARK --> makes safe but is it SEO friendly?
+    blogPosts.push({ ...data, content, slug, postDate });
   }
 
   return blogPosts;
@@ -32,4 +35,11 @@ const createSlug = (title) => {
     .replace(/\-\-+/g, "-") // Replace multiple - with single -
     .replace(/^-+/, "") // Trim - from start of text
     .replace(/-+$/, ""); // Trim - from end of text
+};
+
+const formattedDate = (date) => {
+  var newDate = new Date();
+  newDate = date;
+
+  return newDate.toDateString();
 };

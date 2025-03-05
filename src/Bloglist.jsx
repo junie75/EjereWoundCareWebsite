@@ -22,7 +22,7 @@ export default function Bloglist() {
                         <div className="blogTitle">{blog.title}</div>
                         <div className="blogDesc">{blog.description}</div>
                         <div className="blogTags">
-                          <div className="blogDate">Nov. 18. 2024</div>
+                          <div className="blogDate">{blog.postDate}</div>
                           <div className="blogCategory">
                             Hyperbaric Oxygen Therapy
                           </div>
@@ -45,3 +45,10 @@ export default function Bloglist() {
     </Layout>
   );
 }
+
+// export const formattedDate = (date) => {
+//   var newDate = new Date();
+//   newDate = date;
+
+//   return newDate.toDateString();
+// };
