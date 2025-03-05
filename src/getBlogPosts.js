@@ -23,6 +23,7 @@ export const getBlogPosts = () => {
 const createSlug = (title) => {
   // MARK --> Make this cleaner? learn more about regex expressions and make sure every possible unsafe
   //character is removed for urls
+  //ALSO -- make slug unique...add unchanging id??
   return title
     .toString()
     .toLowerCase()
