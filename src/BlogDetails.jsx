@@ -8,8 +8,10 @@ import Layout from "./Layout";
 export default function BlogDetails() {
   const { slug } = useParams(); //pull the slug name from the url
   const blogs = getBlogPosts(); //get list of blogs
+  var imagePath = "";
 
   const [currentBlog, setCurrentBlog] = useState({});
+  // setCurrentBlog(blogs.find((blog) => blog.slug === slug));
 
   //load correct blog based on
   useEffect(() => {
@@ -17,7 +19,7 @@ export default function BlogDetails() {
     setCurrentBlog(blogs.find((blog) => blog.slug === slug));
   }, [slug]);
 
-  console.log(slug);
+  // console.log(slug);
 
   return currentBlog ? (
     <Layout>
@@ -30,10 +32,7 @@ export default function BlogDetails() {
             <div className="blogReadTime">2 min read</div>
           </div>
           <div className="blogPostBanner">
-            <img
-              src={currentBlog.thumbnail.replace("/public", "")}
-              alt="blog image"
-            />
+            <img src={currentBlog.formattedPath} alt="blog image" />
           </div>
           <div className="blogPostDesc">{currentBlog.description}</div>
           <Markdown>{currentBlog.content}</Markdown>

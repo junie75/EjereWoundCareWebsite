@@ -31,7 +31,8 @@ export default function Bloglist() {
                       </div>
                       <div className="blogThumbnail">
                         <img
-                          src={blog.thumbnail.replace("/public", "")}
+                          // src={blog.thumbnail.replace("/public", "")}
+                          src={blog.formattedPath}
                           alt="thumbnail"
                         />
                       </div>

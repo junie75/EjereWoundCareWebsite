@@ -15,8 +15,9 @@ export const getBlogPosts = () => {
     const { attributes: data, body: content } = fm(markdown);
     const slug = createSlug(data.title);
     const postDate = formattedDate(data.date);
+    const formattedPath = formatPath(data.thumbnail);
     // const slug = defaultUrlTransform(data.title); //MARK --> makes safe but is it SEO friendly?
-    blogPosts.push({ ...data, content, slug, postDate });
+    blogPosts.push({ ...data, content, slug, postDate, formattedPath });
   }
 
   return blogPosts;
@@ -37,9 +38,15 @@ const createSlug = (title) => {
     .replace(/-+$/, ""); // Trim - from end of text
 };
 
+//format date to a human readable string
 const formattedDate = (date) => {
   var newDate = new Date();
   newDate = date;
 
   return newDate.toDateString();
+};
+
+//format path of thumbnails bc in production the "/public" prefix is not needed
+const formatPath = (path) => {
+  return path.replace("/public", "");
 };
