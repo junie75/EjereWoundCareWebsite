@@ -30,7 +30,10 @@ export default function BlogDetails() {
             <div className="blogReadTime">2 min read</div>
           </div>
           <div className="blogPostBanner">
-            <img src={currentBlog.thumbnail} alt="" />
+            <img
+              src={currentBlog.thumbnail.replace("/public", "")}
+              alt="blog image"
+            />
           </div>
           <div className="blogPostDesc">{currentBlog.description}</div>
           <Markdown>{currentBlog.content}</Markdown>
