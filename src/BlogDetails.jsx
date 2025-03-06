@@ -27,14 +27,21 @@ export default function BlogDetails() {
         <div className="blogDetailsContainer">
           <h1 className="blogPostTitle">{currentBlog.title}</h1>
           <div className="blogTags">
-            <div className="blogPostDate">{currentBlog.postDate}</div>
-            <div className="blogCategory">Hyperbaric Oxygen Therapy</div>
-            <div className="blogReadTime">2 min read</div>
+            <div className="leftTags">
+              <div className="blogPostDate">{currentBlog.postDate}</div>
+              <span>•</span>
+
+              <div className="blogReadTime">
+                {currentBlog.readTime} min read
+              </div>
+            </div>
+            {/* <div className="blogCategory">Hyperbaric Oxygen Therapy</div> */}
           </div>
+          <div className="blogPostDesc">{currentBlog.description}</div>
           <div className="blogPostBanner">
             <img src={currentBlog.formattedPath} alt="blog image" />
           </div>
-          <div className="blogPostDesc">{currentBlog.description}</div>
+
           <Markdown>{currentBlog.content}</Markdown>
         </div>
       </div>

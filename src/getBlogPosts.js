@@ -1,5 +1,5 @@
 import fm from "front-matter";
-import { defaultUrlTransform } from "react-markdown";
+import { marked } from "marked";
 
 export const getBlogPosts = () => {
   //gets every markdown file in blog posts folder and pulls raw content eagerly
@@ -16,8 +16,16 @@ export const getBlogPosts = () => {
     const slug = createSlug(data.title);
     const postDate = formattedDate(data.date);
     const formattedPath = formatPath(data.thumbnail);
+    const readTime = calculateReadTime(content);
     // const slug = defaultUrlTransform(data.title); //MARK --> makes safe but is it SEO friendly?
-    blogPosts.push({ ...data, content, slug, postDate, formattedPath });
+    blogPosts.push({
+      ...data,
+      content,
+      slug,
+      postDate,
+      formattedPath,
+      readTime,
+    });
   }
 
   return blogPosts;
@@ -49,4 +57,20 @@ const formattedDate = (date) => {
 //format path of thumbnails bc in production the "/public" prefix is not needed
 const formatPath = (path) => {
   return path.replace("/public", "");
+};
+
+const calculateReadTime = (content) => {
+  // console.log(content);
+  var htmlContent = marked.parse(content);
+  const parsedContent = htmlContent.replace(/<(?!br[\x20/>])[^<>]+>/g, "");
+  const words = parsedContent
+    .replaceAll("\n", " ")
+    .split(" ")
+    .filter((n) => n != " ");
+  // console.log(words);
+  //average reading speed is 200 words per minute so divide words by 200 to get num minutes
+  const readTime = Math.ceil(words.length / 200); //round up so <1 minutes rounds up to 1.
+  // console.log(readTime);
+
+  return readTime;
 };

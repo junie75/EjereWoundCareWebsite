@@ -8,6 +8,8 @@
   --lighter-green: #328b8a;
   --lightest-green: #e5ede2;
   --watermelon-pink: #ff5588;
+  --primary-font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
 }
 
 * {
@@ -892,6 +894,7 @@ main {
   font-size: calc(2 * var(--rem));
   color: gray;
   width: 80%;
+  color: #64727b;
 
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -904,13 +907,23 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 60%;
+  width: 80%;
   font-size: calc(1.7 * var(--rem));
   color: black;
 }
 
+.leftTags {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+
 .blogCategory {
-  color: var(--watermelon-pink);
+  background-color: var(--watermelon-pink);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #21021b25;
 }
 
 .blogThumbnail {
@@ -937,7 +950,10 @@ main {
   width: 60%;
   /* min-height: 80vh; */
   margin: 20px 0;
+  font-size: calc(1.5 * var(--rem));
   font-family: "Noto Serif", serif;
+  /* font-family: var(--primary-font-family); */
+  font-weight: 200;
   text-align: left;
   background-color: white;
   border-radius: 10px;
@@ -947,7 +963,6 @@ main {
 }
 
 .blogDetailsContainer :is(h1, h2, h3, h4, h5, h6) {
-  font-family: "Noto Serif", serif;
   font-weight: bold;
   /* color: var(--darkest-green); */
   margin-top: 20px;
@@ -984,6 +999,13 @@ main {
 .blogDetailsContainer .blogTags {
   width: 80%;
   font-size: calc(1.5 * var(--rem));
+  margin: 10px 0;
+  /* color: var(--medium-green); */
+}
+
+.blogPostDesc {
+  color: rgb(121, 117, 117);
+  color: #64727b;
 }
 
 @media (max-width: 4000px) {

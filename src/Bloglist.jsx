@@ -22,11 +22,17 @@ export default function Bloglist() {
                         <div className="blogTitle">{blog.title}</div>
                         <div className="blogDesc">{blog.description}</div>
                         <div className="blogTags">
-                          <div className="blogDate">{blog.postDate}</div>
+                          <div className="leftTags">
+                            <div className="blogDate">{blog.postDate}</div>
+                            <span>•</span>
+                            <div className="blogReadTime">
+                              {blog.readTime} min read
+                            </div>
+                          </div>
+
                           <div className="blogCategory">
                             Hyperbaric Oxygen Therapy
                           </div>
-                          <div className="blogReadTime">2 min read</div>
                         </div>
                       </div>
                       <div className="blogThumbnail">
