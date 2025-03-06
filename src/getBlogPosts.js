@@ -62,7 +62,7 @@ const formatPath = (path) => {
 const calculateReadTime = (content) => {
   // console.log(content);
   var htmlContent = marked.parse(content);
-  const parsedContent = htmlContent.replace(/<(?!br[\x20/>])[^<>]+>/g, "");
+  const parsedContent = htmlContent.replace(/<(?!br[\x20/>])[^<>]+>/g, ""); //removes html tags
   const words = parsedContent
     .replaceAll("\n", " ")
     .split(" ")
