@@ -1008,6 +1008,15 @@ main {
   color: #64727b;
 }
 
+.blogDetailsContainer .icon-medium {
+  background-color: var(--darkest-green);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 @media (max-width: 4000px) {
   :root {
     --rem: 0.7rem;

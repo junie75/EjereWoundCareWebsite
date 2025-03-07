@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { getBlogPosts } from "./getBlogPosts";
 import Markdown from "react-markdown";
 import Layout from "./Layout";
+import { Link } from "react-router-dom";
 // import { formattedDate } from "./Bloglist";
 
 export default function BlogDetails() {
@@ -25,6 +26,13 @@ export default function BlogDetails() {
     <Layout>
       <div className="pageContainer">
         <div className="blogDetailsContainer">
+          <div className="backBtnContainer">
+            <Link to={"/blogs"} alt="back button">
+              <span class="material-symbols-outlined icon-medium">
+                arrow_back_ios_new
+              </span>
+            </Link>
+          </div>
           <h1 className="blogPostTitle">{currentBlog.title}</h1>
           <div className="blogTags">
             <div className="leftTags">
