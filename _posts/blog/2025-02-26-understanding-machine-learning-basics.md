@@ -4,6 +4,7 @@ title: Understanding Machine Learning Basics
 description: A beginner’s guide to understanding the key concepts behind machine learning.
 date: 2025-02-26T10:37:00.000Z
 thumbnail: /public/assets/uploads/ki-roboter-loest-mathe-probleme.webp
+category: woundCare
 ---
 
 # Understanding Machine Learning Basics
