@@ -7,6 +7,7 @@ description: >
   treatment experience for patients.
 date: 2025-02-26T12:50:00.000Z
 thumbnail: /public/assets/uploads/download.jpeg
+category: hbot
 ---
 ## Introduction
 
