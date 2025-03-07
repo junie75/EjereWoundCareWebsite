@@ -4,6 +4,7 @@ title: The Future of Web Development
 description: An overview of the latest trends shaping the future of web development.
 date: 2025-02-26T10:36:00.000Z
 thumbnail: /public/assets/aitree.jpg
+category: woundCare
 ---
 # The Future of Web Development
 
