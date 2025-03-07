@@ -6,6 +6,7 @@ description: This article explores oxygen toxicity during Hyperbaric Oxygen
   to minimize risks and maximize benefits.
 date: 2025-02-26T12:35:00.000Z
 thumbnail: /public/assets/uploads/images.jpeg
+category: hbot
 ---
 
 ## Introduction
