@@ -853,13 +853,13 @@ main {
   box-shadow: 2px 2px 5px #21021b25;
 }
 
-.filterCategory.underline.pink {
+/* .filterCategory.underline.pink {
   background-color: var(--watermelon-pink);
 }
 
 .filterCategory.underline.green {
   background-color: var(--lighter-green);
-}
+} */
 
 .bloglistBox {
   /* width: 80vw; */
