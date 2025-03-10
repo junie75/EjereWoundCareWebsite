@@ -9,7 +9,6 @@ date: 2025-03-08T12:18:00.000Z
 thumbnail: /public/assets/uploads/images-1-.jpeg
 category:
   - hbot
-  - woundCare
 ---
 ## Why Diabetic Wounds Are Hard to Heal
 Diabetes affects circulation and nerve function, leading to:
