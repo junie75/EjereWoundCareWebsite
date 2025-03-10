@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getBlogPosts } from "./getBlogPosts";
 import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import Layout from "./Layout";
 import { Link } from "react-router-dom";
 // import { formattedDate } from "./Bloglist";
@@ -50,7 +51,7 @@ export default function BlogDetails() {
             <img src={currentBlog.formattedPath} alt="blog image" />
           </div>
 
-          <Markdown>{currentBlog.content}</Markdown>
+          <Markdown remarkPlugins={[remarkGfm]}>{currentBlog.content}</Markdown>
         </div>
       </div>
     </Layout>
