@@ -35,5 +35,14 @@ HBOT is recommended when:
 | **Effect on Healing** | Gradual | Accelerated healing |
 | **Infection Control** | Limited | Strong antibacterial effects |
 
+## Key Differences
+
+| Factor               | Traditional Wound Care           | HBOT                                     |
+|----------------------|--------------------------------|------------------------------------------|
+| **Oxygen Delivery**  | Normal air (21% oxygen)       | 100% pure oxygen under pressure         |
+| **Effect on Healing** | Gradual                      | Accelerated healing                     |
+| **Infection Control** | Limited                      | Strong antibacterial effects            |
+
+
 ## Conclusion
 For **non-healing wounds**, **hyperbaric oxygen therapy** may be the key to faster and more effective healing. Talk to a wound care specialist to see if HBOT is right for you.
