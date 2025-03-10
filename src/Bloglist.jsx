@@ -18,14 +18,31 @@ export default function Bloglist() {
 
   //takes the category of the blog and returns a text input and color for the UI
   const convertCategory = (category) => {
-    switch (category) {
-      case "hbot":
-        return { name: "Hyberbaric Oxygen Therapy", color: "pink" };
-      case "woundCare":
-        return { name: "Wound Care", color: "green" };
-      default:
-        return null;
+    var categoryArr = []; //empty arr to hold categories
+    var instructions = []; //arr of objects to tell code what to display
+
+    //determine wether it is a single or multiple category and add to one array
+    if (typeof category === "string")
+      categoryArr.push(category); //append string to array
+    else if (typeof category === "object") {
+      //multiple category appears as object
+      //iterate over object to get values and append to array as strings
+      for (const word in category) {
+        categoryArr.push(category[word]);
+      }
     }
+
+    //iterate through categories, return an array containing instructions on what to present
+    for (const cat of categoryArr) {
+      if (cat === "hbot") {
+        instructions.push({ name: "Hyperbaric Oxygen Therapy", color: "pink" });
+      } else if (cat === "woundCare") {
+        instructions.push({ name: "Wound Care", color: "green" });
+      }
+    }
+
+    console.log(instructions);
+    return instructions;
   };
 
   return (
@@ -39,7 +56,6 @@ export default function Bloglist() {
               className={`filterCategory ${
                 currentFilter == filterAllRef ? "underline" : ""
               }`}
-              // className="filterCategory"
               onClick={() => setCurrentFilter(filterAllRef)}
             >
               All
@@ -70,17 +86,24 @@ export default function Bloglist() {
                 //tracks currentfilter state to only show blogposts that belong to the appropriate filter.
                 //defaults to all blog posts if the state is filterAllRef or null
                 switch (currentFilter) {
-                  // case filterAllRef:
-                  //   return true;
                   case filterWCRef:
-                    return blog.category == "woundCare";
+                    let foundWC = convertCategory(blog.category).find(
+                      //within instructions array, looks for category w/ name wound care
+                      (obj) => obj.name == "Wound Care"
+                    );
+                    return foundWC != undefined;
                   case filterHBOTRef:
-                    return blog.category == "hbot";
+                    let foundHBOT = convertCategory(blog.category).find(
+                      //within instructions array, looks for category w/ name hbot
+                      (obj) => obj.name == "Hyperbaric Oxygen Therapy"
+                    );
+                    return foundHBOT != undefined;
                   default:
                     return true;
                 }
               })
               .map((blog, index) => {
+                var instructions = convertCategory(blog.category); //convert either string or object value into array of instructions for styling of categories
                 //returns a component for each blog post
                 return (
                   <div className="blogPreview" key={index}>
@@ -100,14 +123,15 @@ export default function Bloglist() {
                           <div className="blogCategoryContainer">
                             {
                               /*Checks if there is a valid category, if so, displays it and styles accordingly*/
-                              convertCategory(blog.category) ? (
-                                <div
-                                  className={`blogCategory ${
-                                    convertCategory(blog.category).color
-                                  }`}
-                                >
-                                  {convertCategory(blog.category).name}
-                                </div>
+                              instructions ? (
+                                instructions.map((category, index2) => (
+                                  <div
+                                    key={index2}
+                                    className={`blogCategory ${category.color}`}
+                                  >
+                                    {category.name}
+                                  </div>
+                                ))
                               ) : (
                                 <div></div>
                               )

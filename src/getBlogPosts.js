@@ -28,6 +28,7 @@ export const getBlogPosts = () => {
     });
   }
 
+  // console.log(blogPosts);
   return blogPosts;
 };
 

@@ -951,7 +951,7 @@ main {
 
 .leftTags {
   display: flex;
-  flex: 3;
+  flex: 1;
   flex-direction: row;
   column-gap: 10px;
   /* border: 2px solid purple; */
@@ -961,7 +961,7 @@ main {
   /* border: 2px solid red; */
   display: flex;
   flex: 1;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .blogCategory {
