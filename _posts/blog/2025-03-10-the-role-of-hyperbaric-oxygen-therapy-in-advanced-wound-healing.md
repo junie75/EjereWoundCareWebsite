@@ -9,7 +9,6 @@ date: 2025-03-10T10:14:00.000Z
 thumbnail: /public/assets/uploads/hyperbaric-oxygen-therapy-device-cu-1600x900_0.png
 category:
   - hbot
-  - woundCare
 ---
 
 ## How Does HBOT Work?
