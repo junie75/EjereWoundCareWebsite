@@ -1026,7 +1026,7 @@ main {
 
 .backBtnContainer {
   margin-bottom: calc(-5 * var(--rem));
-  margin-left: calc(-5.5 * var(--rem));
+  margin-left: calc(-7.5 * var(--rem));
   margin-top: 40px;
 }
 
