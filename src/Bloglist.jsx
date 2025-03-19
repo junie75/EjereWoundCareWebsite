@@ -120,6 +120,7 @@ export default function Bloglist() {
                               {blog.readTime} min read
                             </div>
                           </div>
+
                           <div className="blogCategoryContainer">
                             {
                               /*Checks if there is a valid category, if so, displays it and styles accordingly*/
