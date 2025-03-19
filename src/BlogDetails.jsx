@@ -34,7 +34,7 @@ export default function BlogDetails() {
               </span>
             </Link>
           </div>
-          <h1 className="blogPostTitle">{currentBlog.title}</h1>
+          <div className="blogPostTitle">{currentBlog.title}</div>
           <div className="blogTags">
             <div className="leftTags">
               <div className="blogPostDate">{currentBlog.postDate}</div>
