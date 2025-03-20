@@ -152,7 +152,7 @@ export default function Bloglist() {
                           //otherwise use image uploaded
                           blog.youtubeID ? (
                             <img
-                              src={`https://img.youtube.com/vi/${blog.youtubeID}/mqdefault.jpg`}
+                              src={`https://img.youtube.com/vi/${blog.youtubeID}/hqdefault.jpg`}
                               // width={480}
                               // height={360}
                             />
