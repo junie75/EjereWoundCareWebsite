@@ -19,6 +19,7 @@ export const getBlogPosts = () => {
     const formattedPath = formatPath(data.thumbnail);
     const readTime = calculateReadTime(content);
     const youtubeID = extractYoutubeID(data.youtubeLink); //get the id of the youtube video
+    // if (data.youtubeLink) extractYoutubeID(data.youtubeLink);
     // const slug = defaultUrlTransform(data.title); //MARK --> makes safe but is it SEO friendly?
     blogPosts.push({
       ...data,
@@ -29,6 +30,8 @@ export const getBlogPosts = () => {
       readTime,
       youtubeID,
     });
+
+    // if (youtubeID != undefined) blogPosts.push({ youtubeID });
   }
 
   // console.log(blogPosts);
@@ -80,7 +83,10 @@ const calculateReadTime = (content) => {
 };
 
 const extractYoutubeID = (link) => {
-  //assuming it is the youbuve shortened share link, The structure is https://youtu.be/VIDEO_ID.
-  const { id } = getVideoId(link);
-  return id;
+  if (!link) return null;
+  else {
+    const { id } = getVideoId(link);
+    // console.log("Link is " + link + "and id is " + id);
+    return id;
+  }
 };

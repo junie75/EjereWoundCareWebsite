@@ -43,7 +43,7 @@ export default function Bloglist() {
       }
     }
 
-    console.log(instructions);
+    // console.log(instructions);
     return instructions;
   };
 
@@ -106,6 +106,7 @@ export default function Bloglist() {
               })
               .map((blog, index) => {
                 var instructions = convertCategory(blog.category); //convert either string or object value into array of instructions for styling of categories
+                // if (blog.youtubeLink)
                 console.log(
                   blog.title + " = " + blog.youtubeLink + " = " + blog.youtubeID
                 );
@@ -146,7 +147,19 @@ export default function Bloglist() {
                         </div>
                       </div>
                       <div className="blogThumbnail">
-                        <img src={blog.formattedPath} alt="thumbnail" />
+                        {
+                          //if there is a youtube video added get thumbnail from youtuve. default thumbnail structure is https://img.youtube.com/vi/{youtubeID}/{resolution}default.jpg
+                          //otherwise use image uploaded
+                          blog.youtubeID ? (
+                            <img
+                              src={`https://img.youtube.com/vi/${blog.youtubeID}/mqdefault.jpg`}
+                              // width={480}
+                              // height={360}
+                            />
+                          ) : (
+                            <img src={blog.formattedPath} alt="thumbnail" />
+                          )
+                        }
                       </div>
                     </Link>
                   </div>

@@ -48,18 +48,23 @@ export default function BlogDetails() {
           </div>
           <div className="blogPostDesc">{currentBlog.description}</div>
           <div className="blogPostBanner">
-            {/* <img src={currentBlog.formattedPath} alt="blog image" /> */}
-            <iframe
-              width="560"
-              height="315"
-              // src="https://youtu.be/8qz1LxtM7aI?si=_FO1bWTaIjCw7zD_"
-              src="https://www.youtube.com/embed/8qz1LxtM7aI?si=_FO1bWTaIjCw7zD_"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+            {
+              //if there is a youtube video, create an iframe as the banner. otherwise display the featured image
+              currentBlog.youtubeID ? (
+                <iframe
+                  width="560"
+                  height="315"
+                  src={`https://www.youtube.com/embed/${currentBlog.youtubeID}`}
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              ) : (
+                <img src={currentBlog.formattedPath} alt="blog image" />
+              )
+            }
           </div>
 
           <Markdown remarkPlugins={[remarkGfm]}>{currentBlog.content}</Markdown>
