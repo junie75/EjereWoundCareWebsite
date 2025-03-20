@@ -48,7 +48,18 @@ export default function BlogDetails() {
           </div>
           <div className="blogPostDesc">{currentBlog.description}</div>
           <div className="blogPostBanner">
-            <img src={currentBlog.formattedPath} alt="blog image" />
+            {/* <img src={currentBlog.formattedPath} alt="blog image" /> */}
+            <iframe
+              width="560"
+              height="315"
+              // src="https://youtu.be/8qz1LxtM7aI?si=_FO1bWTaIjCw7zD_"
+              src="https://www.youtube.com/embed/8qz1LxtM7aI?si=_FO1bWTaIjCw7zD_"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
           </div>
 
           <Markdown remarkPlugins={[remarkGfm]}>{currentBlog.content}</Markdown>
