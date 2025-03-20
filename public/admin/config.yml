@@ -18,8 +18,23 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: "Youtube Video", name: "youtubeLink", widget: "string" }
+      - label: "Featured"
+        name: "featured"
+        widget: "object"
+        required: true
+        fields:
+          - {
+              label: "Featured Image",
+              name: "thumbnail",
+              widget: "image",
+              required: false,
+            }
+          - {
+              label: "Youtube Video",
+              name: "youtubeLink",
+              widget: "string",
+              required: false,
+            }
       - {
           label: "Category",
           name: "category",
