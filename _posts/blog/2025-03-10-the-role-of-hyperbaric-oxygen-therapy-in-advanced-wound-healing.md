@@ -7,11 +7,10 @@ description: Wound healing is a complex process that requires optimal
   non-healing wounds.
 date: 2025-03-10T10:14:00.000Z
 thumbnail: /public/assets/uploads/hyperbaric-oxygen-therapy-device-cu-1600x900_0.png
+youtubeLink: https://youtu.be/c2SUQVjklVA?si=QGLR_WJQEtQrIFr3
 category:
   - hbot
 ---
-## <https://youtu.be/c2SUQVjklVA?si=QGLR_WJQEtQrIFr3>
-
 ## How Does HBOT Work?
 
 HBOT involves breathing pure oxygen in a pressurized chamber, increasing oxygen levels in the bloodstream and tissues. This process:
