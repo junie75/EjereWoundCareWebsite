@@ -1,5 +1,6 @@
 import fm from "front-matter";
 import { marked } from "marked";
+import getVideoId from "get-video-id";
 
 export const getBlogPosts = () => {
   //gets every markdown file in blog posts folder and pulls raw content eagerly
@@ -17,6 +18,7 @@ export const getBlogPosts = () => {
     const postDate = formattedDate(data.date);
     const formattedPath = formatPath(data.thumbnail);
     const readTime = calculateReadTime(content);
+    const youtubeID = extractYoutubeID(data.youtubeLink); //get the id of the youtube video
     // const slug = defaultUrlTransform(data.title); //MARK --> makes safe but is it SEO friendly?
     blogPosts.push({
       ...data,
@@ -25,6 +27,7 @@ export const getBlogPosts = () => {
       postDate,
       formattedPath,
       readTime,
+      youtubeID,
     });
   }
 
@@ -74,4 +77,10 @@ const calculateReadTime = (content) => {
   // console.log(readTime);
 
   return readTime;
+};
+
+const extractYoutubeID = (link) => {
+  //assuming it is the youbuve shortened share link, The structure is https://youtu.be/VIDEO_ID.
+  const { id } = getVideoId(link);
+  return id;
 };

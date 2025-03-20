@@ -16,6 +16,8 @@ export default function Bloglist() {
   //state to hold the currently selected filter, defaults to all
   const [currentFilter, setCurrentFilter] = useState(filterAllRef);
 
+  // console.log()
+
   //takes the category of the blog and returns a text input and color for the UI
   const convertCategory = (category) => {
     var categoryArr = []; //empty arr to hold categories
@@ -104,6 +106,9 @@ export default function Bloglist() {
               })
               .map((blog, index) => {
                 var instructions = convertCategory(blog.category); //convert either string or object value into array of instructions for styling of categories
+                console.log(
+                  blog.title + " = " + blog.youtubeLink + " = " + blog.youtubeID
+                );
                 //returns a component for each blog post
                 return (
                   <div className="blogPreview" key={index}>
