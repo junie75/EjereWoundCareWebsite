@@ -21,7 +21,6 @@ collections:
       - label: "Featured"
         name: "featured"
         widget: "object"
-        required: true
         fields:
           - {
               label: "Featured Image",
@@ -34,6 +33,13 @@ collections:
               name: "youtubeLink",
               widget: "string",
               required: false,
+            }
+          - {
+              label: "Thumbnail Displayed",
+              name: "imageOrVid",
+              widget: ["Featured Image", "Youtube Video"],
+              required: true,
+              hint: "Should the post have the featured image as the thumbnail or the youtube video as the thumbnail",
             }
       - {
           label: "Category",
