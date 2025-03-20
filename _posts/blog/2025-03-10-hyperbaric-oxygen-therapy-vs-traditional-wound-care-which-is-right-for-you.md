@@ -7,6 +7,7 @@ description: For individuals suffering from chronic wounds, the choice between
   decision.
 date: 2025-03-07T10:16:00.000Z
 thumbnail: /public/assets/uploads/istockphoto-1716294636-612x612.jpg
+youtubeLink: https://www.youtube.com/embed/4HEvwQ2qVnw?si=_6SGtuoAKwnBIc7Z
 category:
   - hbot
   - woundCare
