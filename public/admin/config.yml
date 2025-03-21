@@ -22,13 +22,13 @@ collections:
           label: "Featured Image",
           name: "thumbnail",
           widget: "image",
-          required: "false",
+          required: false,
         }
       - {
           label: "Youtube Video",
           name: "youtubeLink",
           widget: "string",
-          required: "false",
+          required: false,
         }
       - {
           label: "Category",
