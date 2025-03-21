@@ -7,7 +7,7 @@ description: Wound healing is a complex process that requires optimal
   non-healing wounds.
 date: 2025-03-10T10:14:00.000Z
 thumbnail: /public/assets/uploads/hyperbaric-oxygen-therapy-device-cu-1600x900_0.png
-youtubeLink: https://youtu.be/c2SUQVjklVA?si=QGLR_WJQEtQrIFr3
+youtubeLink: https://youtube.com/shorts/3UjNTpuS4d8?si=kG0r6e9wy25-7Y15
 category:
   - hbot
 ---
