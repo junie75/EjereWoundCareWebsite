@@ -6,7 +6,7 @@ description: Diabetic foot ulcers are a serious complication of diabetes, often
   solution is Hyperbaric Oxygen Therapy (HBOT), which enhances healing and
   reduces the need for amputation.
 date: 2025-03-08T12:18:00.000Z
-thumbnail: /public/assets/uploads/images-1-.jpeg
+thumbnail: ""
 youtubeLink: https://youtube.com/shorts/f5q8s36WcI4?si=_Rdi4SY5Mfezz1u2
 category:
   - hbot
