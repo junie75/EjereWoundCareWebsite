@@ -40,7 +40,7 @@ collections:
               widget: "select",
               options: ["Featured Image", "Youtube Video"],
               required: true,
-              hint: "**Should the post have the featured image as the thumbnail or the youtube video as the thumbnail?**",
+              hint: "Should the post have the featured image as the thumbnail or the youtube video as the thumbnail",
             }
       - {
           label: "Category",
