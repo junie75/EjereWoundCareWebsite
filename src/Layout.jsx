@@ -5,6 +5,7 @@ import Navigation from "./Navigation";
 import Footer from "./Footer";
 import { useLocation } from "react-router-dom";
 import ChatWidget from "./ChatWidget";
+import ScrollToTop from "./ScrollToTop";
 
 const Layout = ({ children }) => {
   const location = useLocation();
@@ -16,6 +17,7 @@ const Layout = ({ children }) => {
         isHomePage ? "home-background" : "green-background"
       }`}
     >
+      <ScrollToTop />
       <Navigation isHomePage={isHomePage} />
       {children}
       <ChatWidget isHomePage={isHomePage} />

@@ -31,7 +31,7 @@ export default function BlogDetails() {
         <div className="blogDetailsContainer">
           <div className="backBtnContainer">
             <Link to={"/blogs"} alt="back button">
-              <span class="material-symbols-outlined icon-medium">
+              <span className="material-symbols-outlined icon-medium">
                 arrow_back_ios_new
               </span>
             </Link>
@@ -61,10 +61,10 @@ export default function BlogDetails() {
                   className="blogPostEmbedVid"
                   src={`https://www.youtube.com/embed/${currentBlog.youtubeID}`}
                   title="YouTube video player"
-                  frameborder="0"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
                 ></iframe>
               ) : currentBlog.formattedPath ? (
                 <img src={currentBlog.formattedPath} alt="blog image" />
