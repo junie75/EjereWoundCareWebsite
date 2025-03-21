@@ -6,7 +6,7 @@ description: This blog explores how Hyperbaric Oxygen Therapy (HBOT) plays a
   flow and promoting healing.
 date: 2025-02-26T12:46:00.000Z
 thumbnail: /public/assets/uploads/woman-with-injured-broken-leg-plaster-cast-sitting-doctor-office-taking-x-ray-crutch-vector-illustration-trauma-hospital-treatment-physiotherapy-concept_74855-10198.avif
-youtubeLink: https://www.youtube.com/watch?v=5C40jdCmN4I
+youtubeLink: https://youtube.com/shorts/T8xTSI0Sco4?si=ZoZ2IiRt67QySL4-
 category: hbot
 ---
 
