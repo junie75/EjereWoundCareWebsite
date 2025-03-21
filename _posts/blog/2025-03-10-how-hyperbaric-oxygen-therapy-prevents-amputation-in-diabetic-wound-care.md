@@ -1,15 +1,12 @@
 ---
 layout: blog
-thumbnail: /public/assets/uploads/images-1-.jpeg
 title: How Hyperbaric Oxygen Therapy Prevents Amputation in Diabetic Wound Care
 description: Diabetic foot ulcers are a serious complication of diabetes, often
   leading to infection and amputation if not treated properly. One promising
   solution is Hyperbaric Oxygen Therapy (HBOT), which enhances healing and
   reduces the need for amputation.
 date: 2025-03-08T12:18:00.000Z
-featured:
-  thumbnail: /public/assets/uploads/images-1-.jpeg
-  imageOrVid: Featured Image
+thumbnail: /public/assets/uploads/images-1-.jpeg
 youtubeLink: https://www.youtube.com/watch?v=3ulVBcPpydk&list=PLXweyiR2fMMf-ZrjCNNKWoeq8L6tlSFUV&index=2
 category:
   - hbot
