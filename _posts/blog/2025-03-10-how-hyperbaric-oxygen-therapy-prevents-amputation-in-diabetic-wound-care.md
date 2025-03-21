@@ -7,7 +7,7 @@ description: Diabetic foot ulcers are a serious complication of diabetes, often
   reduces the need for amputation.
 date: 2025-03-08T12:18:00.000Z
 thumbnail: /public/assets/uploads/images-1-.jpeg
-youtubeLink: https://www.youtube.com/watch?v=3ulVBcPpydk&list=PLXweyiR2fMMf-ZrjCNNKWoeq8L6tlSFUV&index=2
+youtubeLink: https://youtube.com/shorts/f5q8s36WcI4?si=_Rdi4SY5Mfezz1u2
 category:
   - hbot
 ---
