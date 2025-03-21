@@ -6,8 +6,8 @@ description: >
   Hyperbaric Oxygen Therapy (HBOT), ensuring a more comfortable and effective
   treatment experience for patients.
 date: 2025-02-26T12:50:00.000Z
-thumbnail: /public/assets/uploads/download.jpeg
-youtubeLink: https://www.youtube.com/live/5C40jdCmN4I?si=G4ZfmUxGN8zzDvgK
+thumbnail: ""
+youtubeLink: https://youtube.com/shorts/uJ1wC9Xjmic?si=RCMTHAu9DrtMafcf
 category: hbot
 ---
 ## Introduction
