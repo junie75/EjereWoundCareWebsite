@@ -1,12 +1,16 @@
 ---
 layout: blog
+thumbnail: /public/assets/uploads/hyperbaric-oxygen-therapy-device-cu-1600x900_0.png
 title: The Role of Hyperbaric Oxygen Therapy in Advanced Wound Healing
 description: Wound healing is a complex process that requires optimal
   oxygenation to repair damaged tissue. Hyperbaric Oxygen Therapy (HBOT) is an
   advanced treatment that enhances wound healing, especially for chronic and
   non-healing wounds.
 date: 2025-03-10T10:14:00.000Z
-thumbnail: /public/assets/uploads/hyperbaric-oxygen-therapy-device-cu-1600x900_0.png
+featured:
+  youtubeLink: https://youtu.be/mhZtkP5AwNU
+  thumbnail: /public/assets/uploads/hyperbaric-oxygen-therapy-device-cu-1600x900_0.png
+  imageOrVid: Featured Image
 youtubeLink: https://youtu.be/c2SUQVjklVA?si=QGLR_WJQEtQrIFr3
 category:
   - hbot
