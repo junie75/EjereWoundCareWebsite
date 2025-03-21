@@ -5,7 +5,8 @@ description: This article explores oxygen toxicity during Hyperbaric Oxygen
   Therapy (HBOT) and highlights the significance of personalized treatment plans
   to minimize risks and maximize benefits.
 date: 2025-02-26T12:35:00.000Z
-thumbnail: /public/assets/uploads/images.jpeg
+thumbnail: ""
+youtubeLink: https://youtube.com/shorts/WRpUR3yFV9I?si=1krM0BLNBhwTIYcx
 category: hbot
 ---
 
