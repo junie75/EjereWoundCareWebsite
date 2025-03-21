@@ -4,6 +4,7 @@ import thumb1 from "./assets/aboutImg1.jpeg";
 import { getBlogPosts } from "./getBlogPosts";
 import { Link } from "react-router-dom";
 import { color } from "@mui/system";
+import Logo2 from "./assets/RedoneLogoTransBiggestv2.png";
 
 export default function Bloglist() {
   const blogPosts = getBlogPosts(); //get the array of blog posts
@@ -148,16 +149,19 @@ export default function Bloglist() {
                       </div>
                       <div className="blogThumbnail">
                         {
-                          //if there is a youtube video added get thumbnail from youtuve. default thumbnail structure is https://img.youtube.com/vi/{youtubeID}/{resolution}default.jpg
-                          //otherwise use image uploaded
-                          blog.youtubeID ? (
+                          //if there is a featured image -period- use the featured image. otherwise, use the youtube thumbnail
+                          // default thumbnail structure is https://img.youtube.com/vi/{youtubeID}/{resolution}default.jpg
+                          // if neither render default image?
+                          blog.formattedPath ? (
+                            <img src={blog.formattedPath} alt="thumbnail" />
+                          ) : blog.youtubeID ? (
                             <img
                               src={`https://img.youtube.com/vi/${blog.youtubeID}/hqdefault.jpg`}
                               // width={480}
                               // height={360}
                             />
                           ) : (
-                            <img src={blog.formattedPath} alt="thumbnail" />
+                            <img src={Logo2} alt="thumbnail" />
                           )
                         }
                       </div>

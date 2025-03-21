@@ -5,6 +5,8 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Layout from "./Layout";
 import { Link } from "react-router-dom";
+import Logo2 from "./assets/RedoneLogoTransBiggestv2.png";
+
 // import { formattedDate } from "./Bloglist";
 
 export default function BlogDetails() {
@@ -49,11 +51,14 @@ export default function BlogDetails() {
           <div className="blogPostDesc">{currentBlog.description}</div>
           <div className="blogPostBanner">
             {
-              //if there is a youtube video, create an iframe as the banner. otherwise display the featured image
+              //if there is a youtube video, create an embedded yt vid as the banner. **has priority**)
+              //else if there is only a featured image display that
+              //else display logo
               currentBlog.youtubeID ? (
                 <iframe
-                  width="560"
-                  height="315"
+                  // width="560"
+                  // height="315"
+                  className="blogPostEmbedVid"
                   src={`https://www.youtube.com/embed/${currentBlog.youtubeID}`}
                   title="YouTube video player"
                   frameborder="0"
@@ -61,8 +66,10 @@ export default function BlogDetails() {
                   referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen
                 ></iframe>
-              ) : (
+              ) : currentBlog.formattedPath ? (
                 <img src={currentBlog.formattedPath} alt="blog image" />
+              ) : (
+                <img src={Logo2} alt="blog image" />
               )
             }
           </div>

@@ -19,8 +19,6 @@ export const getBlogPosts = () => {
     const formattedPath = formatPath(data.thumbnail);
     const readTime = calculateReadTime(content);
     const youtubeID = extractYoutubeID(data.youtubeLink); //get the id of the youtube video
-    // if (data.youtubeLink) extractYoutubeID(data.youtubeLink);
-    // const slug = defaultUrlTransform(data.title); //MARK --> makes safe but is it SEO friendly?
     blogPosts.push({
       ...data,
       content,
@@ -30,11 +28,8 @@ export const getBlogPosts = () => {
       readTime,
       youtubeID,
     });
-
-    // if (youtubeID != undefined) blogPosts.push({ youtubeID });
   }
 
-  // console.log(blogPosts);
   return blogPosts;
 };
 
