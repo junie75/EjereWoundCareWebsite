@@ -14,6 +14,8 @@ import Testimonials from "./Testimonials.jsx";
 import NotFound from "./NotFound.jsx";
 import PrivacyNotice from "./PrivacyNotice.jsx";
 import Careers from "./Careers.jsx";
+import Bloglist from "./Bloglist.jsx";
+import BlogDetails from "./BlogDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +55,14 @@ const router = createBrowserRouter([
     path: "/careers",
     element: <Careers />,
   },
+  // {
+  //   path: "/blogs",
+  //   element: <Bloglist />,
+  // },
+  // {
+  //   path: "/blogs/:slug",
+  //   element: <BlogDetails />,
+  // },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

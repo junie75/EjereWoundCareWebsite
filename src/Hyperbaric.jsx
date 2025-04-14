@@ -11,13 +11,16 @@ export default function Hyperbaric() {
         <div className="title">Hyperbaric Oxygen Therapy</div>
         <div className="hbotSection">
           <div className="rowSection">
-            <img
-              src={hbot}
-              alt="Hyperbaric Oxygen Therapy"
-              className="hbotImage"
-              width={395}
-              height={224}
-            />
+            <div className="hbotImage">
+              <img
+                src={hbot}
+                alt="Hyperbaric Oxygen Therapy"
+                // className="hbotImage"
+                width={395}
+                height={224}
+              />
+            </div>
+
             <div className="rowText">
               <p>
                 Hyperbaric Oxygen Therapy or “HBOT” is a prescribed treatment

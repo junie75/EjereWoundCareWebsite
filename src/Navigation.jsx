@@ -63,6 +63,9 @@ function Navigation({ isHomePage }) {
       case "Privacy Notice":
         navigate("/privacyNotice");
         break;
+      case "Blog":
+        navigate("/blogs");
+        break;
       case "Patient Portal":
         //open patient portal in new tab
         window.open(
@@ -119,6 +122,10 @@ function Navigation({ isHomePage }) {
             label: "Privacy Notice",
             callback: handleMenuItemClick,
           },
+          // {
+          //   label: "Blog",
+          //   callback: handleMenuItemClick,
+          // },
         ],
       },
       {
@@ -191,6 +198,11 @@ function Navigation({ isHomePage }) {
           <li className="navbar-item services">
             More
             <ul className="dropdown-menu">
+              {/* <li className="dropdown-item">
+                <Link to={"/blogs"} onClick={() => setIsMenuOpen(false)}>
+                  Blog
+                </Link>
+              </li> */}
               <li className="dropdown-item">
                 <Link to="/testimonials" onClick={() => setIsMenuOpen(false)}>
                   Testimonials
@@ -201,6 +213,7 @@ function Navigation({ isHomePage }) {
                   Careers
                 </Link>
               </li>
+
               <li className="dropdown-item">
                 <Link to="/privacyNotice" onClick={() => setIsMenuOpen(false)}>
                   Privacy Notice

@@ -55,7 +55,7 @@ export default function Careers() {
               </div>
             ) : (
               jobPostings.map((post) => {
-                // Convert markdown content to plain text for the description
+                // Convert markdown content to plain text for the description in schemaData
                 const plainTextContent = stripMarkdown(post.content);
                 // Schema data for job posting
                 const schemaData = {
