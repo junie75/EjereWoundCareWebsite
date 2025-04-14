@@ -673,6 +673,11 @@ main {
   box-shadow: 2px 2px 12px #02211f56;
 }
 
+.youtubePlayer {
+  width: 100%;
+  height: calc(80 * var(--rem));
+}
+
 /* *****NOT FOUND PAGE ***** */
 .notFoundImage {
   max-height: 80vh;
@@ -1137,6 +1142,10 @@ main {
   .ctaBtn {
     font-size: calc(2 * var(--rem));
   }
+  .youtubePlayer {
+    width: 80%;
+    height: calc(50 * var(--rem));
+  }
 }
 
 @media (max-width: 1445px) {
@@ -1379,9 +1388,9 @@ main {
       justify-content: center;
     }
 
-    .image img {
-      /* height: calc(20 * var(--rem)); */
-    }
+    /* .image img {
+      /* height: calc(20 * var(--rem)); 
+    } */
   }
 
   .careersContainer {
@@ -1531,6 +1540,11 @@ main {
     width: 90%;
   }
 
+  .youtubePlayer {
+    width: 90%;
+    height: calc(40 * var(--rem));
+  }
+
   .hbotAd {
     flex-direction: column;
     max-height: unset;
@@ -1654,6 +1668,11 @@ main {
 
   .title {
     font-size: calc(3 * var(--rem));
+  }
+
+  .youtubePlayer {
+    width: 99%;
+    height: calc(30 * var(--rem));
   }
 
   .mapContainer {

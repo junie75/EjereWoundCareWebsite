@@ -134,6 +134,19 @@ export default function Testimonials() {
       <div className="pageContainer">
         <div className="intro">
           <div className="title">Testimonials</div>
+          {/* <div> */}
+          <iframe
+            // width="560"
+            // height="315"
+            className="youtubePlayer"
+            src="https://www.youtube.com/embed/lHkjrLQoZgc?si=n7nbor8ihavE8Bs3"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+          {/* </div> */}
           <p>
             Please take a look below at some of the recent testimonials we have
             received from our patients. We welcome patient feedback to let us
