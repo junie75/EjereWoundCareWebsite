@@ -122,10 +122,10 @@ function Navigation({ isHomePage }) {
             label: "Privacy Notice",
             callback: handleMenuItemClick,
           },
-          {
-            label: "Blog",
-            callback: handleMenuItemClick,
-          },
+          // {
+          //   label: "Blog",
+          //   callback: handleMenuItemClick,
+          // },
         ],
       },
       {
@@ -198,11 +198,11 @@ function Navigation({ isHomePage }) {
           <li className="navbar-item services">
             More
             <ul className="dropdown-menu">
-              <li className="dropdown-item">
+              {/* <li className="dropdown-item">
                 <Link to={"/blogs"} onClick={() => setIsMenuOpen(false)}>
                   Blog
                 </Link>
-              </li>
+              </li> */}
               <li className="dropdown-item">
                 <Link to="/testimonials" onClick={() => setIsMenuOpen(false)}>
                   Testimonials
