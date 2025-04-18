@@ -46,7 +46,11 @@ export default function Contact() {
               <div className="desc hbot">
                 <h2>Hours</h2>
                 <div>
-                  <p>Monday - Friday: 8:00am - 4:00pm</p>
+                  <p>Monday: 8:00am - 4:00pm</p>
+                  <p>Tuesday: 8:00am - 4:00pm</p>
+                  <p>Wednesday: 8:00am - 12:00pm</p>
+                  <p>Thursday: 8:00am - 4:00pm</p>
+                  <p>Friday: 8:00am - 12:00pm</p>
                   <p>Saturday - Sunday: Closed</p>
                 </div>
               </div>
