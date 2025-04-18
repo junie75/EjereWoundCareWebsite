@@ -674,8 +674,8 @@ main {
 }
 
 .youtubePlayer {
-  width: 100%;
-  height: calc(80 * var(--rem));
+  width: 80%;
+  height: calc(60 * var(--rem));
 }
 
 /* *****NOT FOUND PAGE ***** */
