@@ -14,17 +14,70 @@ export default function Testimonials() {
         "Great customer service is nearly impossible to come by these days, so I wanted to take a moment to express my heartfelt gratitude for the exceptional care and attention I received during my visit today! From the moment I arrived, I felt welcomed and supported by your entire team. Your professionalism and genuine concern for my well-being truly made a difference in my experience. I appreciate the time you took to listen to my concerns and answer all my questions with patience and clarity. Thank you once again for your dedication and compassion. I look forward to continuing my care with your team in the future!",
     },
     {
+      name: "Bonnie Tisdale",
+      rating: 5,
+      review:
+        "So thankful for Dr. Ejere and his team!!! I was 12 weeks pregnant and was healing from a dog bite. The first day I went in Dr. Ejere immediately had me admitted to hospital for life saving surgery. Had my wound gone on w out proper treatment i would have developed sepsis and my daughters life would have been in jeapordy! Once released from hospital they gave me the best care when changing my dressings and helping me heal! They were always so kind informative and gentle as they could be when changing my dressings!! Highly recommend this wound care Dr. and team!",
+    },
+    {
+      name: "Ed Lasley",
+      rating: 5,
+      review:
+        "Wonderful and kind staff. Very professional and experienced. Dr Ejere takes time to understand details, issues, and history related to the problem. He takes time thinking through the elements before formulating a strategy and tactical approach, and ensures that the patient buys-in to the plan. He is open minded about alternatives and researches suggested approaches.",
+    },
+    {
+      name: "Paul E",
+      rating: 5,
+      review:
+        "The staff is very professional and they care for the well being of the patient. All steps are completely explained. The chamber is primarily made of Fiberglass which helps reduce the closed in feeling. The TV helps too. The staff was attentive to my needs and sensitivity which I appreciated. Overall I appreciated the positive spirit and response to my wishes.",
+    },
+    {
+      name: "Sherice Miller",
+      rating: 5,
+      review:
+        "Excellent care! Excellent staff! Dr. Ejere saved my life with his incredible care and medical knowledge of the circulatory system and how wounds heal! No better medical staff in the state!!! I highly recommend the Ejere Wound and Hyperbaric Clinic for the best wound care ever! Thank you, Dr. Ejere, Melonie, Jackie, Juni, Linda, Felicia, Theresa and McKensie! Dr. Where has excellent skill at explaining option, care and advice where it is easily understood. His English is also impeccable! Speaks professionally!",
+    },
+    {
+      name: "Tina Graves",
+      rating: 5,
+      review:
+        "They have the best care I've ever received. I would recommend them for any wounds you may have. The staff are always sweet and caring. Dr Ejere has the best bedside manner he takes care of you until you have fully healed. He was very patient with me. They explained every concern I had and made sure I had everything I needed for my wound. They are very professional at what they do they make sure your comfortable. They take very EXCELLENT care of you I can't explain it enough.",
+    },
+    {
+      name: "Garrett Sampley",
+      rating: 5,
+      review:
+        "Can't say enough good things about Dr Ejere and his team. I could go on all day. If you have a wound that needs the best care available, go see Dr Ejere.",
+    },
+    {
+      name: "Lisa Oliver",
+      rating: 5,
+      review: "Great doctor most wonderful staff with great bedside manners.",
+    },
+    {
+      name: "Nora Parsons",
+      rating: 5,
+      review:
+        "Very concerned for my health and comfort. Always timely and excellent at their job. Dr. listen to my concerns and explains what needs to be done.",
+    },
+    {
+      name: "John Thomson",
+      rating: 5,
+      review:
+        "Takes the extra time to explain the details of the visit. Dr Ejere and staff are very courteous and polite.",
+    },
+    {
       name: "Jim Collins",
       rating: 5,
       review:
         "Back in 2017 my mother was in a local care center and had a wound that was ongoing and painful, I would take her for her appointments and she would want me to go back with her to see the Dr. and every time Dr. Ejere and the nurses were very caring to her and friendly to both of us. Then in January and February of 2019 and again in July and August of 2020 I had some issues with a wound on my foot due to diabetes and did hyperbaric treatments at the center. During my many sessions, I was treated with kindness and professionalism that made a bad thing bearable. So, I can honestly say that Dr. Ejere and the staff of skilled nurses and office personnel are at the top of their profession and rate up there with any other wound care center.",
     },
-    {
-      name: "Bonnie Tisdale",
-      rating: 5,
-      review:
-        "I always receive outstanding care here! Best wound care team in Parker county. Always professional yet compassionate. First day I showed up Dr Ejere (sorry spelled wrong prob) advised me to head to er because I needed surgery to remove bacteria from a dog bite. In doing so he saved mine and my unborn child’s life from possible sepsis. After my surgery I have been going back for weekly dressing changes. Again best team and I appreciate all they do to help me and other heals and get back our quality of life!",
-    },
+    // {
+    //   name: "Bonnie Tisdale",
+    //   rating: 5,
+    //   review:
+    //     "I always receive outstanding care here! Best wound care team in Parker county. Always professional yet compassionate. First day I showed up Dr Ejere (sorry spelled wrong prob) advised me to head to er because I needed surgery to remove bacteria from a dog bite. In doing so he saved mine and my unborn child’s life from possible sepsis. After my surgery I have been going back for weekly dressing changes. Again best team and I appreciate all they do to help me and other heals and get back our quality of life!",
+    // },
     {
       name: "Linda Lee Everitt Coleman",
       rating: 5,
@@ -39,6 +92,13 @@ export default function Testimonials() {
         "I would like to say thank you to Dr Ejere and everyone at Wound Care Weatherford for the best care from the beginning to the end in healing me. It has been a long process and they made it as professional and caring as it could possibly be. Your efforts will not be forgotten.",
     },
     {
+      name: "Mannyz 3",
+      rating: 5,
+      review:
+        "D Ejere and his staff are great. I appreciate his bed side manner and he and his staff genuinely care about my treatment. Anyone needing help with wounds will do themselves a favor by seeing Ejere Wound Care for treatment. I feel welcomed every time I come for my treatments.",
+    },
+
+    {
       name: "Chris Woodrum",
       rating: 5,
       review:
@@ -49,6 +109,12 @@ export default function Testimonials() {
       rating: 5,
       review:
         "The Doctor and the whole care team here is awesome! Would recommend anyone needing wound care to see this clinic.",
+    },
+    {
+      name: "Katie O'Leary",
+      rating: 5,
+      review:
+        "Incredible team. Incredible service. Kind. Empathetic. Comforting. Care is top notch. I wouldn’t go anywhere else. 100%. Thank you to Dr. Ejere’s team for taking incredible care of my elderly mother. 🙏🏼",
     },
     {
       name: "General Lee Custom",
