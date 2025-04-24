@@ -51,9 +51,10 @@ export default function Bloglist() {
   return (
     <Layout>
       <div className="pageContainer">
+        <div className="title">Recent Blog Posts</div>
         <div className="bloglistContainer">
-          <div className="filterCategoryContainer">
-            {/* Assign divs to refs in code, add class if it is the currently selected filter */}
+          {/* <div className="filterCategoryContainer">
+            {/* Assign divs to refs in code, add class if it is the currently selected filter /}
             <div
               ref={filterAllRef}
               className={`filterCategory ${
@@ -81,7 +82,7 @@ export default function Bloglist() {
             >
               Hyperbaric Oxygen Therapy
             </div>
-          </div>
+          </div> */}
           <div className="bloglistBox ">
             {blogPosts
               .sort((a, b) => b.date - a.date) //sorts by most recently published
@@ -113,40 +114,9 @@ export default function Bloglist() {
                 );
                 //returns a component for each blog post
                 return (
-                  <div className="blogPreview" key={index}>
-                    {/* creates a url based on the slug and sends the user to it when clicked */}
-                    <Link to={"/blogs/" + blog.slug}>
-                      <div className="blogInfo">
-                        <div className="blogTitle">{blog.title}</div>
-                        <div className="blogDesc">{blog.description}</div>
-                        <div className="blogTags">
-                          <div className="leftTags">
-                            <div className="blogDate">{blog.postDate}</div>
-                            <span>•</span>
-                            <div className="blogReadTime">
-                              {blog.readTime} min read
-                            </div>
-                          </div>
-
-                          <div className="blogCategoryContainer">
-                            {
-                              /*Checks if there is a valid category, if so, displays it and styles accordingly*/
-                              instructions ? (
-                                instructions.map((category, index2) => (
-                                  <div
-                                    key={index2}
-                                    className={`blogCategory ${category.color}`}
-                                  >
-                                    {category.name}
-                                  </div>
-                                ))
-                              ) : (
-                                <div></div>
-                              )
-                            }
-                          </div>
-                        </div>
-                      </div>
+                  <Link to={"/blogs/" + blog.slug}>
+                    <div className="blogPreview" key={index}>
+                      {/* creates a url based on the slug and sends the user to it when clicked */}
                       <div className="blogThumbnail">
                         {
                           //if there is a featured image -period- use the featured image. otherwise, use the youtube thumbnail
@@ -165,8 +135,45 @@ export default function Bloglist() {
                           )
                         }
                       </div>
-                    </Link>
-                  </div>
+                      <div className="blogInfo">
+                        <div className="blogTitle">{blog.title}</div>
+                        <div className="blogDesc">{blog.description}</div>
+                        <div className="blogReadMoreBox">
+                          <div className="blogReadMore">Read More</div>
+                          <span className="material-symbols-outlined icon-medium blog">
+                            arrow_forward_ios
+                          </span>
+                        </div>
+                        {/* <div className="blogTags">
+                          <div className="leftTags">
+                            <div className="blogDate">{blog.postDate}</div>
+                            <span>•</span>
+                            <div className="blogReadTime">
+                              {blog.readTime} min read
+                            </div>
+                          </div>
+
+                          <div className="blogCategoryContainer">
+                            {
+                              /*Checks if there is a valid category, if so, displays it and styles accordingly/
+                              instructions ? (
+                                instructions.map((category, index2) => (
+                                  <div
+                                    key={index2}
+                                    className={`blogCategory ${category.color}`}
+                                  >
+                                    {category.name}
+                                  </div>
+                                ))
+                              ) : (
+                                <div></div>
+                              )
+                            }
+                          </div> 
+                        </div>*/}
+                      </div>
+                    </div>
+                  </Link>
                 );
               })}
           </div>
