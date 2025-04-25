@@ -1481,6 +1481,15 @@ main {
     width: 98%;
   }
 
+  .blogThumbnail img {
+    height: calc(18 * var(--rem));
+  }
+
+  .bloglistBox {
+    grid-template-columns: repeat(2, 1fr);
+    gap: calc(2 * var(--rem));
+  }
+
   /* .blogThumbnail img {
     height: calc(10 * var(--rem));
     width: calc(12 * var(--rem));
