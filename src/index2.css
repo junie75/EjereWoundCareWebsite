@@ -10,6 +10,8 @@
   --watermelon-pink: #ff5588;
   --primary-font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
     Arial, sans-serif;
+  --secondary-font-family: "Open Sans", sans-serif;
+  --tertiary-font-family: "Helvetica", sans-serif;
 }
 
 * {
@@ -1065,7 +1067,11 @@ main {
   width: 90vw;
   margin: 20px 0;
   font-size: calc(1.8 * var(--rem));
-  font-family: "Noto Serif", serif;
+  /* font-family: "Noto Serif", serif; */
+  font-family: var(--secondary-font-family);
+  font-family: var(--tertiary-font-family);
+  /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  font-family: "Times New Roman", Times, serif;
   font-weight: 200;
   text-align: left;
   background-color: white;
@@ -1074,14 +1080,22 @@ main {
   box-shadow: 2px 2px 10px #02211f37;
   /* border: 2px solid green; */
   position: relative;
+  /* line-height: calc(3 * var(--rem)); */
 }
 
 .blogDetailsContainer :is(h1, h2, h3, h4, h5, h6) {
-  font-size: calc(3.3 * var(--rem));
+  /* font-family: var(--primary-font-family); */
+  /* font-size: calc(3.3 * var(--rem)); */
   font-weight: bold;
-  /* color: var(--darkest-green); */
-  margin-top: 20px;
+  color: var(--darkest-green);
+  margin-top: 25px;
   margin-bottom: 5px;
+}
+
+.blogDetailsContainer p {
+  /* line-height: calc(2.2 * var(--rem)); */
+  /* line-height: 1rem; */
+  line-height: 1.2;
 }
 
 .backBtnContainer {
@@ -1091,6 +1105,7 @@ main {
 }
 
 .blogPostTitle {
+  /* font-family: var(--primary-font-family); */
   font-size: calc(3.8 * var(--rem));
   font-weight: bold;
   color: var(--darkest-green);
@@ -1120,7 +1135,7 @@ main {
 }
 
 .blogDetailsContainer :is(ol, ul) {
-  padding-left: 20px;
+  padding-left: 40px;
 }
 
 .blogDetailsContainer .blogTags {
@@ -1490,6 +1505,10 @@ main {
     gap: calc(2 * var(--rem));
   }
 
+  .blogPostBanner {
+    height: 30vh;
+  }
+
   /* .blogThumbnail img {
     height: calc(10 * var(--rem));
     width: calc(12 * var(--rem));
@@ -1695,6 +1714,10 @@ main {
     font-size: calc(3 * var(--rem));
   }
 
+  .blogPostBanner {
+    height: 40vh;
+  }
+
   .blogDetailsContainer :is(h1, h2, h3, h4, h5, h6) {
     font-size: calc(2.5 * var(--rem));
   }
@@ -1859,7 +1882,7 @@ main {
   }
   .blogPostBanner {
     margin: 10px 0 0;
-    height: 40vh;
+    height: 20vh;
   }
 }
 
