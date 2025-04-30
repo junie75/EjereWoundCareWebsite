@@ -1159,6 +1159,51 @@ main {
   cursor: pointer;
 }
 
+/* MARK: Micro-Learning Platform */
+.mlGridContainer {
+  /* width: 50%; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: calc(2 * var(--rem)) calc(8 * var(--rem));
+  /* border: 2px solid yellow; */
+}
+
+.mlVideo {
+  height: 400px;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mlVideoPlayer {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.dummyPlayer {
+  height: 100%;
+  width: 100%;
+  background-color: var(--darkest-green);
+}
+
+.mlVideo .mlVideoTitle {
+  font-size: calc(2 * var(--rem));
+  font-weight: bold;
+  color: var(--darkest-green);
+  /* text-align: center; */
+  margin-top: calc(1 * var(--rem));
+}
+
+.mlVideo .mlVideoDesc {
+  font-size: calc(1.5 * var(--rem));
+  /* color: #64727b; */
+  /* text-align: center; */
+  /* margin-top: calc(1 * var(--rem)); */
+}
+
+/* MARK: Media Queries */
+
 @media (max-width: 4000px) {
   :root {
     --rem: 0.7rem;
