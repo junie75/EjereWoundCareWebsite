@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "./Layout";
 import CloudflarePlayer from "./CloudflarePlayer";
+import playButton from "../public/assets/icons8-play-64.png";
 
 export default function MicroLearning() {
   const vids = [
@@ -25,9 +26,17 @@ export default function MicroLearning() {
       videoID: "99c24780e72348ddacb2c67c4674fd06",
     },
   ];
+
+  const [activeVideo, setActiveVideo] = useState(null);
+
+  const handleVideoClick = (vidId) => {
+    setActiveVideo(vidId);
+  };
+
+  const custSubdomain = "customer-e48qfbpiiu6efycs.cloudflarestream.com";
   return (
     <Layout>
-      <div className="pageContainer">
+      <div className="pageContainer ml">
         <div className="intro">
           <div className="title">MICRO-LEARNING</div>
           <p>
@@ -39,10 +48,32 @@ export default function MicroLearning() {
           {vids.map((vid, index) => {
             return (
               <div key={index} className="mlVideo">
-                <CloudflarePlayer
-                  videoID={vid.videoID}
-                  className="mlVideoPlayer"
-                />
+                {/* {playerActivated.includes(index) && (
+                  <CloudflarePlayer
+                    videoID={vid.videoID}
+                    autoplay={true}
+                    className="mlVideoPlayer"
+                  />
+                )} */}
+                {/* {!playerActivated.includes(index) && ( */}
+                <div
+                  className="dummyPlayer"
+                  onClick={() => handleVideoClick(vid.videoID)}
+                >
+                  <img
+                    src={`https://${custSubdomain}/${vid.videoID}/thumbnails/thumbnail.jpg`}
+                    alt={`thumbnail ${vid.title}`}
+                    height={400}
+                    width={380}
+                    className="mlThumbnail"
+                  />
+                  <img
+                    src={playButton}
+                    alt="play button"
+                    className="mlPlayBtn"
+                  />
+                </div>
+                {/* )} */}
                 <div className="mlVideoInfo">
                   <div className="mlVideoTitle">{vid.title}</div>
                   <div className="mlVideoDesc">{vid.desc}</div>
@@ -51,6 +82,26 @@ export default function MicroLearning() {
             );
           })}
         </div>
+
+        {activeVideo && (
+          <div className="mlModal" onClick={() => setActiveVideo(null)}>
+            <div className="mlModalContent">
+              <button
+                className="mlModalCloseBtn"
+                onClick={() => setActiveVideo(null)}
+              >
+                &times;
+              </button>
+              {/* Render Job content after parsing markdown */}
+              {/* <Markdown>{job.content}</Markdown> */}
+              <CloudflarePlayer
+                videoID={activeVideo}
+                autoplay={true}
+                className="mlVideoPlayer"
+              />
+            </div>
+          </div>
+        )}
       </div>
     </Layout>
   );

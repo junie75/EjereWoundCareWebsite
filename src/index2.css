@@ -115,7 +115,7 @@ main {
   flex: 1;
 }
 
-/* ***** HOME ***** */
+/* ***** MARK: HOME ***** */
 
 .homeContainer {
   display: flex;
@@ -176,7 +176,7 @@ main {
   color: white;
 }
 
-/* ****** ABOUT PAGE ******* */
+/* ****** MARK: ABOUT PAGE ******* */
 
 .pageContainer {
   display: flex;
@@ -395,7 +395,7 @@ main {
   font-weight: bold;
 }
 
-/* ****** WOUND CARE SERVICES PAGE ******* */
+/* ****** MARK: WOUND CARE SERVICES PAGE ******* */
 
 .intro {
   display: flex;
@@ -501,7 +501,7 @@ main {
   object-fit: contain;
 }
 
-/* ****** HBOT page ******* */
+/* ****** MARK: HBOT page ******* */
 
 .hbotSection {
   display: flex;
@@ -601,7 +601,7 @@ main {
   width: 100%;
 }
 
-/* ***** CONTACT ***** */
+/* ***** MARK: CONTACT ***** */
 
 .contactSections {
   display: flex;
@@ -654,7 +654,7 @@ main {
   border: 4px solid var(--darkest-green);
 }
 
-/* ***** TESTIMONIALS ***** */
+/* ***** MARK: TESTIMONIALS ***** */
 
 .testimonialsSection {
   display: grid;
@@ -675,7 +675,7 @@ main {
   box-shadow: 2px 2px 12px #02211f56;
 }
 
-/* *****NOT FOUND PAGE ***** */
+/* ***** MARK: NOT FOUND PAGE ***** */
 .notFoundImage {
   max-height: 80vh;
   max-width: 80vw;
@@ -703,7 +703,7 @@ main {
   height: 80vh;
 }
 
-/** Privacy Notice Page */
+/** MARK: Privacy Notice Page */
 
 .privacyNotice {
   background-color: white;
@@ -711,7 +711,7 @@ main {
   border-radius: 10px;
 }
 
-/* Careers Page */
+/* MARK: Careers Page */
 
 .careersContainer {
   display: flex;
@@ -839,7 +839,7 @@ main {
   }
 }
 
-/* BLOGLIST PAGE */
+/* MARK: BLOGLIST PAGE */
 .bloglistContainer {
   /* display: flex; */
   flex: 1;
@@ -1056,7 +1056,7 @@ main {
   }
 }
 
-/* MARK BLOG DETAILS PAGE */
+/* MARK: BLOG DETAILS PAGE */
 
 .blogDetailsContainer {
   display: flex;
@@ -1171,6 +1171,9 @@ main {
 .mlVideo {
   height: 400px;
   width: 380px;
+
+  height: 40vh;
+  width: 20vw;
   display: flex;
   flex-direction: column;
 }
@@ -1178,13 +1181,47 @@ main {
 .mlVideoPlayer {
   height: 100%;
   width: 100%;
-  border-radius: 20px;
+  object-fit: cover;
+  /* border-radius: 20px; */
 }
 
 .dummyPlayer {
+  position: relative;
   height: 100%;
   width: 100%;
-  background-color: var(--darkest-green);
+  /* background-color: var(--darkest-green); */
+}
+
+.mlThumbnail {
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  /* border: 2px solid yellow; */
+  /* border-radius: 20px; */
+  /* background-color: var(--darkest-green); */
+}
+
+.mlPlayBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.094);
+  border-radius: 50%;
+  /* font-size: calc(3 * var(--rem)); */
+  /* color: white; */
+  /* background-color: var(--darkest-green); */
+}
+
+.mlPlayBtn:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 0px 10px #ffffff;
+  opacity: 1;
 }
 
 .mlVideo .mlVideoTitle {
@@ -1200,6 +1237,38 @@ main {
   /* color: #64727b; */
   /* text-align: center; */
   /* margin-top: calc(1 * var(--rem)); */
+}
+/* .pageContainer.ml {
+  position: relative;
+} */
+.mlModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  /* height: 100vh; */
+  /* border: 2px solid yellow; */
+}
+
+.mlModalContent {
+  /* position: relative; */
+  width: 50vw;
+}
+
+.mlModalCloseBtn {
+  position: absolute;
+  /* top: 10px; */
+  /* right: 10px; */
+  font-size: calc(2 * var(--rem));
+  color: var(--darkest-green);
+  cursor: pointer;
+  z-index: 1001;
 }
 
 /* MARK: Media Queries */
@@ -1241,6 +1310,10 @@ main {
   }
   .bloglistContainer {
     width: unset;
+  }
+
+  .mlVideo {
+    width: 30vw;
   }
 }
 
@@ -1322,6 +1395,10 @@ main {
 
   .blogDetailsContainer {
     width: 98vw;
+  }
+
+  .mlVideo {
+    width: 35vw;
   }
 }
 
@@ -1558,6 +1635,16 @@ main {
     height: calc(10 * var(--rem));
     width: calc(12 * var(--rem));
   } */
+
+  .mlGridContainer {
+    grid-template-columns: 1fr;
+    gap: calc(5 * var(--rem)) 0;
+  }
+
+  .mlVideo {
+    width: 60vw;
+    /* border: 2px solid red; */
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1777,6 +1864,14 @@ main {
     margin: unset;
     margin-bottom: 20px;
   }
+
+  .mlGridContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .mlVideo {
+    width: 60vw;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -1928,6 +2023,10 @@ main {
   .blogPostBanner {
     margin: 10px 0 0;
     height: 30vh;
+  }
+
+  .mlVideo {
+    width: 80vw;
   }
 }
 
