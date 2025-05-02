@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Layout from "./Layout";
 import CloudflarePlayer from "./CloudflarePlayer";
+import Spinner from "react-bootstrap/Spinner";
 import playButton from "../public/assets/icons8-play-64.png";
+import { TailSpin } from "react-loader-spinner";
 
 export default function MicroLearning() {
   const vids = [
@@ -29,7 +31,10 @@ export default function MicroLearning() {
 
   const [activeVideo, setActiveVideo] = useState(null);
 
+  const [isLoading, setIsLoading] = useState(true);
+
   const handleVideoClick = (vidId) => {
+    setIsLoading(true);
     setActiveVideo(vidId);
   };
 
@@ -47,33 +52,46 @@ export default function MicroLearning() {
         <div className="mlGridContainer">
           {vids.map((vid, index) => {
             return (
-              <div key={index} className="mlVideo">
-                {/* {playerActivated.includes(index) && (
-                  <CloudflarePlayer
-                    videoID={vid.videoID}
-                    autoplay={true}
-                    className="mlVideoPlayer"
-                  />
-                )} */}
-                {/* {!playerActivated.includes(index) && ( */}
-                <div
-                  className="dummyPlayer"
-                  onClick={() => handleVideoClick(vid.videoID)}
-                >
-                  <img
-                    src={`https://${custSubdomain}/${vid.videoID}/thumbnails/thumbnail.jpg`}
-                    alt={`thumbnail ${vid.title}`}
-                    height={400}
-                    width={380}
-                    className="mlThumbnail"
-                  />
-                  <img
-                    src={playButton}
-                    alt="play button"
-                    className="mlPlayBtn"
-                  />
+              <div key={index} className="mlVideoCard">
+                <div className="mlVideo">
+                  {
+                    /* show the thumbnail until the active video is clicked and finished loading*/
+                    (activeVideo != vid.videoID || isLoading) && (
+                      <div
+                        className="dummyPlayer"
+                        onClick={() => handleVideoClick(vid.videoID)}
+                      >
+                        <img
+                          src={`https://${custSubdomain}/${vid.videoID}/thumbnails/thumbnail.jpg`}
+                          alt={`thumbnail ${vid.title}`}
+                          height={400}
+                          width={380}
+                          className="mlThumbnail"
+                        />
+                        {
+                          /* show the play button until the video is clicked, then show spinner while it is loading*/
+                          activeVideo === vid.videoID && isLoading ? (
+                            <TailSpin wrapperClass="spinner" color="white" />
+                          ) : (
+                            <div className="mlPlayBtn">▶</div>
+                          )
+                        }
+                      </div>
+                    )
+                  }
+                  {
+                    /* as soon as the video is clicked load the video player, it will be hidden under thumbnail until the video finishes loading */
+                    activeVideo === vid.videoID && (
+                      <div className="mlVideoPlayer">
+                        <CloudflarePlayer
+                          videoID={vid.videoID}
+                          autoplay={true}
+                          setIsLoading={setIsLoading}
+                        />
+                      </div>
+                    )
+                  }
                 </div>
-                {/* )} */}
                 <div className="mlVideoInfo">
                   <div className="mlVideoTitle">{vid.title}</div>
                   <div className="mlVideoDesc">{vid.desc}</div>
@@ -83,7 +101,7 @@ export default function MicroLearning() {
           })}
         </div>
 
-        {activeVideo && (
+        {/* {activeVideo && (
           <div className="mlModal" onClick={() => setActiveVideo(null)}>
             <div className="mlModalContent">
               <button
@@ -93,7 +111,7 @@ export default function MicroLearning() {
                 &times;
               </button>
               {/* Render Job content after parsing markdown */}
-              {/* <Markdown>{job.content}</Markdown> */}
+        {/* <Markdown>{job.content}</Markdown> 
               <CloudflarePlayer
                 videoID={activeVideo}
                 autoplay={true}
@@ -101,7 +119,7 @@ export default function MicroLearning() {
               />
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </Layout>
   );
