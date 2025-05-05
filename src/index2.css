@@ -1169,6 +1169,7 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: calc(2 * var(--rem)) calc(8 * var(--rem));
+
   /* border: 2px solid yellow; */
 }
 
@@ -1198,6 +1199,19 @@ main {
 
 .dummyPlayer {
   position: relative;
+  /* give loading animation effect until thumbnail pic loads and covers it */
+  background: linear-gradient(90deg, #e5e5e5 25%, #f7f7f7 50%, #e5e5e5 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 .mlThumbnail {

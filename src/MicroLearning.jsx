@@ -62,10 +62,10 @@ export default function MicroLearning() {
                         onClick={() => handleVideoClick(vid.videoID)}
                       >
                         <img
-                          src={`https://${custSubdomain}/${vid.videoID}/thumbnails/thumbnail.jpg`}
+                          src={`https://${custSubdomain}/${vid.videoID}/thumbnails/thumbnail.jpg?time=0s&width=500&height=350`}
                           alt={`thumbnail ${vid.title}`}
-                          height={400}
-                          width={380}
+                          height={350}
+                          width={500}
                           className="mlThumbnail"
                         />
                         {
