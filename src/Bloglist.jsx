@@ -4,7 +4,7 @@ import thumb1 from "./assets/aboutImg1.jpeg";
 import { getBlogPosts } from "./getBlogPosts";
 import { Link } from "react-router-dom";
 import { color } from "@mui/system";
-import Logo2 from "./assets/RedoneLogoTransBiggestv2.png";
+import BlogPreview from "./BlogPreview";
 
 export default function Bloglist() {
   const blogPosts = getBlogPosts(); //get the array of blog posts
@@ -109,72 +109,11 @@ export default function Bloglist() {
               .map((blog, index) => {
                 var instructions = convertCategory(blog.category); //convert either string or object value into array of instructions for styling of categories
                 // if (blog.youtubeLink)
-                console.log(
-                  blog.title + " = " + blog.youtubeLink + " = " + blog.youtubeID
-                );
+                // console.log(
+                //   blog.title + " = " + blog.youtubeLink + " = " + blog.youtubeID
+                // );
                 //returns a component for each blog post
-                return (
-                  <Link to={"/blogs/" + blog.slug}>
-                    <div className="blogPreview" key={index}>
-                      {/* creates a url based on the slug and sends the user to it when clicked */}
-                      <div className="blogThumbnail">
-                        {
-                          //if there is a featured image -period- use the featured image. otherwise, use the youtube thumbnail
-                          // default thumbnail structure is https://img.youtube.com/vi/{youtubeID}/{resolution}default.jpg
-                          // if neither render default image?
-                          blog.formattedPath ? (
-                            <img src={blog.formattedPath} alt="thumbnail" />
-                          ) : blog.youtubeID ? (
-                            <img
-                              src={`https://img.youtube.com/vi/${blog.youtubeID}/hqdefault.jpg`}
-                              // width={480}
-                              // height={360}
-                            />
-                          ) : (
-                            <img src={Logo2} alt="thumbnail" />
-                          )
-                        }
-                      </div>
-                      <div className="blogInfo">
-                        <div className="blogTitle">{blog.title}</div>
-                        <div className="blogDesc">{blog.description}</div>
-                        <div className="blogReadMoreBox">
-                          <div className="blogReadMore">Read More</div>
-                          <span className="material-symbols-outlined icon-medium blog">
-                            arrow_forward_ios
-                          </span>
-                        </div>
-                        {/* <div className="blogTags">
-                          <div className="leftTags">
-                            <div className="blogDate">{blog.postDate}</div>
-                            <span>•</span>
-                            <div className="blogReadTime">
-                              {blog.readTime} min read
-                            </div>
-                          </div>
-
-                          <div className="blogCategoryContainer">
-                            {
-                              /*Checks if there is a valid category, if so, displays it and styles accordingly/
-                              instructions ? (
-                                instructions.map((category, index2) => (
-                                  <div
-                                    key={index2}
-                                    className={`blogCategory ${category.color}`}
-                                  >
-                                    {category.name}
-                                  </div>
-                                ))
-                              ) : (
-                                <div></div>
-                              )
-                            }
-                          </div> 
-                        </div>*/}
-                      </div>
-                    </div>
-                  </Link>
-                );
+                return <BlogPreview blog={blog} index={index} />;
               })}
           </div>
         </div>

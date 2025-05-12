@@ -17,6 +17,7 @@
     "@mui/system": "^6.1.8",
     "@react-google-maps/api": "^2.19.3",
     "bootstrap": "^5.3.5",
+    "framer-motion": "^12.10.4",
     "front-matter": "^4.0.2",
     "get-video-id": "^4.1.7",
     "marked": "^15.0.7",

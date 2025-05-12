@@ -3,8 +3,13 @@
 import React from "react";
 import hbot from "./assets/hbotv2.jpg";
 import Layout from "./Layout";
+import BlogCarousel from "./BlogCarousel";
+import Slideshow from "./Slideshow";
+import VideoCarousel from "./VideoCarousel";
+import ReviewCarousel from "./ReviewCarousel";
 
 export default function Hyperbaric() {
+  const width = "calc(30* var(--rem))";
   return (
     <Layout>
       <div className="pageContainer">
@@ -166,6 +171,21 @@ export default function Hyperbaric() {
             </p>
           </div>
         </div>
+
+        {/* <div style={{ border: "2px solid white", width: "50%" }}> */}
+
+        <div style={{ width: "50vw" }}>
+          <BlogCarousel />
+          {/* <Slideshow array={VideoCarousel()} /> */}
+        </div>
+        <div style={{ width: "50vw" }}>
+          <VideoCarousel />
+        </div>
+        <div style={{ width: "50vw" }}>
+          <ReviewCarousel />
+        </div>
+
+        {/* </div> */}
       </div>
     </Layout>
   );

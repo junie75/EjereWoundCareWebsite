@@ -1,0 +1,64 @@
+/* container for overflow of images */
+.carousel {
+  cursor: grab;
+  overflow-x: hidden;
+  max-width: 100%;
+  border: 2px solid purple;
+}
+
+/* container to drag images within outer container */
+.innerCarousel {
+  display: flex;
+}
+
+.carouselItemVert {
+  /* position: relative; */
+  /* min-height: 20rem; */
+  /* min-width: min-content; */
+  width: 20rem;
+  padding: 5px 20px;
+}
+
+/* .carouselItemVert img {
+  width: 100%;
+  height: 100%;
+  /* border-radius: 2rem; 
+  pointer-events: none;
+  object-fit: scale-down;
+} */
+
+.carouselItemHoriz {
+  position: relative;
+  /* min-height: 10rem; */
+  /* min-width: calc(30 * var(--rem)); */
+  padding: 5px 0;
+  margin: 0 25px;
+  /* border: 1px solid #000; */
+  /* width: 8px; */
+}
+
+.carouselItemHoriz .expand {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* @media (max-width: 768px) {
+  .carouselItemHoriz {
+    min-width: 25rem;
+  }
+}*/
+
+@media (max-width: 480px) {
+  .carouselItemHoriz {
+    /* height: 30rem; */
+    /* min-width: calc(25 * var(--rem)); */
+    margin: 0 10px;
+  }
+}
+
+/* @media (max-width: 400px) {
+  .carouselItemHoriz {
+    min-width: 18rem;
+  } 
+} */
