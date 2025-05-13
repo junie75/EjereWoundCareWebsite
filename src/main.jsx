@@ -17,11 +17,12 @@ import Careers from "./Careers.jsx";
 import Bloglist from "./Bloglist.jsx";
 import BlogDetails from "./BlogDetails.jsx";
 import MicroLearning from "./MicroLearning.jsx";
+import HomeExpanded from "./HomeExpanded.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <HomeExpanded />,
     exact: true,
   },
   {

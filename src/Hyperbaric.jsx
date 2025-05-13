@@ -174,16 +174,16 @@ export default function Hyperbaric() {
 
         {/* <div style={{ border: "2px solid white", width: "50%" }}> */}
 
-        <div style={{ width: "50vw" }}>
+        {/* <div style={{ width: "50vw" }}>
           <BlogCarousel />
-          {/* <Slideshow array={VideoCarousel()} /> */}
+          
         </div>
         <div style={{ width: "50vw" }}>
           <VideoCarousel />
         </div>
         <div style={{ width: "50vw" }}>
           <ReviewCarousel />
-        </div>
+        </div> */}
 
         {/* </div> */}
       </div>

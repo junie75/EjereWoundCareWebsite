@@ -29,6 +29,12 @@
   padding: calc(0.5 * var(--rem)) calc(1 * var(--rem));
 }
 
+.navbar.homeExpanded {
+  /* for banner on expanded home page but does not follow scroll like on other pages*/
+  position: absolute;
+  width: 99.5vw;
+}
+
 .navSolidBackground {
   background-color: var(--lightest-green);
 }

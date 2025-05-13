@@ -136,7 +136,9 @@ function Navigation({ isHomePage }) {
   };
 
   return (
-    <div className={`navbar ${isHomePage ? "" : "navSolidBackground"}`}>
+    <div
+      className={`navbar ${isHomePage ? "homeExpanded" : "navSolidBackground"}`}
+    >
       <div className="logoContainer">
         <Link to="/">
           <img

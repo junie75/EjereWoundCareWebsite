@@ -13,9 +13,10 @@ const Layout = ({ children }) => {
 
   return (
     <div
-      className={`containers ${
-        isHomePage ? "home-background" : "green-background"
-      }`}
+      // className={`containers ${
+      //   isHomePage ? "home-background" : "green-background"
+      // }`}
+      className="containers"
     >
       <ScrollToTop />
       <Navigation isHomePage={isHomePage} />

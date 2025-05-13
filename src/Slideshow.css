@@ -3,7 +3,7 @@
   cursor: grab;
   overflow-x: hidden;
   max-width: 100%;
-  border: 2px solid purple;
+  /* border: 2px solid purple; */
 }
 
 /* container to drag images within outer container */
