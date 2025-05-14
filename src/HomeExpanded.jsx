@@ -89,6 +89,17 @@ export default function HomeExpanded() {
             </Link>
           </div>
         </div>
+
+        <div className="homeSection homeTestimonials">
+          <div className="homeSectionHeader">What Our Patients Are Saying</div>
+          <div className="aboutUsText">
+            <b>Patient Spotlight:</b> Aaron Stark shares his healing journey
+            with Ejere Wound Care & Hyperbaric Oxygen Therapy. In this heartfelt
+            testimonial, he highlights the compassionate, expert care he
+            received and how the clinic's treatments — especially hyperbaric
+            oxygen therapy — helped restore his quality of life.
+          </div>
+        </div>
       </div>
     </Layout>
   );

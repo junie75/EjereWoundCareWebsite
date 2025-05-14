@@ -22,7 +22,7 @@ import HomeExpanded from "./HomeExpanded.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomeExpanded />,
+    element: <Home />,
     exact: true,
   },
   {
@@ -57,18 +57,18 @@ const router = createBrowserRouter([
     path: "/careers",
     element: <Careers />,
   },
-  {
-    path: "/blogs",
-    element: <Bloglist />,
-  },
-  {
-    path: "/blogs/:slug",
-    element: <BlogDetails />,
-  },
-  {
-    path: "/micro-learning",
-    element: <MicroLearning />,
-  },
+  // {
+  //   path: "/blogs",
+  //   element: <Bloglist />,
+  // },
+  // {
+  //   path: "/blogs/:slug",
+  //   element: <BlogDetails />,
+  // },
+  // {
+  //   path: "/micro-learning",
+  //   element: <MicroLearning />,
+  // },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
