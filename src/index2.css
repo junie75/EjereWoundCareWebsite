@@ -65,7 +65,7 @@ body {
 @supports (background-image: url("unsplashTreeOptv3.avif")) {
   .home-background {
     background-image: url("unsplashTreeOptv3.avif");
-    background-image: url("../public/assets/unsplashTreeOptv3.avif");
+    /* background-image: url("../public/assets/unsplashTreeOptv3.avif"); */
   }
 }
 
